@@ -43,6 +43,7 @@ other layers needed. e.g.:
     /path/to/yocto/meta-yocto \
     /path/to/yocto/meta-yocto-bsp \
     /path/to/yocto/meta-kf5 \
+    /path/to/yocto/meta-qt5 \
     "
 
 
