@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING-CMAKE-SCRIPTS;md5=54c7042be62e169199200bc6477
     "
 PR = "r0"
 
-DEPENDS = "cmake-native"
+DEPENDS = "cmake-native qttools"
 
 GIT_REPO = "git://anongit.kde.org/extra-cmake-modules;protocol=git"
 S = "${WORKDIR}/git"
