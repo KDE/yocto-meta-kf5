@@ -1,0 +1,5 @@
+require ${PN}.inc
+
+SRC_URI = "${GIT_REPO}"
+SRCREV = "05065c64b0d60842b9b8004ecf29132978e99a42"
+PV = "5.0.0"
