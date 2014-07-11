@@ -20,8 +20,8 @@ do_install() {
 }
 
 FILES_${PN} += " \
-        ${base_prefix}/usr/share/ECM/kde-modules/* \
-        ${base_prefix}/usr/share/ECM/modules/* \
-        ${base_prefix}/usr/share/ECM/cmake/* \
-        ${base_prefix}/usr/share/ECM/find-modules/* \
-        "
+    ${base_prefix}/usr/share/ECM/kde-modules/* \
+    ${base_prefix}/usr/share/ECM/modules/* \
+    ${base_prefix}/usr/share/ECM/cmake/* \
+    ${base_prefix}/usr/share/ECM/find-modules/* \
+"
