@@ -11,7 +11,7 @@ GIT_REPO = "git://anongit.kde.org/extra-cmake-modules;protocol=git"
 S = "${WORKDIR}/git"
 
 do_compile() {
-    cmake -DCMAKE_INSTALL_PREFIX:PATH=${D}/usr/ .
+    cmake -DCMAKE_INSTALL_PREFIX:PATH=${D}/${prefix}/ .
     make
 }
 
@@ -19,9 +19,4 @@ do_install() {
     make install
 }
 
-FILES_${PN} += " \
-    ${base_prefix}/usr/share/ECM/kde-modules/* \
-    ${base_prefix}/usr/share/ECM/modules/* \
-    ${base_prefix}/usr/share/ECM/cmake/* \
-    ${base_prefix}/usr/share/ECM/find-modules/* \
-"
+FILES_${PN}-dev += " ${datadir}/ECM"
