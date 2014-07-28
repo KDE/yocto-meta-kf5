@@ -12,7 +12,16 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-#FILES_${PN}-dev += " \
-#    ${libdir}/cmake/KF5ThreadWeaver/*.cmake \
-#    ${prefix}/mkspecs/modules/qt_ThreadWeaver.pri \
-#"
+FILES_${PN} += " \
+    ${libdir}/plugins/kauth/helper/kauth_helper_plugin.so \
+    /usr/share/kf5/kauth/*.stub \
+"
+
+FILES_${PN}-dev += " \
+    ${libdir}/cmake/KF5Auth/*.cmake \
+    ${prefix}/mkspecs/modules/qt_KAuth.pri \
+"
+
+FILES_${PN}-dbg += " \
+    ${libdir}/plugins/kauth/helper/.debug/kauth_helper_plugin.so \
+"
