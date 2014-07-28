@@ -10,7 +10,7 @@ DEPENDS = "qtbase qtscript"
 GIT_REPO = "git://anongit.kde.org/ki18n"
 S = "${WORKDIR}/git"
 
-inherit cmake_qt5
+inherit cmake_kf5
 inherit perlnative
 
 FILES_${PN}-dev += " \

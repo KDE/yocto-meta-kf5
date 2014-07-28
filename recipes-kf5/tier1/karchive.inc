@@ -10,7 +10,7 @@ DEPENDS = "ecm zlib bzip2 xz qtbase"
 GIT_REPO = "git://anongit.kde.org/karchive;protocol=git"
 S = "${WORKDIR}/git"
 
-inherit cmake_qt5
+inherit cmake_kf5
 
 FILES_${PN}-dev += " \
     ${libdir}/cmake/KF5Archive/*.cmake \
