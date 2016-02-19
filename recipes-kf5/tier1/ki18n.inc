@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase qtscript"
 
-GIT_REPO = "git://anongit.kde.org/ki18n"
+SRC_URI = "git://anongit.kde.org/ki18n"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

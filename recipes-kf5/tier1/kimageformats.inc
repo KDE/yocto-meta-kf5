@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-GIT_REPO = "git://anongit.kde.org/kimageformats"
+SRC_URI = "git://anongit.kde.org/kimageformats"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

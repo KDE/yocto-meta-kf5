@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-GIT_REPO = "git://anongit.kde.org/kitemviews"
+SRC_URI = "git://anongit.kde.org/kitemviews"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

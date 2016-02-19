@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase qtx11extras"
 
-GIT_REPO = "git://anongit.kde.org/kglobalaccel"
+SRC_URI = "git://anongit.kde.org/kglobalaccel"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
