@@ -7,10 +7,14 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-SRC_URI = "git://anongit.kde.org/kwindowsystem"
+SRC_URI = "git://anongit.kde.org/kwindowsystem;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+
+FILES_${PN} += " \
+    ${libdir}/plugins/kf5/org.kde.kwindowsystem.platforms/* \
+"
 
 FILES_${PN}-dev += " \
     ${libdir}/cmake/KF5WindowSystem/*.cmake \

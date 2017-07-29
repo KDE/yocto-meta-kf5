@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-SRC_URI = "git://anongit.kde.org/kcoreaddons"
+SRC_URI = "git://anongit.kde.org/kcoreaddons;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
@@ -19,4 +19,5 @@ FILES_${PN}-dev += " \
 
 FILES_${PN} += " \
     /usr/share/mime/packages/kde5.xml \
+    /usr/share/kf5/licenses/* \
 "
