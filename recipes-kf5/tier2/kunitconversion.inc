@@ -7,10 +7,12 @@ PR = "r0"
 
 DEPENDS = "qtbase ki18n"
 
-GIT_REPO = "git://anongit.kde.org/kunitconversion"
+SRC_URI = "git://anongit.kde.org/kunitconversion;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+inherit python3native
+inherit gettext
 
 FILES_${PN}-dev += " \
     ${libdir}/cmake/KF5UnitConversion/*.cmake \

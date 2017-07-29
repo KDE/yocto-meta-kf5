@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase kcoreaddons"
 
-GIT_REPO = "git://anongit.kde.org/kauth"
+SRC_URI = "git://anongit.kde.org/kauth;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
