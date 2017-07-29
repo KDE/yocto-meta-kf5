@@ -19,3 +19,5 @@ do_install() {
 }
 
 FILES_${PN}-dev += " ${datadir}/ECM"
+
+BBCLASSEXTEND = "native nativesdk"

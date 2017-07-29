@@ -1,7 +1,9 @@
 inherit cmake_qt5
 
 EXTRA_OECMAKE += " \
-    -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST}"
+    -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
+    -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/usr/lib/cmake \
+"
 
 DEPENDS += "ecm"
 
@@ -17,3 +19,5 @@ do_install_prepend() {
         sed -i 's/\;\/usr\//\;\$\{OE_KF5_PATH_HOST_ROOT\}\/usr\//g' $(find . -name "*.cmake" | grep _usr)
     fi
 }
+
+BBCLASSEXTEND = "native nativesdk"
