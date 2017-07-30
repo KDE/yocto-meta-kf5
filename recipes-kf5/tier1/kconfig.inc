@@ -10,10 +10,18 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-SRC_URI = "git://anongit.kde.org/kconfig;nobranch=1"
+SRC_URI = " \
+    git://anongit.kde.org/kconfig;nobranch=1 \
+    file://0001-no-gui.patch \
+"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+
+sysroot_stage_all_append_class-target () {
+    mkdir -p ${SYSROOT_DESTDIR}${libexecdir}/kf5
+    cp ${D}${libexecdir}/kf5/kconf_update ${SYSROOT_DESTDIR}${libexecdir}/kf5
+}
 
 FILES_${PN}-dev += " \
     ${libdir}/cmake/KF5Config/*.cmake \

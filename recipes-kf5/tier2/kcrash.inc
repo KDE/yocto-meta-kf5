@@ -7,7 +7,10 @@ PR = "r0"
 
 DEPENDS = "kcoreaddons kwindowsystem kcoreaddons-native"
 
-SRC_URI = "git://anongit.kde.org/kcrash"
+SRC_URI = " \
+    git://anongit.kde.org/kcrash \
+    file://0001-no-x11.patch \
+"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
