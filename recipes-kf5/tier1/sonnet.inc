@@ -9,6 +9,7 @@ DEPENDS = "qtbase sonnet-native qtbase-native"
 
 SRC_URI = "git://anongit.kde.org/sonnet;nobranch=1 \
     file://0001-no-widgets.patch \
+    file://0002-unexport-helpers.patch \
 "
 S = "${WORKDIR}/git"
 

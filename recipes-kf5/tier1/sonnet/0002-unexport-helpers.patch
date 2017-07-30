@@ -1,0 +1,33 @@
+commit 4104b2ea0db4d65d0cb2fcac6db9e343df5f2d9b
+Author: Volker Krause <vkrause@kde.org>
+Date:   Sun Jul 30 21:37:48 2017 +0200
+
+    Don't export internal helper executables
+    
+    Summary:
+    Exporting the executables will make the cmake config file check for their
+    presence when used, which isn't really necessary, and is actually a problem
+    for cross-compilation, where the helper executables don't exist for the
+    target but for the host.
+    
+    Reviewers: #frameworks, cordlandwehr
+    
+    Tags: #frameworks
+    
+    Differential Revision: https://phabricator.kde.org/D7008
+
+diff --git a/data/CMakeLists.txt b/data/CMakeLists.txt
+index 100b05f..d86cde1 100644
+--- a/data/CMakeLists.txt
++++ b/data/CMakeLists.txt
+@@ -11,8 +11,8 @@ ecm_mark_nongui_executable(gentrigrams)
+ 
+ TARGET_LINK_LIBRARIES(parsetrigrams PUBLIC Qt5::Core)
+ TARGET_LINK_LIBRARIES(gentrigrams PUBLIC Qt5::Core KF5::SonnetCore)
+-INSTALL(TARGETS parsetrigrams EXPORT KF5SonnetTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+-INSTALL(TARGETS gentrigrams EXPORT KF5SonnetTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
++INSTALL(TARGETS parsetrigrams ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
++INSTALL(TARGETS gentrigrams ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+ 
+ cmake_policy(SET CMP0026 OLD) # FIXME: make this work with CMP0026 set to NEW
+ if(CMAKE_CROSSCOMPILING AND PARSETRIGRAMS_EXECUTABLE)
