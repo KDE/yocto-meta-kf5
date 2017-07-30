@@ -3,6 +3,7 @@ inherit cmake_qt5
 EXTRA_OECMAKE += " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/usr/lib/cmake \
+    -DBUILD_TESTING=OFF \
 "
 
 DEPENDS += "ecm"
