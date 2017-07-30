@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1 \
     "
 PR = "r0"
 
-DEPENDS = "qtbase kcoreaddons"
+DEPENDS = "qtbase kcoreaddons kcoreaddons-native polkit-qt-1"
 
 SRC_URI = "git://anongit.kde.org/kauth;nobranch=1"
 S = "${WORKDIR}/git"
@@ -14,7 +14,8 @@ inherit cmake_kf5
 
 FILES_${PN} += " \
     ${libdir}/plugins/kauth/helper/kauth_helper_plugin.so \
-    /usr/share/kf5/kauth/*.stub \
+    ${libdir}/plugins/kauth/backend/kauth_backend_plugin.so \
+    ${datadir}/kf5/kauth/*.stub \
 "
 
 FILES_${PN}-dev += " \
