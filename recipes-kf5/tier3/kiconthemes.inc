@@ -4,7 +4,7 @@ LICENSE = "LGPL-2.1"
 LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
 PR = "r0"
 
-DEPENDS = "qtbase qtsvg karchive ki18n kcoreaddons kcoreaddons-native kconfigwidgets kconfig-native kwidgetsaddons kitemviews"
+DEPENDS = "qtbase qtsvg karchive ki18n kcoreaddons kconfigwidgets kwidgetsaddons kitemviews"
 
 SRC_URI = "git://anongit.kde.org/kiconthemes;nobranch=1"
 S = "${WORKDIR}/git"

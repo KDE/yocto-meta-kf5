@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1 \
     "
 PR = "r0"
 
-DEPENDS = "qtbase kcoreaddons kwidgetsaddons kcoreaddons-native"
+DEPENDS = "qtbase kcoreaddons kwidgetsaddons"
 
 SRC_URI = "git://anongit.kde.org/kjobwidgets;nobranch=1"
 S = "${WORKDIR}/git"

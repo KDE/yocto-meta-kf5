@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1 \
     "
 PR = "r0"
 
-DEPENDS = "qtbase kwindowsystem kconfig kconfig-native kcodecs kcoreaddons kcoreaddons-native phonon"
+DEPENDS = "qtbase kwindowsystem kconfig kcodecs kcoreaddons phonon"
 
 SRC_URI = "git://anongit.kde.org/knotifications;nobranch=1"
 S = "${WORKDIR}/git"

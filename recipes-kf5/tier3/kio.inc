@@ -8,9 +8,7 @@ DEPENDS = " \
     qtbase \
     karchive \
     kconfig \
-    kconfig-native \
     kcoreaddons \
-    kcoreaddons-native \
     kdbusaddons \
     ki18n \
     kservice \
