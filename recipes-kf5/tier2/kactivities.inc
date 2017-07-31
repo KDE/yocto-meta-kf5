@@ -14,8 +14,3 @@ inherit cmake_kf5
 FILES_${PN} += " \
     ${libdir}/qml/org/kde/activities/* \
 "
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Activities/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KActivities.pri \
-"

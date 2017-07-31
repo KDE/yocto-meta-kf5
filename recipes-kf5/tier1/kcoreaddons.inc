@@ -12,11 +12,6 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5CoreAddons/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KCoreAddons.pri \
-"
-
 FILES_${PN} += " \
     /usr/share/mime/packages/kde5.xml \
     /usr/share/kf5/licenses/* \

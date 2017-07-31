@@ -11,8 +11,3 @@ SRC_URI = "git://anongit.kde.org/kcompletion;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Completion/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KCompletion.pri \
-"

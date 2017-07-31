@@ -17,9 +17,7 @@ inherit python3native
 EXTRA_OECMAKE += " -DBUILD_TESTING=OFF"
 
 FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5I18n/*.cmake \
     ${libdir}/cmake/KF5I18n/*.py \
-    ${prefix}/mkspecs/modules/qt_KI18n.pri \
 "
 
 FILES_${PN}-dbg += " \

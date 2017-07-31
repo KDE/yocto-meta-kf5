@@ -12,11 +12,6 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5ImageFormats/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KImageFormats.pri \
-"
-
 FILES_${PN}-dbg += " \
     ${libdir}/plugins/imageformats/.debug/*.so \
 "

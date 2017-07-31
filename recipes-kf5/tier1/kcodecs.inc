@@ -11,8 +11,3 @@ SRC_URI = "git://anongit.kde.org/kcodecs;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Codecs/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KCodecs.pri \
-"

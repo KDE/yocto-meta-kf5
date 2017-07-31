@@ -17,8 +17,3 @@ inherit python3native
 FILES_${PN} += " \
     ${datadir}/kservicetypes5/* \
 "
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Package/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KPackage.pri \
-"

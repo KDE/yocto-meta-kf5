@@ -18,6 +18,4 @@ FILES_${PN} += " \
 
 FILES_${PN}-dev += " \
     ${datadir}/dbus-1/interfaces/*.xml \
-    ${libdir}/cmake/KF5Notifications/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KNotifications.pri \
 "

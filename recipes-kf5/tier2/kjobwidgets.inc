@@ -15,8 +15,3 @@ inherit cmake_kf5
 FILES_${PN} += " \
     /usr/share/dbus-1/interfaces/*.xml \
 "
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5JobWidgets/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KJobWidgets.pri \
-"

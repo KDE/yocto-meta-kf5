@@ -15,8 +15,3 @@ inherit cmake_kf5
 FILES_${PN} += " \
     ${libdir}/plugins/kf5/org.kde.kwindowsystem.platforms/* \
 "
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5WindowSystem/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KWindowSystem.pri \
-"

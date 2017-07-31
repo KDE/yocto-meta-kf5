@@ -13,8 +13,3 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 inherit python3native
 inherit gettext
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5UnitConversion/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KUnitConversion.pri \
-"

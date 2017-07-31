@@ -12,11 +12,6 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5WidgetsAddons/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KWidgetsAddons.pri \
-"
-
 FILES_${PN} += " \
     /usr/share/kf5/kcharselect/kcharselect-data \
 "

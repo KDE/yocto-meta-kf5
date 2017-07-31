@@ -11,8 +11,3 @@ SRC_URI = "git://anongit.kde.org/threadweaver"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5ThreadWeaver/*.cmake \
-    ${prefix}/mkspecs/modules/qt_ThreadWeaver.pri \
-"

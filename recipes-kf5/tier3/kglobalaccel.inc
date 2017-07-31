@@ -22,12 +22,10 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 
 FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5GlobalAccel/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KGlobalAccel.pri \
+    /usr/share/dbus-1/interfaces/kf5_org.*.xml \
 "
 
 FILES_${PN} += " \
-    /usr/share/dbus-1/interfaces/kf5_org.*.xml \
     /usr/share/dbus-1/services/org.kde.kglobalaccel.service \
     /usr/share/kservices5/kglobalaccel5.desktop \
 "

@@ -12,8 +12,3 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 inherit gettext
 inherit python3native
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5IconThemes/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KIconThemes.pri \
-"

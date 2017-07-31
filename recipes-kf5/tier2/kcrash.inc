@@ -14,8 +14,3 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Crash/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KCrash.pri \
-"

@@ -11,8 +11,3 @@ SRC_URI = "git://anongit.kde.org/kitemviews;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5ItemViews/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KItemViews.pri \
-"

@@ -19,8 +19,3 @@ EXTRA_OECMAKE += " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/usr/bin/pars
 FILES_${PN} += " \
     ${datadir}/kf5/sonnet/* \
 "
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Sonnet/*.cmake \
-    ${prefix}/mkspecs/modules/qt_Sonnet*.pri \
-"

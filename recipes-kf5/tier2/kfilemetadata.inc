@@ -16,8 +16,3 @@ inherit python3native
 FILES_${PN} += " \
   ${libdir}/plugins/kf5/kfilemetadata/*.so \
 "
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5FileMetaData/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KFileMetaData.pri \
-"

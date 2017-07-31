@@ -11,8 +11,3 @@ SRC_URI = "git://anongit.kde.org/prison"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Prison/*.cmake \
-    ${prefix}/mkspecs/modules/qt_Prison.pri \
-"

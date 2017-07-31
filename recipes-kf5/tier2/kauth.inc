@@ -18,11 +18,6 @@ FILES_${PN} += " \
     ${datadir}/kf5/kauth/*.stub \
 "
 
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Auth/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KAuth.pri \
-"
-
 FILES_${PN}-dbg += " \
     ${libdir}/plugins/kauth/helper/.debug/kauth_helper_plugin.so \
 "

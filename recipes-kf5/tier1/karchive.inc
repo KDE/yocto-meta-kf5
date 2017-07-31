@@ -11,8 +11,3 @@ SRC_URI = "git://anongit.kde.org/karchive;protocol=git"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Archive/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KArchive.pri \
-"

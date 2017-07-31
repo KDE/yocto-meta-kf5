@@ -22,8 +22,3 @@ sysroot_stage_all_append_class-target () {
     mkdir -p ${SYSROOT_DESTDIR}${libexecdir}/kf5
     cp ${D}${libexecdir}/kf5/kconf_update ${SYSROOT_DESTDIR}${libexecdir}/kf5
 }
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5Config/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KConfig*.pri \
-"

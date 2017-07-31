@@ -12,8 +12,3 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 inherit gettext
 inherit python3native
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5ConfigWidgets/*.cmake \
-    ${prefix}/mkspecs/modules/qt_KConfigWidgets.pri \
-"

@@ -22,3 +22,8 @@ do_install_prepend() {
 }
 
 BBCLASSEXTEND = "native nativesdk"
+
+FILES_${PN}-dev += " \
+    ${libdir}/cmake/KF5*/*.cmake \
+    ${prefix}/mkspecs/modules/qt_*.pri \
+"
