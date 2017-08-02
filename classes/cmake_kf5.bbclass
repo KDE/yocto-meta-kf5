@@ -5,7 +5,7 @@ EXTRA_OECMAKE += " \
     -DBUILD_TESTING=OFF \
 "
 
-DEPENDS += "ecm"
+DEPENDS += "extra-cmake-modules"
 
 # FIXME: using tags gives us translations, translations require lrelease/lconvert host tools, the ecm recipe can't deal with that yet...
 do_configure_prepend() {
