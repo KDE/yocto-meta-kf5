@@ -11,6 +11,11 @@ S = "${WORKDIR}/git"
 inherit cmake_qt5
 EXTRA_OECMAKE += " -DPHONON_BUILD_PHONON4QT5=ON"
 
+# remove the widget designer plugin, this makes no sense for the target
+do_install_append() {
+    rm -rf ${D}/${libdir}/qt5/
+}
+
 FILES_${PN}-dev += " \
     ${datadir}/phonon4qt5/buildsystem/* \
     ${datadir}/dbus-1/interfaces/*.xml \
