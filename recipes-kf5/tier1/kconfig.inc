@@ -17,6 +17,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+EXTRA_OECMAKE_class-native += " -DKCONFIG_USE_GUI=OFF"
 
 # we need the config compiler for the host, but kconf_update for the target
 # the latter also needs to be in the sysroot to silence the cmake config files checking its existence

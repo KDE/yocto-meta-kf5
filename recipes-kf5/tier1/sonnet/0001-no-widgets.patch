@@ -1,4 +1,4 @@
-commit e5cf922c9bd53c13d05cb8776dde14a9e66c0db1
+commit ab4e46f45e84b1916b875bd5db49b1a59220f73a
 Author: Volker Krause <vkrause@kde.org>
 Date:   Sun Jul 30 13:36:25 2017 +0200
 
@@ -9,27 +9,34 @@ Date:   Sun Jul 30 13:36:25 2017 +0200
     parsetrigrams build tool on the host and avoids having to pull in a full
     graphics stack for the host build in Yocto.
     
-    Reviewers: #frameworks, cordlandwehr
+    Reviewers: #frameworks, cordlandwehr, aacid
+    
+    Reviewed By: aacid
+    
+    Subscribers: aacid
     
     Tags: #frameworks
     
     Differential Revision: https://phabricator.kde.org/D6990
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 64df939..19bbd17 100644
+index 64df939..9c24415 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -17,7 +17,8 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+@@ -17,7 +17,11 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
  include(KDECMakeSettings)
  
  set(REQUIRED_QT_VERSION 5.6.0)
 -find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
-+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG COMPONENTS Widgets)
++option(SONNET_USE_WIDGETS "Build components using Qt5Widgets" ON)
++if(SONNET_USE_WIDGETS)
++    find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
++endif()
 +find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core)
  
  
  include(GenerateExportHeader)
-@@ -43,7 +44,9 @@ endif()
+@@ -43,7 +47,9 @@ endif()
  add_subdirectory(src)
  add_subdirectory(autotests)
  add_subdirectory(data)

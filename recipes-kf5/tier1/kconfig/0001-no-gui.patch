@@ -1,28 +1,38 @@
-commit 61ed46048d3ae7aa182102d192bab3e49339a010
+commit aaae37eaa2b05a113d1d5e77c766ebe48fca8c69
 Author: Volker Krause <vkrause@kde.org>
 Date:   Sun Jul 30 15:47:29 2017 +0200
 
     Allow to build KConfig without Qt5Gui
     
+    Summary:
     This is particularly useful for cross-compilation, where we only need the
     kconfig_compiler on the host system.
+    
+    Reviewers: #frameworks
+    
+    Tags: #frameworks
+    
+    Differential Revision: https://phabricator.kde.org/D6994
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5e50ba5..458630e 100644
+index 5e50ba5..1f7df84 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -12,7 +12,8 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+@@ -12,7 +12,11 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
  
  set(REQUIRED_QT_VERSION 5.6.0)
  
 -find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Gui Xml)
 +find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Xml)
-+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG OPTIONAL_COMPONENTS Gui)
++option(KCONFIG_USE_GUI "Build components using Qt5Gui" ON)
++if(KCONFIG_USE_GUI)
++    find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Gui)
++endif()
  include(KDEInstallDirs)
  include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
  include(KDECMakeSettings)
 diff --git a/autotests/CMakeLists.txt b/autotests/CMakeLists.txt
-index c1ae1de..7d6698f 100644
+index a07636d..fd3816d 100644
 --- a/autotests/CMakeLists.txt
 +++ b/autotests/CMakeLists.txt
 @@ -52,6 +52,7 @@ ecm_add_tests(
@@ -33,8 +43,8 @@ index c1ae1de..7d6698f 100644
  ecm_add_tests(
     kconfigguitest.cpp
     kconfigloadertest.cpp
-@@ -62,4 +63,4 @@ ecm_add_tests(
- )
+@@ -67,4 +68,4 @@ set_tests_properties(kconfigcore-kconfignokdehometest PROPERTIES RUN_SERIAL TRUE
+ set_tests_properties(kconfiggui-kconfigguitest PROPERTIES RUN_SERIAL TRUE)
  
  add_subdirectory(kconfig_compiler)
 -
