@@ -1,0 +1,29 @@
+commit 28aa8aa3da6fa9a6cbf003307030861d2fff985b
+Author: Volker Krause <vkrause@kde.org>
+Date:   Thu Aug 3 21:57:44 2017 +0200
+
+    Fix compilation on Yocto
+    
+    Summary:
+    By default, Qt is built without accessibility there, which is what
+    would indirectly include the needed QColor with a "normal" Qt build
+    here.
+    
+    Reviewers: #frameworks
+    
+    Tags: #frameworks
+    
+    Differential Revision: https://phabricator.kde.org/D7117
+
+diff --git a/src/declarativeimports/core/colorscope.cpp b/src/declarativeimports/core/colorscope.cpp
+index 8a705b8b3..2785fab93 100644
+--- a/src/declarativeimports/core/colorscope.cpp
++++ b/src/declarativeimports/core/colorscope.cpp
+@@ -23,6 +23,7 @@
+ 
+ #include <QQmlContext>
+ #include <QQmlEngine>
++#include <QColor>
+ 
+ QHash<QObject *, ColorScope *> ColorScope::s_attachedScopes = QHash<QObject *, ColorScope *>();
+ 
