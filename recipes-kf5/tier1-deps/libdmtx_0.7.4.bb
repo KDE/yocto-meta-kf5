@@ -1,5 +1,5 @@
 DESCRIPTION = "Library for reading and writing data matrix barcodes"
-HOMEPAGE = "http://www.libdmtx.org/"
+HOMEPAGE = "http://libdmtx.sourceforge.net/"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1c8a135723039c12792b01a2c688251b"
 
