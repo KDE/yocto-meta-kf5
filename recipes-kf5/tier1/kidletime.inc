@@ -5,9 +5,15 @@ LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1 \
     "
 PR = "r0"
 
-DEPENDS = "qtbase qtx11extras"
+DEPENDS = " \
+    qtbase \
+    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
+"
 
-SRC_URI = "git://anongit.kde.org/kidletime"
+SRC_URI = " \
+    git://anongit.kde.org/kidletime \
+    file://0001-no-x11.patch \
+"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
