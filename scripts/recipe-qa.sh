@@ -17,6 +17,10 @@ function validate_url()
 }
 
 for r in `find -name *.inc -o -name *.bb`; do
+    if ! [ -z "`egrep '/usr|/etc' $r`" ]; then
+        echo "ERROR: $r uses hard-coded paths."
+    fi
+
     url=`cat $r | grep HOMEPAGE | sed -e 's,HOMEPAGE\s*=\s*\"\(.*\)\",\1,'`
     if ! [ -z "$url" ]; then
         validate_url "$r" "$url"

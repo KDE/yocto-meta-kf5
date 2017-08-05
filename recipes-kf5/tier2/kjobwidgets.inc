@@ -13,5 +13,5 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 
 FILES_${PN} += " \
-    /usr/share/dbus-1/interfaces/*.xml \
+    ${datadir}/dbus-1/interfaces/*.xml \
 "

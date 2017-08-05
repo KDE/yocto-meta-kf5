@@ -16,7 +16,7 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 EXTRA_OECMAKE_class-native += " -DSONNET_USE_WIDGETS=OFF"
-EXTRA_OECMAKE_class-target += " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/usr/bin/parsetrigrams"
+EXTRA_OECMAKE_class-target += " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/parsetrigrams"
 
 FILES_${PN} += " \
     ${datadir}/kf5/sonnet/* \

@@ -17,7 +17,7 @@ inherit cmake_kf5
 inherit perlnative
 
 EXTRA_OECMAKE_class-native += " -DKSYNTAXHIGHLIGHTING_USE_GUI=OFF"
-EXTRA_OECMAKE_class-target += " -DKATEHIGHLIGHTINGINDEXER=${STAGING_DIR_NATIVE}/usr/bin/katehighlightingindexer"
+EXTRA_OECMAKE_class-target += " -DKATEHIGHLIGHTINGINDEXER=${STAGING_DIR_NATIVE}/${bindir}/katehighlightingindexer"
 
 sysroot_stage_all_append_class-native () {
     mkdir -p ${SYSROOT_DESTDIR}/${bindir}
