@@ -40,3 +40,7 @@ FILES_${PN} += " \
   ${datadir}/polkit-1/actions/*.policy \
   ${datadir}/katepart5/script/README.md \
 "
+
+FILES_${PN}-dev += " \
+    ${datadir}/kdevappwizard/templates/*.bz2 \
+"

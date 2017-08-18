@@ -27,7 +27,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/plasma-framework;nobranch=1 \
-    file://0001-colorscope-compile-fix.patch \
 "
 S = "${WORKDIR}/git"
 

@@ -8,8 +8,6 @@ DEPENDS = "qtbase ksyntaxhighlighting-native"
 
 SRC_URI = " \
     git://anongit.kde.org/syntax-highlighting;nobranch=1 \
-    file://0001-cross-compilation-support.patch \
-    file://0002-no-gui.patch \
 "
 S = "${WORKDIR}/git"
 

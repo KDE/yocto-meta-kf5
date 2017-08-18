@@ -1,20 +1,27 @@
-commit 3ab170ea32c521435bf22674f9ea7dd92fd2e750
+commit 78eff35256ebe1d5edc4acf6f0e389eb4c7256c3
 Author: Volker Krause <vkrause@kde.org>
 Date:   Thu Aug 10 19:22:05 2017 +0200
 
     Allow to only build the kauth-policy-gen code generator
     
+    Summary:
     This is primarily useful for cross-compilation, where e.g. with Yocto
     neither Qt5Widgets nor PolicyKit are easily available for the host build.
+    
+    Reviewers: #frameworks, cordlandwehr
+    
+    Tags: #frameworks
+    
+    Differential Revision: https://phabricator.kde.org/D7274
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 13a6129..0afd2de 100644
+index f822c89..859b2d9 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -12,7 +12,11 @@ feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKA
  set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
  
- set(REQUIRED_QT_VERSION 5.6.0)
+ set(REQUIRED_QT_VERSION 5.7.0)
 -find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets DBus)
 +find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED DBus)
 +option(KAUTH_BUILD_CODEGENERATOR_ONLY "Only build the kauth-policy-gen code generator." OFF)

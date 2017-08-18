@@ -7,9 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase sonnet-native"
 
-# patch 0001 can be dropped once we update to 5.37
 SRC_URI = "git://anongit.kde.org/sonnet;nobranch=1 \
-    file://0001-no-widgets.patch \
     file://0002-unexport-helpers.patch \
 "
 S = "${WORKDIR}/git"

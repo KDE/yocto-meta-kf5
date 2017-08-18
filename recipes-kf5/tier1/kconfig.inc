@@ -12,7 +12,6 @@ DEPENDS = "qtbase kconfig-native"
 
 SRC_URI = " \
     git://anongit.kde.org/kconfig;nobranch=1 \
-    file://0001-no-gui.patch \
 "
 S = "${WORKDIR}/git"
 

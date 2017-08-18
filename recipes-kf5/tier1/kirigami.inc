@@ -6,7 +6,7 @@ PR = "r0"
 
 DEPENDS = "qtquickcontrols2 qtsvg"
 
-SRC_URI = "git://anongit.kde.org/kirigami"
+SRC_URI = "git://anongit.kde.org/kirigami;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
