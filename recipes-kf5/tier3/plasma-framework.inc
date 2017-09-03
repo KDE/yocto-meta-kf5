@@ -27,6 +27,7 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/plasma-framework;nobranch=1 \
+    file://0001-optional-kdoctools.patch \
 "
 S = "${WORKDIR}/git"
 

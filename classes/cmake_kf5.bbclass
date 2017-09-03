@@ -5,10 +5,10 @@ EXTRA_OECMAKE += " \
     -DBUILD_TESTING=OFF \
 "
 
-DEPENDS += "extra-cmake-modules"
+DEPENDS += "extra-cmake-modules qttools-native"
 
-# FIXME: using tags gives us translations, translations require lrelease/lconvert host tools, the ecm recipe can't deal with that yet...
-do_configure_prepend() {
+# don't bother with translations for host tools
+do_configure_class-native_prepend() {
     rm -rf ${S}/po
 }
 
