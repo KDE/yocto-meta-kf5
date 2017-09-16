@@ -19,7 +19,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/ktexteditor;nobranch=1 \
-    file://0001-no-accessibility.patch \
 "
 S = "${WORKDIR}/git"
 

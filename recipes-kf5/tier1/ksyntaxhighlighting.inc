@@ -19,5 +19,5 @@ EXTRA_OECMAKE_class-target += " -DKATEHIGHLIGHTINGINDEXER=${STAGING_DIR_NATIVE}/
 
 sysroot_stage_all_append_class-native () {
     mkdir -p ${SYSROOT_DESTDIR}/${bindir}
-    cp ${B}/src/indexer/katehighlightingindexer ${SYSROOT_DESTDIR}/${bindir}
+    cp ${B}/bin/katehighlightingindexer ${SYSROOT_DESTDIR}/${bindir}
 }

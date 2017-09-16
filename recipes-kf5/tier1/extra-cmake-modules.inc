@@ -6,7 +6,7 @@ PR = "r0"
 
 DEPENDS = "cmake-native qttools"
 
-SRC_URI = "git://anongit.kde.org/extra-cmake-modules;protocol=git"
+SRC_URI = "git://anongit.kde.org/extra-cmake-modules;nobranch=1"
 S = "${WORKDIR}/git"
 
 do_compile() {

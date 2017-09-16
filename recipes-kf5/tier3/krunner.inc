@@ -31,4 +31,5 @@ FILES_${PN} += " \
 
 FILES_${PN}-dev += " \
     ${datadir}/kdevappwizard/templates/* \
+    ${datadir}/dbus-1/interfaces/*.xml \
 "

@@ -21,7 +21,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kwallet;nobranch=1 \
-    file://0001-no-find-file.patch \
 "
 S = "${WORKDIR}/git"
 

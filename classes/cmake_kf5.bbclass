@@ -8,7 +8,7 @@ EXTRA_OECMAKE += " \
 DEPENDS += "extra-cmake-modules qttools-native"
 
 # don't bother with translations for host tools
-do_configure_class-native_prepend() {
+do_configure_prepend_class-native() {
     rm -rf ${S}/po
 }
 
