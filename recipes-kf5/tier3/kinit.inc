@@ -16,7 +16,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kinit;nobranch=1 \
-    file://0001-no-x11.patch \
 "
 S = "${WORKDIR}/git"
 
