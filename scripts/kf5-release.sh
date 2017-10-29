@@ -22,11 +22,12 @@ add)
     for recipe in `find $base -name "*.inc" | grep -v /staging/`; do
         name=`echo $recipe | sed -e "s,\.inc,_${version}.bb,"`
         echo -e 'require ${PN}.inc\nSRCREV = "v${PV}"' > $name
+        git add $name
     done
     ;;
 remove)
     for recipe in `find $base -name "*_$version.bb"`; do
-        rm $recipe
+        git rm $recipe
     done
     ;;
 *)
