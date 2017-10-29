@@ -15,7 +15,3 @@ inherit cmake_kf5
 FILES_${PN} += " \
     ${datadir}/kservicetypes5/knotificationplugin.desktop \
 "
-
-FILES_${PN}-dev += " \
-    ${datadir}/dbus-1/interfaces/*.xml \
-"

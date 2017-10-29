@@ -42,10 +42,5 @@ FILES_${PN} += " \
     ${datadir}/kservices5/useragentstrings/*.desktop \
     ${datadir}/kservices5/searchproviders/*.desktop \
     ${datadir}/kservicetypes5/*.desktop \
-    ${datadir}/dbus-1/services/*.service \
     ${datadir}/kf5/kcookiejar/domain_info \
-"
-
-FILES_${PN}-dev += " \
-    ${datadir}/dbus-1/interfaces/*.xml \
 "

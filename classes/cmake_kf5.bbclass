@@ -22,7 +22,12 @@ do_install_prepend() {
 
 BBCLASSEXTEND = "native nativesdk"
 
+FILES_${PN} += " \
+    ${datadir}/dbus-1/services/*.service \
+"
+
 FILES_${PN}-dev += " \
+    ${datadir}/dbus-1/interfaces/*.xml \
     ${libdir}/cmake/KF5*/*.cmake \
     ${prefix}/mkspecs/modules/qt_*.pri \
 "

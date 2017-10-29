@@ -23,11 +23,9 @@ inherit cmake_kf5
 FILES_SOLIBSDEV = ""
 FILES_${PN} += " \
     ${libdir}/libkdeinit5_kded5.so \
-    ${datadir}/dbus-1/services/*.service \
     ${datadir}/kservicetypes5/*.desktop \
 "
 
 FILES_${PN}-dev += " \
     ${libdir}/cmake/KDED/*.cmake \
-    ${datadir}/dbus-1/interfaces/*.xml \
 "

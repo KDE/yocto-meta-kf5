@@ -30,5 +30,4 @@ FILES_${PN} += " \
 
 FILES_${PN}-dev += " \
     ${libdir}/cmake/KF5Init/kde5init_dummy.cpp.in \
-    ${datadir}/dbus-1/interfaces/*.xml \
 "

@@ -31,9 +31,4 @@ inherit python3native
 FILES_${PN} += " \
     ${datadir}/knotifications5/*.notifyrc \
     ${datadir}/kservices5/*.desktop \
-    ${datadir}/dbus-1/services/*.service \
-"
-
-FILES_${PN}-dev += " \
-    ${datadir}/dbus-1/interfaces/*.xml \
 "

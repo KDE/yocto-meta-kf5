@@ -34,7 +34,3 @@ FILES_${PN} += " \
     ${datadir}/icons/hicolor/128x128/apps/baloo.png \
     ${datadir}/kservices5/*.protocol \
 "
-
-FILES_${PN}-dev += " \
-    ${datadir}/dbus-1/interfaces/*.xml \
-"

@@ -19,11 +19,6 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-FILES_${PN}-dev += " \
-    ${datadir}/dbus-1/interfaces/kf5_org.*.xml \
-"
-
 FILES_${PN} += " \
-    ${datadir}/dbus-1/services/org.kde.kglobalaccel.service \
     ${datadir}/kservices5/kglobalaccel5.desktop \
 "

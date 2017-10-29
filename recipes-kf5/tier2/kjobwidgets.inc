@@ -11,7 +11,3 @@ SRC_URI = "git://anongit.kde.org/kjobwidgets;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN} += " \
-    ${datadir}/dbus-1/interfaces/*.xml \
-"
