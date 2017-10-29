@@ -11,7 +11,3 @@ SRC_URI = "git://anongit.kde.org/knotifications;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN} += " \
-    ${datadir}/kservicetypes5/knotificationplugin.desktop \
-"

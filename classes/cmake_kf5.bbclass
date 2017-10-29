@@ -24,10 +24,16 @@ BBCLASSEXTEND = "native nativesdk"
 
 FILES_${PN} += " \
     ${datadir}/dbus-1/services/*.service \
+    ${datadir}/knotifications5/*.notifyrc \
+    ${datadir}/kservices5/*.desktop \
+    ${datadir}/kservices5/*.protocol \
+    ${datadir}/kservicetypes5/*.desktop \
+    ${datadir}/kservices5/*.desktop \
 "
 
 FILES_${PN}-dev += " \
     ${datadir}/dbus-1/interfaces/*.xml \
+    ${datadir}/kdevappwizard/templates/*.tar.bz2 \
     ${libdir}/cmake/KF5*/*.cmake \
     ${prefix}/mkspecs/modules/qt_*.pri \
 "

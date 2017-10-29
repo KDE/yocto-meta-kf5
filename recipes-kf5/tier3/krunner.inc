@@ -26,9 +26,4 @@ inherit python3native
 
 FILES_${PN} += " \
   ${libdir}/qml/org/kde/runnermodel/* \
-  ${datadir}/kservicetypes5/*.desktop \
-"
-
-FILES_${PN}-dev += " \
-    ${datadir}/kdevappwizard/templates/* \
 "

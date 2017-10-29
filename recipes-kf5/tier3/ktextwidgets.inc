@@ -12,7 +12,3 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 inherit gettext
 inherit python3native
-
-FILES_${PN} += " \
-  ${datadir}/kservicetypes5/*.desktop \
-"

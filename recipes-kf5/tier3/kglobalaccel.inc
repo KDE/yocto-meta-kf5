@@ -18,7 +18,3 @@ SRC_URI = "git://anongit.kde.org/kglobalaccel;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-
-FILES_${PN} += " \
-    ${datadir}/kservices5/kglobalaccel5.desktop \
-"

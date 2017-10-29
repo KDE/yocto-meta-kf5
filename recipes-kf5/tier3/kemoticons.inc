@@ -20,8 +20,6 @@ inherit cmake_kf5
 FILES_${PN} += " \
     ${libdir}/plugins/kf5/*.so \
     ${libdir}/plugins/kf5/emoticonsthemes/*.so \
-    ${datadir}/kservices5/*.desktop \
-    ${datadir}/kservicetypes5/*.desktop \
     ${datadir}/emoticons/Konqi/*.png \
     ${datadir}/emoticons/Konqi/emoticons.xml \
     ${datadir}/emoticons/EmojiOne/*.png \

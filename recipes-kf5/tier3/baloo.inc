@@ -32,5 +32,4 @@ FILES_${PN} += " \
     ${libdir}/qml/org/kde/baloo/* \
     ${libdir}/qml/org/kde/baloo/experimental/* \
     ${datadir}/icons/hicolor/128x128/apps/baloo.png \
-    ${datadir}/kservices5/*.protocol \
 "

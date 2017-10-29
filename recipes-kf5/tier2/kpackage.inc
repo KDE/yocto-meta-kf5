@@ -18,7 +18,3 @@ sysroot_stage_all_append_class-target() {
     mkdir -p ${SYSROOT_DESTDIR}/${bindir}
     cp ${D}${bindir}//kpackagetool5 ${SYSROOT_DESTDIR}/${bindir}/
 }
-
-FILES_${PN} += " \
-    ${datadir}/kservicetypes5/* \
-"

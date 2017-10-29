@@ -51,8 +51,6 @@ FILES_${PN} += " \
     ${libdir}/qml/QtQuick/Controls.2/Plasma/* \
     ${libdir}/qml/QtQuick/Controls.2/Plasma/private/* \
     ${libdir}/qml/QtQuick/Controls/Styles/Plasma/* \
-    ${datadir}/kservices5/*.desktop \
-    ${datadir}/kservicetypes5/*.desktop \
     ${datadir}/plasma/services/*.operations \
     ${datadir}/plasma/desktoptheme/air/* \
     ${datadir}/plasma/desktoptheme/air/*/* \
@@ -64,8 +62,4 @@ FILES_${PN} += " \
     ${datadir}/plasma/desktoptheme/default/*/* \
     ${datadir}/plasma/desktoptheme/oxygen/* \
     ${datadir}/plasma/desktoptheme/oxygen/*/* \
-"
-
-FILES_${PN}-dev += " \
-    ${datadir}/kdevappwizard/templates/* \
 "

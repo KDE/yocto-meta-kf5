@@ -36,11 +36,7 @@ FILES_${PN} += " \
     ${libdir}/plugins/kf5/kded/*.so \
     ${libdir}/plugins/kf5/kiod/*.so \
     ${libdir}/plugins/kf5/urifilters/*.so \
-    ${datadir}/knotifications5/proxyscout.notifyrc \
-    ${datadir}/kservices5/*.protocol \
-    ${datadir}/kservices5/*.desktop \
     ${datadir}/kservices5/useragentstrings/*.desktop \
     ${datadir}/kservices5/searchproviders/*.desktop \
-    ${datadir}/kservicetypes5/*.desktop \
     ${datadir}/kf5/kcookiejar/domain_info \
 "

@@ -23,6 +23,5 @@ inherit python3native
 
 FILES_${PN} += " \
     ${libdir}/qml/org/kde/people/* \
-    ${datadir}/kservicetypes5/*.desktop \
     ${datadir}/kf5/kpeople/*.png \
 "

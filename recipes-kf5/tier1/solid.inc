@@ -12,10 +12,6 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-FILES_${PN}-dbg += " \
-    ${libdir}/qml/org/kde/solid/.debug/*.so \
-"
-
 FILES_${PN} += " \
     ${libdir}/qml/org/kde/solid/qmldir \
     ${libdir}/qml/org/kde/solid/*.so \

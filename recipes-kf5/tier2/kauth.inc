@@ -36,7 +36,3 @@ FILES_${PN} += " \
 FILES_${PN}-dev += " \
     ${libexecdir}/kauth/kauth-policy-gen \
 "
-
-FILES_${PN}-dbg += " \
-    ${libdir}/plugins/kauth/helper/.debug/kauth_helper_plugin.so \
-"
