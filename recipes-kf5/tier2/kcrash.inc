@@ -8,7 +8,7 @@ PR = "r0"
 DEPENDS = "kcoreaddons kwindowsystem"
 
 SRC_URI = " \
-    git://anongit.kde.org/kcrash \
+    git://anongit.kde.org/kcrash;nobranch=1 \
     file://0001-no-x11.patch \
 "
 S = "${WORKDIR}/git"

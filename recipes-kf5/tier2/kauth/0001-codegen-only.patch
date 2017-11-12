@@ -1,4 +1,4 @@
-commit 78eff35256ebe1d5edc4acf6f0e389eb4c7256c3
+commit 11268b7467cecc09783da08c67e37dffa227e6d5
 Author: Volker Krause <vkrause@kde.org>
 Date:   Thu Aug 10 19:22:05 2017 +0200
 
@@ -15,7 +15,7 @@ Date:   Thu Aug 10 19:22:05 2017 +0200
     Differential Revision: https://phabricator.kde.org/D7274
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f822c89..859b2d9 100644
+index 45efd2c..947e138 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -12,7 +12,11 @@ feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKA
@@ -195,7 +195,7 @@ index 662a0dd..a0aa965 100644
      ecm_add_qch(
          KF5Auth_QCH
 diff --git a/src/ConfigureChecks.cmake b/src/ConfigureChecks.cmake
-index d46761a..03b1142 100644
+index d46761a..1f99ad5 100644
 --- a/src/ConfigureChecks.cmake
 +++ b/src/ConfigureChecks.cmake
 @@ -61,7 +61,7 @@ if(NOT KAUTH_BACKEND)
@@ -207,12 +207,8 @@ index d46761a..03b1142 100644
      # Case-insensitive
      string(TOUPPER ${KAUTH_BACKEND} KAUTH_BACKEND_UPPER)
      set (KAUTH_BACKEND ${KAUTH_BACKEND_UPPER})
-@@ -103,10 +103,10 @@ else(NOT KAUTH_BACKEND)
-         if (NOT PolkitQt5-1_FOUND)
-             message ("WARNING: You chose the PolkitQt5-1 KAuth backend but you don't have PolkitQt5-1 installed.
-                       Falling back to Fake backend")
--            set (KAUTH_BACKEND "FAKE")
-+            #set (KAUTH_BACKEND "FAKE")
+@@ -106,7 +106,7 @@ else(NOT KAUTH_BACKEND)
+             set (KAUTH_BACKEND "FAKE")
          endif (NOT PolkitQt5-1_FOUND)
      endif (KAUTH_BACKEND STREQUAL "POLKITQT5-1")
 -endif(NOT KAUTH_BACKEND)
@@ -231,7 +227,7 @@ index d46761a..03b1142 100644
 -    string(REPLACE ${POLKITQT-1_INSTALL_DIR}
 -        ${CMAKE_INSTALL_PREFIX} _KAUTH_POLICY_FILES_INSTALL_DIR
 -        ${POLKITQT-1_POLICY_FILES_INSTALL_DIR})
-+    if(POLKITQT-1_INSTALL_DIR)
++    if(PolkitQt5-1_FOUND)
 +        string(REPLACE ${POLKITQT-1_INSTALL_DIR}
 +            ${CMAKE_INSTALL_PREFIX} _KAUTH_POLICY_FILES_INSTALL_DIR
 +            ${POLKITQT-1_POLICY_FILES_INSTALL_DIR})

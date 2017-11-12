@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase wayland-native"
 
-SRC_URI = "git://anongit.kde.org/kwayland"
+SRC_URI = "git://anongit.kde.org/kwayland;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

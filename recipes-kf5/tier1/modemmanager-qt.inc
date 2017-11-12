@@ -6,7 +6,7 @@ PR = "r0"
 
 DEPENDS = "qtbase modemmanager"
 
-SRC_URI = "git://anongit.kde.org/modemmanager-qt"
+SRC_URI = "git://anongit.kde.org/modemmanager-qt;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

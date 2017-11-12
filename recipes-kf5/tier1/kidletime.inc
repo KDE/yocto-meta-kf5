@@ -11,7 +11,7 @@ DEPENDS = " \
 "
 
 SRC_URI = " \
-    git://anongit.kde.org/kidletime \
+    git://anongit.kde.org/kidletime;nobranch=1 \
 "
 S = "${WORKDIR}/git"
 

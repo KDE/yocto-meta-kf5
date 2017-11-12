@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-SRC_URI = "git://anongit.kde.org/kguiaddons"
+SRC_URI = "git://anongit.kde.org/kguiaddons;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase qrencode libdmtx"
 
-SRC_URI = "git://anongit.kde.org/prison"
+SRC_URI = "git://anongit.kde.org/prison;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

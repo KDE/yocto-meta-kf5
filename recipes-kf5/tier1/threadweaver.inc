@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-SRC_URI = "git://anongit.kde.org/threadweaver"
+SRC_URI = "git://anongit.kde.org/threadweaver;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
