@@ -16,3 +16,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+
+FILES_${PN} += " \
+    ${libdir}/plugins/kf5/org.kde.kidletime.platforms/*.so \
+"
