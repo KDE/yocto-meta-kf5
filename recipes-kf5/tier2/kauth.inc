@@ -10,7 +10,6 @@ DEPENDS_class-target = "qtbase kcoreaddons kauth-native polkit-qt-1"
 
 SRC_URI = " \
     git://anongit.kde.org/kauth;nobranch=1 \
-    file://0001-codegen-only.patch \
 "
 S = "${WORKDIR}/git"
 
