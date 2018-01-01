@@ -1,0 +1,23 @@
+commit 843cf87fbaebf977d2a2d1278d8369d4e1dba918
+Author: Volker Krause <vkrause@kde.org>
+Date:   Mon Jan 1 19:19:12 2018 +0100
+
+    Don't export kf5-config to the CMake config file
+    
+    It's not needed during building, but the corresponding find_package call
+    will check for its existence anyway, which is inconvenient when cross-
+    compiling.
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 16dc6242..c59dff87 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -91,7 +91,7 @@ ecm_mark_nongui_executable(kf5-config)
+ target_link_libraries(kf5-config KF5::CoreAddons KF5::I18n KF5::ConfigCore KF5::KDELibs4Support)
+ target_include_directories(kf5-config PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/../..")
+ 
+-install(TARGETS kf5-config EXPORT KF5KDELibs4SupportTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} ) # put this for now into the export set KDELibs4SupportTargets, so that it exists and is not empty
++install(TARGETS kf5-config ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} ) # put this for now into the export set KDELibs4SupportTargets, so that it exists and is not empty
+ 
+ 
+ # create a Config.cmake and a ConfigVersion.cmake file and install them

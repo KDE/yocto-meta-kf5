@@ -71,4 +71,5 @@ RDEPENDS_${PN} = " \
     \
     kjs \
     kjsembed \
+    kdelibs4support \
 "
