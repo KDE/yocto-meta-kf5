@@ -70,4 +70,5 @@ RDEPENDS_${PN} = " \
     qqc2-desktop-style \
     \
     kjs \
+    kjsembed \
 "

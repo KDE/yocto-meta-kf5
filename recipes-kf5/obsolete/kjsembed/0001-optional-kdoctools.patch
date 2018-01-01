@@ -1,0 +1,38 @@
+commit d8bc800380613a147d4db2df696e44b816375a38
+Author: Volker Krause <vkrause@kde.org>
+Date:   Mon Jan 1 14:18:52 2018 +0100
+
+    Make kdoctools dependency optional
+    
+    Summary: Same as its done in other frameworks. This simplifies cross-compilation.
+    
+    Reviewers: #frameworks
+    
+    Tags: #frameworks
+    
+    Differential Revision: https://phabricator.kde.org/D9588
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c826d01..8158d31 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -29,7 +29,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KJSEMBED
+ 
+ find_package(KF5JS ${KF5_DEP_VERSION} REQUIRED)
+ find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
+-find_package(KF5DocTools ${KF5_DEP_VERSION} REQUIRED)
++find_package(KF5DocTools ${KF5_DEP_VERSION})
+ 
+ add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0)
+ remove_definitions(-DQT_NO_CAST_FROM_ASCII)
+@@ -40,7 +40,9 @@ if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+     ki18n_install(po)
+     kdoctools_install(po)
+ endif()
+-add_subdirectory(docs)
++if(KF5DocTools_FOUND)
++    add_subdirectory(docs)
++endif()
+ add_subdirectory(src)
+ add_subdirectory(examples/kjsconsole)
+ 
