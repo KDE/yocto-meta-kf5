@@ -1,0 +1,44 @@
+commit 3cc55f8cd9424abc4a8b1ba31599b8d14a65c56d
+Author: Volker Krause <vkrause@kde.org>
+Date:   Mon Jan 1 17:42:44 2018 +0100
+
+    Make kdoctools dependency optional
+    
+    Summary: Same as its done in other frameworks. This simplifies cross-compilation.
+    
+    Reviewers: #frameworks
+    
+    Tags: #frameworks
+    
+    Differential Revision: https://phabricator.kde.org/D9594
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b8429f3..e23c479 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -29,7 +29,7 @@ include(ECMPoQmTools)
+ 
+ find_package(KF5CoreAddons ${KF5_DEP_VERSION} REQUIRED)
+ find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
+-find_package(KF5DocTools ${KF5_DEP_VERSION} REQUIRED)
++find_package(KF5DocTools ${KF5_DEP_VERSION})
+ 
+ find_package(KF5Completion ${KF5_DEP_VERSION})
+ set_package_properties(KF5Completion PROPERTIES TYPE OPTIONAL
+@@ -89,10 +89,14 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII)
+ 
+ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DesignerPlugin")
+ 
+-add_subdirectory(docs)
++if (KF5DocTools_FOUND)
++    add_subdirectory(docs)
++endif()
+ if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+     ecm_install_po_files_as_qm(po)
+-    kdoctools_install(po)
++    if (KF5DocTools_FOUND)
++        kdoctools_install(po)
++    endif()
+ endif()
+ 
+ add_subdirectory(src)
