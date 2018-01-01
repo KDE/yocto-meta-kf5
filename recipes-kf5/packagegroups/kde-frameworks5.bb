@@ -68,4 +68,6 @@ RDEPENDS_${PN} = " \
     kxmlrpcclient \
     plasma-framework \
     qqc2-desktop-style \
+    \
+    kjs \
 "
