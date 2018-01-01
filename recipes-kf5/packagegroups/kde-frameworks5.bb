@@ -37,6 +37,7 @@ RDEPENDS_${PN} = " \
     kactivities \
     kauth \
     kcrash \
+    kdoctools \
     kfilemetadata \
     kjobwidgets \
     knotifications \
