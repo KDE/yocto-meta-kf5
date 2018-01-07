@@ -55,6 +55,7 @@ RDEPENDS_${PN} = " \
     kemoticons \
     kglobalaccel \
     kiconthemes \
+    kinit \
     kio \
     knewstuff \
     knotifyconfig \
