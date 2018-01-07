@@ -20,3 +20,7 @@ FILES_${PN} += " \
     ${libdir}/qml/org/kde/kirigami.2/templates/* \
     ${libdir}/qml/org/kde/kirigami.2/templates/private/* \
 "
+
+RDEPENDS_${PN} += " \
+    qtgraphicaleffects-qmlplugins \
+"
