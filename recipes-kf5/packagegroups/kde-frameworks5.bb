@@ -71,6 +71,8 @@ RDEPENDS_${PN} = " \
     plasma-framework \
     qqc2-desktop-style \
     \
+    frameworkintegration \
+    \
     kjs \
     kjsembed \
     kdelibs4support \
