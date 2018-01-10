@@ -16,6 +16,7 @@ DEPENDS = " \
     kglobalaccel \
     kguiaddons \
     kpackage \
+    libepoxy \
 "
 
 SRC_URI = "git://anongit.kde.org/kdeclarative;nobranch=1"
