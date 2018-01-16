@@ -20,6 +20,7 @@ DEPENDS = " \
     kparts \
     kunitconversion \
     liburi-perl-native \
+    openssl \
 "
 
 SRC_URI = " \

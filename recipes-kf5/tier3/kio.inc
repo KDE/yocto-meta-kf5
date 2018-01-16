@@ -40,3 +40,7 @@ FILES_${PN} += " \
     ${datadir}/kservices5/searchproviders/*.desktop \
     ${datadir}/kf5/kcookiejar/domain_info \
 "
+
+RDEPENDS_${PN} += " \
+    ca-certificates \
+"

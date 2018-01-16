@@ -27,7 +27,7 @@ add)
     ;;
 remove)
     for recipe in `find $base -name "*_$version.bb"`; do
-        git rm $recipe
+        git rm -f $recipe
     done
     ;;
 *)

@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 74f1a2f..b52c833 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -46,7 +46,9 @@ if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+ endif()
+ 
+ add_subdirectory(src)
+-add_subdirectory(autotests)
++if (BUILD_TESTING)
++     add_subdirectory(autotests)
++endif()
+ if (NOT CMAKE_CROSSCOMPILING)
+ 	add_subdirectory(data)
+ endif()

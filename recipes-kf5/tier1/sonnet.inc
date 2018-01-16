@@ -7,14 +7,15 @@ PR = "r0"
 
 DEPENDS = "qtbase sonnet-native"
 
-SRC_URI = "git://anongit.kde.org/sonnet;nobranch=1 \
-    file://0002-unexport-helpers.patch \
+SRC_URI = " \
+    git://anongit.kde.org/sonnet;nobranch=1 \
+    file://0001-no-autotests.diff \
 "
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-EXTRA_OECMAKE_class-native += " -DSONNET_USE_WIDGETS=OFF"
-EXTRA_OECMAKE_class-target += " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/parsetrigrams"
+EXTRA_OECMAKE_append_class-native += " -DSONNET_USE_WIDGETS=OFF"
+EXTRA_OECMAKE_append_class-target += " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/parsetrigrams"
 
 FILES_${PN} += " \
     ${datadir}/kf5/sonnet/* \

@@ -23,6 +23,7 @@ DEPENDS = " \
     knotifications \
     kpackage \
     kwayland \
+    kirigami \
 "
 
 SRC_URI = " \
@@ -39,18 +40,10 @@ FILES_${PN} += " \
     ${libdir}/plugins/kpackage/packagestructure/*.so \
     ${libdir}/plugins/plasma/scriptengines/*.so \
     ${libdir}/qml/org/kde/plasma/accessdenied/* \
-    ${libdir}/qml/org/kde/plasma/components.3/* \
-    ${libdir}/qml/org/kde/plasma/extras/* \
-    ${libdir}/qml/org/kde/plasma/extras/animations/* \
-    ${libdir}/qml/org/kde/plasma/components/* \
-    ${libdir}/qml/org/kde/plasma/components/private/* \
-    ${libdir}/qml/org/kde/plasma/core/* \
-    ${libdir}/qml/org/kde/plasma/core/private/* \
-    ${libdir}/qml/org/kde/plasma/calendar/* \
-    ${libdir}/qml/org/kde/plasma/platformcomponents/* \
-    ${libdir}/qml/QtQuick/Controls.2/Plasma/* \
-    ${libdir}/qml/QtQuick/Controls.2/Plasma/private/* \
-    ${libdir}/qml/QtQuick/Controls/Styles/Plasma/* \
+    ${libdir}/qml/org/kde/plasma  \
+    ${libdir}/qml/org/kde/kirigami.2 \
+    ${libdir}/qml/QtQuick/Controls.2/Plasma \
+    ${libdir}/qml/QtQuick/Controls/Styles/Plasma \
     ${datadir}/plasma/services/*.operations \
     ${datadir}/plasma/desktoptheme/air/* \
     ${datadir}/plasma/desktoptheme/air/*/* \

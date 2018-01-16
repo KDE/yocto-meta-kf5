@@ -11,3 +11,7 @@ SRC_URI = "git://anongit.kde.org/kdbusaddons;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+
+FILES_${PN}-dev += " \
+    ${libdir}/cmake/KF5DBusAddons \
+"

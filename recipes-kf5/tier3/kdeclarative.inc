@@ -27,12 +27,5 @@ inherit gettext
 inherit python3native
 
 FILES_${PN} += " \
-    ${libdir}/qml/org/kde/kquickcontrols/* \
-    ${libdir}/qml/org/kde/kquickcontrolsaddons/* \
-    ${libdir}/qml/org/kde/kio/* \
-    ${libdir}/qml/org/kde/private/kquickcontrols/* \
-    ${libdir}/qml/org/kde/kconfig/* \
-    ${libdir}/qml/org/kde/kcoreaddons/* \
-    ${libdir}/qml/org/kde/draganddrop/* \
-    ${libdir}/qml/org/kde/kwindowsystem/* \
+    ${libdir}/qml/org/kde \
 "

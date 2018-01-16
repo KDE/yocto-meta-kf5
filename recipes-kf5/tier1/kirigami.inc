@@ -12,13 +12,7 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 
 FILES_${PN} += " \
-    ${libdir}/qml/org/kde/kirigami.2/* \
-    ${libdir}/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/* \
-    ${libdir}/qml/org/kde/kirigami.2/styles/Plasma/* \
-    ${libdir}/qml/org/kde/kirigami.2/styles/Material/* \
-    ${libdir}/qml/org/kde/kirigami.2/private/* \
-    ${libdir}/qml/org/kde/kirigami.2/templates/* \
-    ${libdir}/qml/org/kde/kirigami.2/templates/private/* \
+    ${libdir}/qml/org/kde/kirigami.2 \
 "
 
 RDEPENDS_${PN} += " \
