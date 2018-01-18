@@ -29,10 +29,6 @@ inherit python3native
 EXTRA_OECMAKE += " -DBUILD_TESTING=OFF"
 EXTRA_OECMAKE_class-native += " -DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
 
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KF5I18n/*.py \
-"
-
 FILES_${PN}-dbg += " \
     ${libdir}/plugins/kf5/.debug/ktranscript.so \
 "

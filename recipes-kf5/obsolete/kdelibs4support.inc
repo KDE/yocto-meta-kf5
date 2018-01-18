@@ -58,8 +58,6 @@ FILES_${PN} += " \
 "
 
 FILES_${PN}-dev += " \
-    ${libdir}/cmake/KDELibs4/* \
-    ${libdir}/cmake/KF5KDELibs4Support/* \
     ${datadir}/kf5/widgets/pics/*.png \
 "
 

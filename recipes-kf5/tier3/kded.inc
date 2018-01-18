@@ -27,7 +27,3 @@ FILES_SOLIBSDEV = ""
 FILES_${PN} += " \
     ${libdir}/libkdeinit5_kded5.so \
 "
-
-FILES_${PN}-dev += " \
-    ${libdir}/cmake/KDED/*.cmake \
-"
