@@ -10,3 +10,5 @@ SRC_URI = "git://anongit.kde.org/modemmanager-qt;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+
+RDEPENDS_${PN} += "modemmanager"

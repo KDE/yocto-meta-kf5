@@ -17,4 +17,5 @@ FILES_${PN} += " \
 
 RDEPENDS_${PN} += " \
     qtgraphicaleffects-qmlplugins \
+    qtquickcontrols2-qmlplugins \
 "

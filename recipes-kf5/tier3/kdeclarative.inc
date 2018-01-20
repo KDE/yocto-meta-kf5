@@ -29,3 +29,7 @@ inherit python3native
 FILES_${PN} += " \
     ${libdir}/qml/org/kde \
 "
+
+RDEPENDS_${PN} += " \
+    qtdeclarative-qmlplugins \
+"

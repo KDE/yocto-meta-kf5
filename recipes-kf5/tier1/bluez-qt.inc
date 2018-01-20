@@ -14,3 +14,5 @@ inherit cmake_kf5
 FILES_${PN} += " \
     ${libdir}/qml/org/kde/bluezqt/* \
 "
+
+RDEPENDS_${PN} += "bluez5"
