@@ -9,7 +9,6 @@ DEPENDS = "qtbase sonnet-native"
 
 SRC_URI = " \
     git://anongit.kde.org/sonnet;nobranch=1 \
-    file://0001-no-autotests.diff \
 "
 S = "${WORKDIR}/git"
 

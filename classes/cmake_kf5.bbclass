@@ -24,11 +24,13 @@ BBCLASSEXTEND = "native nativesdk"
 
 FILES_${PN} += " \
     ${datadir}/dbus-1/services/*.service \
+    ${datadir}/dbus-1/system-services/*.service \
     ${datadir}/knotifications5/*.notifyrc \
     ${datadir}/kservices5/*.desktop \
     ${datadir}/kservices5/*.protocol \
     ${datadir}/kservicetypes5/*.desktop \
     ${datadir}/kservices5/*.desktop \
+    ${datadir}/polkit-1/actions/*.policy \
 "
 
 FILES_${PN}-dev += " \

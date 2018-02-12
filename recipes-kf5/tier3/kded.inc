@@ -17,7 +17,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kded;nobranch=1 \
-    file://0001-unexport-kded5.patch \
 "
 S = "${WORKDIR}/git"
 

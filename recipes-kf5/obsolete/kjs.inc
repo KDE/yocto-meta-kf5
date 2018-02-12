@@ -9,7 +9,6 @@ DEPENDS = "qtbase kjs-native pcre"
 
 SRC_URI = " \
     git://anongit.kde.org/kjs;nobranch=1 \
-    file://0001-optional-kdoctools.patch \
 "
 S = "${WORKDIR}/git"
 

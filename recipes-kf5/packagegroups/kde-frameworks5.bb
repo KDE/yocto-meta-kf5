@@ -15,6 +15,7 @@ RDEPENDS_${PN} = " \
     kdbusaddons \
     kdnssd \
     kguiaddons \
+    kholidays \
     ki18n \
     kidletime \
     kimageformats \
@@ -69,6 +70,7 @@ RDEPENDS_${PN} = " \
     kxmlgui \
     kxmlrpcclient \
     plasma-framework \
+    purpose \
     qqc2-desktop-style \
     \
     frameworkintegration \

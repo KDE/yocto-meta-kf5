@@ -33,7 +33,5 @@ do_compile_prepend() {
 
 FILES_${PN} += " \
   ${libdir}/plugins/kf5/parts/katepart.so \
-  ${datadir}/dbus-1/system-services/*.service \
-  ${datadir}/polkit-1/actions/*.policy \
   ${datadir}/katepart5/script/README.md \
 "

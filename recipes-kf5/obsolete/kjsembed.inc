@@ -14,8 +14,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/${PN};nobranch=1 \
-    file://0001-optional-kdoctools.patch \
-    file://0002-unexport-kjscmd.patch \
 "
 S = "${WORKDIR}/git"
 

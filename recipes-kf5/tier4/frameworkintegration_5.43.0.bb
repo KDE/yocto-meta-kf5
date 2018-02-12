@@ -1,2 +1,2 @@
 require ${PN}.inc
-SRCREV = "master"
+SRCREV = "v${PV}"

@@ -18,7 +18,6 @@ DEPENDS_class-target += " \
 
 SRC_URI = " \
     git://anongit.kde.org/ki18n;nobranch=1 \
-    file://0001-libintl.patch \
 "
 S = "${WORKDIR}/git"
 
