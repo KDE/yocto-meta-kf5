@@ -14,8 +14,6 @@ inherit cmake_kf5
 EXTRA_OECMAKE += " -DBINARY_ICONS_RESOURCE=OFF"
 
 FILES_${PN} += " \
-    ${datadir}/icons/breeze/index.theme \
-    ${datadir}/icons/breeze/*/*/*.svg \
-    ${datadir}/icons/breeze-dark/index.theme \
-    ${datadir}/icons/breeze-dark/*/*/*.svg \
+    ${datadir}/icons/breeze \
+    ${datadir}/icons/breeze-dark \
 "

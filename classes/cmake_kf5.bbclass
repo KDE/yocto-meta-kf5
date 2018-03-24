@@ -12,6 +12,11 @@ do_configure_prepend_class-native() {
     rm -rf ${S}/po
 }
 
+do_compile_prepend() {
+    export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
+    export LD_LIBRARY_PATH=${STAGING_LIBDIR_NATIVE}:$LD_LIBRARY_PATH
+}
+
 # This function is rather offensive right now, but it seems to work
 do_install_prepend() {
     if [ "0" -ne $(find . -name \*.cmake | grep _usr | wc -l) ]; then

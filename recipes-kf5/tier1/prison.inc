@@ -5,9 +5,13 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=02744127548d68b579a51bda5af08e2b \
     "
 PR = "r0"
 
-DEPENDS = "qtbase qrencode libdmtx"
+DEPENDS = "qtbase qtdeclarative qrencode libdmtx"
 
 SRC_URI = "git://anongit.kde.org/prison;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+
+FILES_${PN} += " \
+    ${libdir}/qml/org/kde/prison/ \
+"
