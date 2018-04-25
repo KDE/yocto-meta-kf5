@@ -24,8 +24,6 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 inherit python3native
 
-# autotests add an extra dependency on QtQml
-EXTRA_OECMAKE += " -DBUILD_TESTING=OFF"
 EXTRA_OECMAKE_class-native += " -DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
 
 FILES_${PN}-dbg += " \
