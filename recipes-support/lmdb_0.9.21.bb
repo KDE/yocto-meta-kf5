@@ -11,18 +11,24 @@ inherit base
 S = "${WORKDIR}/git/libraries/liblmdb"
 
 do_compile() {
-    oe_runmake CC="${CC}" SOEXT=".so.${PV}" LDFLAGS="-Wl,-soname,lib${PN}.so.${PV}"
+    oe_runmake CC="${CC}" SOEXT="-${PV}.so" LDFLAGS="-Wl,-soname,lib${PN}-${PV}.so"
 }
 
 do_install() {
-    oe_runmake CC="${CC}" DESTDIR="${D}" prefix="${prefix}" libprefix="${libdir}" manprefix="${mandir}" SOEXT=".so.${PV}" LDFLAGS="-Wl,-soname,lib${PN}.so.${PV}" install
+    oe_runmake CC="${CC}" DESTDIR="${D}" prefix="${prefix}" libprefix="${libdir}" manprefix="${mandir}" SOEXT="-${PV}.so" LDFLAGS="-Wl,-soname,lib${PN}-${PV}.so" install
     cd ${D}/${libdir}
-    ln -s liblmdb.so.${PV} liblmdb.so
+    ln -s liblmdb-${PV}.so liblmdb.so
     rm liblmdb.a
 }
 
+FILES_SOLIBSDEV = ""
+FILES_${PN} += " \
+    ${libdir}/lib${PN}-${PV}.so \
+"
+
 FILES_${PN}-dev += " \
     ${bindir}/mdb_* \
+    ${libdir}/lib${PN}.so \
 "
 
 INSANE_SKIP += "ldflags"
