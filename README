@@ -39,9 +39,12 @@ location of the kf5 layer to bblayers.conf, along with any
 other layers needed. e.g.:
 
   BBLAYERS ?= " \
-    /path/to/yocto/meta \
-    /path/to/yocto/meta-yocto \
-    /path/to/yocto/meta-yocto-bsp \
+    /path/to/poky/meta \
+    /path/to/poky/meta-yocto \
+    /path/to/poky/meta-yocto-bsp \
+    /path/to/meta-openembedded/meta-networking \
+    /path/to/meta-openembedded/meta-python \
+    /path/to/meta-openembedded/meta-oe \
     /path/to/yocto/meta-kf5 \
     /path/to/yocto/meta-qt5 \
     "
