@@ -39,6 +39,7 @@ FILES_${PN} += " \
     ${datadir}/kservices5/useragentstrings/*.desktop \
     ${datadir}/kservices5/searchproviders/*.desktop \
     ${datadir}/kf5/kcookiejar/domain_info \
+    ${datadir}/kconf_update \
 "
 
 RDEPENDS_${PN} += " \
