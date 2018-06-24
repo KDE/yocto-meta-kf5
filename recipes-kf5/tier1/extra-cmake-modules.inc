@@ -8,6 +8,7 @@ DEPENDS = "cmake-native qttools"
 
 SRC_URI = "git://anongit.kde.org/extra-cmake-modules;nobranch=1"
 S = "${WORKDIR}/git"
+CLEANBROKEN = "1"
 
 do_compile() {
     cmake -DCMAKE_INSTALL_PREFIX:PATH=${D}/${prefix}/ .
