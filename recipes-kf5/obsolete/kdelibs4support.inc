@@ -14,6 +14,8 @@ DEPENDS = " \
     kded \
     kdesignerplugin \
     kdesignerplugin-native \
+    kdoctools \
+    kdoctools-native \
     kemoticons \
     kglobalaccel \
     kiconthemes \
@@ -27,7 +29,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kdelibs4support;nobranch=1 \
-    file://0001-optional-kdoctools.patch \
     file://0003-unexport-kf5-config.patch \
 "
 S = "${WORKDIR}/git"
