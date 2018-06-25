@@ -12,6 +12,8 @@ DEPENDS = " \
     kconfigwidgets \
     kcrash \
     kded \
+    kdesignerplugin \
+    kdesignerplugin-native \
     kemoticons \
     kglobalaccel \
     kiconthemes \
@@ -26,7 +28,6 @@ DEPENDS = " \
 SRC_URI = " \
     git://anongit.kde.org/kdelibs4support;nobranch=1 \
     file://0001-optional-kdoctools.patch \
-    file://0002-optional-kdesignerplugin.patch \
     file://0003-unexport-kf5-config.patch \
 "
 S = "${WORKDIR}/git"
@@ -41,6 +42,10 @@ inherit perlnative
 do_compile_prepend() {
     # desktoptojson needs to find installed service type files
     export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
+}
+
+do_install_append_class-target() {
+    rm -rf ${D}${libdir}/plugins/designer
 }
 
 FILES_${PN} += " \
