@@ -29,7 +29,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kdelibs4support;nobranch=1 \
-    file://0003-unexport-kf5-config.patch \
 "
 S = "${WORKDIR}/git"
 

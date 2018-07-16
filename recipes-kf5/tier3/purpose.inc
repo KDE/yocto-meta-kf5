@@ -21,6 +21,7 @@ inherit gettext
 inherit python3native
 
 FILES_${PN} += " \
+    ${libdir}/plugins/kf5/kfileitemaction \
     ${libdir}/plugins/kf5/purpose \
     ${libdir}/qml/org/kde/purpose \
     ${datadir}/icons/hicolor \
