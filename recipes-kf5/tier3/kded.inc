@@ -13,6 +13,7 @@ DEPENDS = " \
     kio \
     kinit \
     kservice \
+    libxslt-native \
 "
 
 SRC_URI = " \
