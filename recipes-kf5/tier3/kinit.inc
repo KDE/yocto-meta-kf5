@@ -12,6 +12,7 @@ DEPENDS = " \
     kwindowsystem \
     kcrash \
     kconfig \
+    libxslt-native \
 "
 
 SRC_URI = " \
