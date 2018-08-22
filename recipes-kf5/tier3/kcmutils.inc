@@ -15,6 +15,7 @@ DEPENDS = " \
     kxmlgui \
     kdeclarative \
     kpackage \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kcmutils;nobranch=1"

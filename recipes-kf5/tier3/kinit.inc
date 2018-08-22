@@ -13,6 +13,7 @@ DEPENDS = " \
     kcrash \
     kconfig \
     libxslt-native \
+    gettext-native \
 "
 
 SRC_URI = " \

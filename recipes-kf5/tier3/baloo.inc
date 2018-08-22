@@ -17,6 +17,7 @@ DEPENDS = " \
     kcrash \
     kio \
     lmdb \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/baloo;nobranch=1"

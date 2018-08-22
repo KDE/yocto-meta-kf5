@@ -15,6 +15,7 @@ DEPENDS = " \
     sonnet \
     kiconthemes \
     ksyntaxhighlighting \
+    gettext-native \
 "
 
 SRC_URI = " \

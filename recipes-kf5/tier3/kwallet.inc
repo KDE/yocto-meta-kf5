@@ -17,6 +17,7 @@ DEPENDS = " \
     kwidgetsaddons \
     kwindowsystem \
     libgcrypt \
+    gettext-native \
 "
 
 SRC_URI = " \

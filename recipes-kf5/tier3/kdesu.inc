@@ -10,6 +10,7 @@ DEPENDS = " \
     ki18n \
     kservice \
     kpty \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kdesu;nobranch=1"

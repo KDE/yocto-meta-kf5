@@ -16,6 +16,7 @@ DEPENDS = " \
     ktextwidgets \
     kwidgetsaddons \
     kxmlgui \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kparts;nobranch=1"

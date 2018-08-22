@@ -15,12 +15,15 @@ DEPENDS = " \
     solid \
     kbookmarks \
     kcompletion \
+    kdoctools \
     kconfigwidgets \
     kiconthemes \
     kitemviews \
     kjobwidgets \
     kwidgetsaddons \
-    kwindowsystem\
+    kwindowsystem \
+    libxslt-native \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kio;nobranch=1"

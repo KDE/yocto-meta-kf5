@@ -11,6 +11,7 @@ DEPENDS = " \
     kconfig \
     ki18n \
     kio \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/knotifyconfig;nobranch=1"

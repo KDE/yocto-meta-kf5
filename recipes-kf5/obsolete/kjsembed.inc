@@ -10,6 +10,7 @@ DEPENDS = " \
     qtsvg \
     kjs \
     ki18n \
+    gettext-native \
 "
 
 SRC_URI = " \

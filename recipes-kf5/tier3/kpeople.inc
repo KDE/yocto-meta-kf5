@@ -12,6 +12,7 @@ DEPENDS = " \
     kwidgetsaddons \
     kservice \
     kitemviews \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kpeople;nobranch=1"

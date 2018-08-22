@@ -15,6 +15,7 @@ DEPENDS = " \
     plasma-framework \
     solid \
     threadweaver \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/krunner;nobranch=1"

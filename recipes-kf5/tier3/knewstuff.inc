@@ -20,6 +20,7 @@ DEPENDS = " \
     kwidgetsaddons \
     kxmlgui \
     attica \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/knewstuff;nobranch=1"

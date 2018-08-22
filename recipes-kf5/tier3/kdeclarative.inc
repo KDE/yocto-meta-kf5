@@ -17,6 +17,7 @@ DEPENDS = " \
     kguiaddons \
     kpackage \
     libepoxy \
+    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kdeclarative;nobranch=1"
