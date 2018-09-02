@@ -25,6 +25,8 @@ DEPENDS = " \
     kwayland \
     kirigami \
     gettext-native \
+    libxslt-native \
+    karchive-native \
 "
 
 SRC_URI = " \

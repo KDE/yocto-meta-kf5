@@ -10,7 +10,6 @@ DEPENDS = "qtbase \
     kcrash \
     kdbusaddons \
     ki18n \
-    kdoctools \
     gettext-native \
     bison-native \
     "

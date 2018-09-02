@@ -14,6 +14,7 @@ DEPENDS = " \
     kconfig \
     libxslt-native \
     gettext-native \
+    karchive-native \
 "
 
 SRC_URI = " \

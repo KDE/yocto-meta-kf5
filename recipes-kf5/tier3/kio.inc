@@ -24,6 +24,7 @@ DEPENDS = " \
     kwindowsystem \
     libxslt-native \
     gettext-native \
+    karchive-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kio;nobranch=1"

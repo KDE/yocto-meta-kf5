@@ -14,6 +14,7 @@ DEPENDS = " \
     kinit \
     kservice \
     libxslt-native \
+    karchive-native \
 "
 
 SRC_URI = " \
