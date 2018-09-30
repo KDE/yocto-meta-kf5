@@ -1,7 +1,7 @@
 DESCRIPTION = "KSyntaxHighlighting"
 HOMEPAGE = "https://api.kde.org/frameworks/syntax-highlighting/html/index.html"
-LICENSE = "LGPL-2.1"
-LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://COPYING;md5=61be4d272e55cc2609d58596cf084908"
 PR = "r0"
 
 DEPENDS = "qtbase ksyntaxhighlighting-native"

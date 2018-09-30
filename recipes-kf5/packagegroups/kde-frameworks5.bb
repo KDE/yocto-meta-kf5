@@ -45,6 +45,7 @@ RDEPENDS_${PN} = " \
     kpackage \
     kpty \
     kunitconversion \
+    syndication \
     \
     baloo \
     kactivitiesstats \

@@ -11,7 +11,7 @@ DEPENDS_class-native += " \
     extra-cmake-modules \
 "
 DEPENDS_class-target += " \
-    qtscript \
+    qtdeclarative \
     gettext-native \
     extra-cmake-modules \
 "
