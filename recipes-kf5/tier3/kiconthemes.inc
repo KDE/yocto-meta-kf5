@@ -21,3 +21,7 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 inherit gettext
 inherit python3native
+
+FILES_${PN} += "\
+    ${libdir}/plugins/iconengines/ \
+"
