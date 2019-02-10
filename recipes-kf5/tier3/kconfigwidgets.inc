@@ -10,17 +10,14 @@ DEPENDS = "qtbase \
     kcodecs \
     kconfig \
     kguiaddons \
-    ki18n \
     kwidgetsaddons \
-    gettext-native \
-    "
+"
 
 SRC_URI = "git://anongit.kde.org/kconfigwidgets;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_${PN}-dev += " \
     ${bindir}/preparetips5 \

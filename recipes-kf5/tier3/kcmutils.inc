@@ -10,17 +10,14 @@ DEPENDS = " \
     kconfigwidgets \
     kcoreaddons \
     kiconthemes \
-    ki18n \
     kservice \
     kxmlgui \
     kdeclarative \
     kpackage \
-    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kcmutils;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n

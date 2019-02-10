@@ -11,7 +11,6 @@ DEPENDS = " \
     kcompletion \
     kconfig \
     kcoreaddons \
-    ki18n \
     kiconthemes \
     kio \
     kitemviews \
@@ -20,15 +19,13 @@ DEPENDS = " \
     kwidgetsaddons \
     kxmlgui \
     attica \
-    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/knewstuff;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_${PN} += " \
     ${libdir}/qml/org/kde/newstuff/* \

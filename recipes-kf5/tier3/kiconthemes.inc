@@ -7,20 +7,17 @@ PR = "r0"
 DEPENDS = "qtbase \
     qtsvg \
     karchive \
-    ki18n \
     kcoreaddons \
     kconfigwidgets \
     kwidgetsaddons \
     kitemviews \
-    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kiconthemes;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_${PN} += "\
     ${libdir}/plugins/iconengines/ \

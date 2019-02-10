@@ -12,12 +12,10 @@ DEPENDS = " \
     kdbusaddons \
     kiconthemes \
     knotifications \
-    ki18n \
     kservice \
     kwidgetsaddons \
     kwindowsystem \
     libgcrypt \
-    gettext-native \
 "
 
 SRC_URI = " \
@@ -26,5 +24,4 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n

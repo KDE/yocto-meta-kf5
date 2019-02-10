@@ -10,22 +10,19 @@ DEPENDS = " \
     kcoreaddons \
     kconfig \
     kdbusaddons \
-    ki18n \
     kidletime \
     solid \
     kfilemetadata \
     kcrash \
     kio \
     lmdb \
-    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/baloo;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_${PN} += " \
     ${libdir}/plugins/kf5/kio/*.so \

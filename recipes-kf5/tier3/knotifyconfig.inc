@@ -9,14 +9,11 @@ DEPENDS = " \
     phonon \
     kcompletion \
     kconfig \
-    ki18n \
     kio \
-    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/knotifyconfig;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n

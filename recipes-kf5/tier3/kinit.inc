@@ -8,12 +8,10 @@ DEPENDS = " \
     qtbase \
     kservice \
     kio \
-    ki18n \
     kwindowsystem \
     kcrash \
     kconfig \
     libxslt-native \
-    gettext-native \
     karchive-native \
 "
 
@@ -23,8 +21,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_SOLIBSDEV = ""
 FILES_${PN} += " \

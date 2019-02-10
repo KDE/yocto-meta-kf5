@@ -9,21 +9,18 @@ DEPENDS = " \
     qtdeclarative \
     kconfig \
     kcoreaddons \
-    ki18n \
     kio \
     kservice \
     plasma-framework \
     solid \
     threadweaver \
-    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/krunner;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_${PN} += " \
   ${libdir}/qml/org/kde/runnermodel/* \

@@ -9,8 +9,6 @@ DEPENDS = " \
     qttools \
     qtsvg \
     kjs \
-    ki18n \
-    gettext-native \
 "
 
 SRC_URI = " \
@@ -19,5 +17,4 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n

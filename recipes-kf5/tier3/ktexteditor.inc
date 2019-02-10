@@ -9,13 +9,11 @@ DEPENDS = " \
     karchive \
     kconfig \
     kguiaddons \
-    ki18n \
     kio \
     kparts \
     sonnet \
     kiconthemes \
     ksyntaxhighlighting \
-    gettext-native \
 "
 
 SRC_URI = " \
@@ -24,8 +22,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 do_compile_prepend() {
     # desktoptojson needs to find installed service type files

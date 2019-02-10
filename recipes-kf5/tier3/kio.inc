@@ -10,29 +10,24 @@ DEPENDS = " \
     kconfig \
     kcoreaddons \
     kdbusaddons \
-    ki18n \
     kservice \
     solid \
     kbookmarks \
     kcompletion \
-    kdoctools \
     kconfigwidgets \
     kiconthemes \
     kitemviews \
     kjobwidgets \
     kwidgetsaddons \
     kwindowsystem \
-    libxslt-native \
-    gettext-native \
-    karchive-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kio;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
+inherit kdoctools
 
 FILES_${PN} += " \
     ${libdir}/plugins/kcm_*.so \

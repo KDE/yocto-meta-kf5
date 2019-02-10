@@ -9,18 +9,15 @@ DEPENDS = "qtbase \
     kitemviews \
     kconfig \
     kconfigwidgets \
-    ki18n \
     kiconthemes \
     ktextwidgets \
     kwidgetsaddons \
     kwindowsystem \
     kglobalaccel\
-    gettext-native \
 "
 
 SRC_URI = "git://anongit.kde.org/kxmlgui;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n

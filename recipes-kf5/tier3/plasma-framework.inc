@@ -14,7 +14,6 @@ DEPENDS = " \
     kdeclarative \
     kglobalaccel \
     kguiaddons \
-    ki18n \
     kiconthemes \
     kio \
     kservice \
@@ -24,7 +23,6 @@ DEPENDS = " \
     kpackage \
     kwayland \
     kirigami \
-    gettext-native \
     libxslt-native \
     karchive-native \
 "
@@ -35,8 +33,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_${PN} += " \
     ${libdir}/plugins/*.so \
