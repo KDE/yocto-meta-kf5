@@ -11,6 +11,9 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 inherit ki18n
+inherit distro_features_check
+
+REQUIRED_DISTRO_FEATURES += "xattr"
 
 FILES_${PN} += " \
   ${libdir}/plugins/kf5/kfilemetadata/*.so \
