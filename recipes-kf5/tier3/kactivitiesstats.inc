@@ -8,6 +8,9 @@ DEPENDS = " \
     qtbase \
     kconfig \
     kactivities \
+    kcoreaddons-native \
+    kconfig-native \
+    kauth-native \
     boost \
 "
 

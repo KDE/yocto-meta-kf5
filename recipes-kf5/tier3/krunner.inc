@@ -8,8 +8,11 @@ DEPENDS = " \
     qtbase \
     qtdeclarative \
     kconfig \
+    kconfig-native \
     kcoreaddons \
+    kcoreaddons-native \
     kio \
+    kauth-native \
     kservice \
     plasma-framework \
     solid \

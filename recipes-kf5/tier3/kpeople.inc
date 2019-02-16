@@ -8,8 +8,10 @@ DEPENDS = " \
     qtbase \
     qtdeclarative \
     kcoreaddons \
+    kcoreaddons-native \
     kwidgetsaddons \
     kservice \
+    kconfig-native \
     kitemviews \
 "
 

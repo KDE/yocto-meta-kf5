@@ -9,6 +9,7 @@ DEPENDS = " \
     kactivities \
     karchive \
     kconfig \
+    kconfig-native \
     kconfigwidgets \
     kdbusaddons \
     kdeclarative \
@@ -16,6 +17,8 @@ DEPENDS = " \
     kguiaddons \
     kiconthemes \
     kio \
+    kcoreaddons-native \
+    kauth-native \
     kservice \
     kwindowsystem \
     kxmlgui \
@@ -23,8 +26,6 @@ DEPENDS = " \
     kpackage \
     kwayland \
     kirigami \
-    libxslt-native \
-    karchive-native \
 "
 
 SRC_URI = " \
@@ -34,6 +35,7 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 inherit ki18n
+inherit kdoctools
 
 FILES_${PN} += " \
     ${libdir}/plugins/*.so \

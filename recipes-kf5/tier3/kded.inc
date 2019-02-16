@@ -7,14 +7,15 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     kconfig \
+    kconfig-native \
     kcoreaddons \
+    kcoreaddons-native \
     kcrash \
     kdbusaddons \
     kio \
+    kauth-native \
     kinit \
     kservice \
-    libxslt-native \
-    karchive-native \
 "
 
 SRC_URI = " \
@@ -23,6 +24,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+inherit kdoctools
 
 FILES_SOLIBSDEV = ""
 FILES_${PN} += " \

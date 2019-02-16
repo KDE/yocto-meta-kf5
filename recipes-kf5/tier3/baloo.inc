@@ -8,13 +8,16 @@ DEPENDS = " \
     qtbase \
     qtdeclarative \
     kcoreaddons \
+    kcoreaddons-native \
     kconfig \
+    kconfig-native \
     kdbusaddons \
     kidletime \
     solid \
     kfilemetadata \
     kcrash \
     kio \
+    kauth-native \
     lmdb \
 "
 

@@ -8,8 +8,11 @@ DEPENDS = " \
     qtbase \
     karchive \
     kconfig \
+    kconfig-native \
     kguiaddons \
     kio \
+    kcoreaddons-native \
+    kauth-native \
     kparts \
     sonnet \
     kiconthemes \

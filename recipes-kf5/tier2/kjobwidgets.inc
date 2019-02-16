@@ -8,6 +8,7 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     kcoreaddons \
+    kcoreaddons-native \
     kwidgetsaddons \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "

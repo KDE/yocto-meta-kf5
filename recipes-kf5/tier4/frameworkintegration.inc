@@ -7,13 +7,15 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     kconfig \
+    kconfig-native \
     kconfigwidgets \
+    kcoreaddons-native \
+    kauth-native \
     kiconthemes \
     knotifications \
     kwidgetsaddons \
     kpackage \
     knewstuff \
-    ki18n \
 "
 
 SRC_URI = " \
@@ -22,8 +24,7 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 
 FILES_${PN} += " \
     ${libdir}/plugins/kf5/FrameworkIntegrationPlugin.so \

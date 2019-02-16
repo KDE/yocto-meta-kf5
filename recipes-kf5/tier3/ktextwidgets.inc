@@ -7,7 +7,10 @@ PR = "r0"
 DEPENDS = "qtbase \
     kcompletion \
     kconfig \
+    kconfig-native \
     kconfigwidgets \
+    kcoreaddons-native \
+    kauth-native \
     kiconthemes \
     kservice \
     kwidgetsaddons \

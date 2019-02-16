@@ -14,12 +14,13 @@ DEPENDS = " \
     kded \
     kdesignerplugin \
     kdesignerplugin-native \
-    kdoctools \
-    kdoctools-native \
     kemoticons \
     kglobalaccel \
     kiconthemes \
     kio \
+    kcoreaddons-native \
+    kconfig-native \
+    kauth-native \
     knotifications \
     kparts \
     kunitconversion \
@@ -32,12 +33,12 @@ SRC_URI = " \
 "
 S = "${WORKDIR}/git"
 
-EXTRA_OECMAKE += " -DHAVE_GOOD_GETADDRINFO=ON"
+EXTRA_OECMAKE_class-target += " -DHAVE_GOOD_GETADDRINFO=ON"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
+inherit ki18n
 inherit perlnative
+inherit kdoctools
 
 do_compile_prepend() {
     # desktoptojson needs to find installed service type files

@@ -7,8 +7,6 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     karchive \
-    kconfig \
-    kcoreaddons \
     kdbusaddons \
     kservice \
     solid \
@@ -26,8 +24,11 @@ SRC_URI = "git://anongit.kde.org/kio;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+inherit kcoreaddons
+inherit kconfig
 inherit ki18n
 inherit kdoctools
+inherit kauth
 
 FILES_${PN} += " \
     ${libdir}/plugins/kcm_*.so \

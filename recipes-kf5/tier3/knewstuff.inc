@@ -10,9 +10,12 @@ DEPENDS = " \
     karchive \
     kcompletion \
     kconfig \
+    kconfig-native \
     kcoreaddons \
+    kcoreaddons-native \
     kiconthemes \
     kio \
+    kauth-native \
     kitemviews \
     kservice \
     ktextwidgets \

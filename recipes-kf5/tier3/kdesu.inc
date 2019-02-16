@@ -7,7 +7,9 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     kcoreaddons \
+    kcoreaddons-native \
     kservice \
+    kconfig-native \
     kpty \
 "
 

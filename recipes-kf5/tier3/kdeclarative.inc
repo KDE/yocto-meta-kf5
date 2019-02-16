@@ -8,8 +8,10 @@ DEPENDS = " \
     qtbase \
     qtdeclarative \
     kconfig \
+    kconfig-native \
     kiconthemes \
     kio \
+    kauth-native \
     kwidgetsaddons \
     kwindowsystem \
     kglobalaccel \

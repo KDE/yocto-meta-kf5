@@ -6,9 +6,12 @@ PR = "r0"
 
 DEPENDS = "qtbase \
     kauth \
+    kauth-native \
     kcoreaddons \
+    kcoreaddons-native \
     kcodecs \
     kconfig \
+    kconfig-native \
     kguiaddons \
     kwidgetsaddons \
 "

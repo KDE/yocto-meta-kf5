@@ -10,21 +10,21 @@ DEPENDS_class-target = "qtbase kcoreaddons kauth-native polkit-qt-1"
 
 SRC_URI = " \
     git://anongit.kde.org/kauth;nobranch=1 \
+    file://0001-find_file_namespacing.diff \
 "
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-EXTRA_OECMAKE_class-native += " \
-    -DKAUTH_BUILD_CODEGENERATOR_ONLY=ON \
+EXTRA_OECMAKE_class-target += " \
     -DKAUTH_BACKEND_NAME=POLKITQT5-1 \
-    -DKAUTH_POLICY_FILES_INSTALL_DIR=${datadir}/polkit-1/actions \
 "
 
-sysroot_stage_all_append_class-target () {
-    mkdir -p ${SYSROOT_DESTDIR}${libexecdir}/kauth
-    cp ${STAGING_LIBEXECDIR_NATIVE}/kauth/kauth-policy-gen ${SYSROOT_DESTDIR}/${libexecdir}/kauth
-}
+EXTRA_OECMAKE_class-native += " \
+    -DKAUTH_BACKEND_NAME=POLKITQT5-1 \
+    -DKAUTH_BUILD_CODEGENERATOR_ONLY=ON \
+    -DKAUTH_POLICY_FILES_INSTALL_DIR=${datadir}/polkit-1/actions \
+"
 
 FILES_${PN} += " \
     ${libdir}/plugins/kauth/helper/kauth_helper_plugin.so \

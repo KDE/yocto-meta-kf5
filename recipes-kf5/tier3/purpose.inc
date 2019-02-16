@@ -8,9 +8,12 @@ DEPENDS = " \
     qtbase \
     qtdeclarative \
     kcoreaddons \
+    kcoreaddons-native \
     ki18n \
     kconfig \
+    kconfig-native \
     kio \
+    kauth-native \
 "
 
 SRC_URI = "git://anongit.kde.org/${BPN};nobranch=1"

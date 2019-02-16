@@ -3,8 +3,6 @@
 do_compile_prepend() {
     # meinproc5 needs to find installed service type files
     export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
-    # meinproc5 needs to find its libraries
-    export LD_LIBRARY_PATH=${STAGING_LIBDIR_NATIVE}:$LD_LIBRARY_PATH
 }
 
 DEPENDS += " \
@@ -13,3 +11,5 @@ DEPENDS += " \
     libxslt-native \
     karchive-native \
 "
+
+EXTRA_OECMAKE += " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"

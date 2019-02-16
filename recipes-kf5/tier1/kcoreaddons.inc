@@ -12,12 +12,6 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-# put the native version of dekstoptojson into the sysroot, we want to execute that during the build
-sysroot_stage_all_append_class-target() {
-    mkdir -p ${SYSROOT_DESTDIR}/${bindir}
-    cp ${STAGING_BINDIR_NATIVE}/desktoptojson ${SYSROOT_DESTDIR}/${bindir}/
-}
-
 FILES_${PN} += " \
     ${datadir}/mime/packages/kde5.xml \
     ${datadir}/kf5/licenses/* \

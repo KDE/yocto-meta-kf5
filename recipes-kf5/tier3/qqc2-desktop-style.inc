@@ -10,6 +10,9 @@ DEPENDS = " \
     kirigami \
     kiconthemes \
     kconfigwidgets \
+    kcoreaddons-native \
+    kconfig-native \
+    kauth-native \
 "
 
 SRC_URI = " \

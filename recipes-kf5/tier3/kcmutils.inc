@@ -8,7 +8,10 @@ DEPENDS = " \
     qtbase \
     kitemviews \
     kconfigwidgets \
+    kconfig-native \
+    kauth-native \
     kcoreaddons \
+    kcoreaddons-native \
     kiconthemes \
     kservice \
     kxmlgui \

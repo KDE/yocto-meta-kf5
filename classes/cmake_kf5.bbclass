@@ -1,8 +1,14 @@
 inherit cmake_qt5
 
-EXTRA_OECMAKE += " \
+EXTRA_OECMAKE_class-native += " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DBUILD_TESTING=OFF \
+"
+
+EXTRA_OECMAKE_class-target += " \
+    -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
+    -DBUILD_TESTING=OFF \
+    -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake \
 "
 
 DEPENDS += "extra-cmake-modules qttools-native"

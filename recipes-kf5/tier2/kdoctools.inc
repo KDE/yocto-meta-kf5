@@ -19,6 +19,7 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kdoctools;nobranch=1 \
+    file://0001-kf5-host-tooling-port.diff \
 "
 S = "${WORKDIR}/git"
 
@@ -26,6 +27,8 @@ inherit cmake_kf5
 inherit gettext
 inherit python3native
 inherit perlnative
+
+EXTRA_OECMAKE_class-native += " -DINSTALL_INTERNAL_TOOLS=ON"
 
 EXTRA_OECMAKE_class-target += " \
     -DMEINPROC5_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/meinproc5 \

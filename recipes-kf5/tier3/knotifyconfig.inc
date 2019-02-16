@@ -9,7 +9,10 @@ DEPENDS = " \
     phonon \
     kcompletion \
     kconfig \
+    kconfig-native \
     kio \
+    kcoreaddons-native \
+    kauth-native \
 "
 
 SRC_URI = "git://anongit.kde.org/knotifyconfig;nobranch=1"

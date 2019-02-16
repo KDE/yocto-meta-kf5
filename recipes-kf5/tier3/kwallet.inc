@@ -7,8 +7,11 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     kconfig \
+    kconfig-native \
     kconfigwidgets \
+    kauth-native \
     kcoreaddons \
+    kcoreaddons-native \
     kdbusaddons \
     kiconthemes \
     knotifications \

@@ -7,9 +7,12 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     kconfig \
+    kconfig-native \
     kcoreaddons \
+    kcoreaddons-native \
     kiconthemes \
     kio \
+    kauth-native \
     kjobwidgets \
     kservice \
     ktextwidgets \
