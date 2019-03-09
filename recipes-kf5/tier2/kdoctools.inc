@@ -19,7 +19,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kdoctools;nobranch=1 \
-    file://0001-kf5-host-tooling-port.diff \
 "
 S = "${WORKDIR}/git"
 
