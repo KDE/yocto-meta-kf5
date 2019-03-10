@@ -24,6 +24,7 @@ DEPENDS = " \
     kxmlgui \
     knotifications \
     kpackage \
+    kpackage-native \
     kwayland \
     kirigami \
 "

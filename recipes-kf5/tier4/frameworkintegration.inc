@@ -15,6 +15,7 @@ DEPENDS = " \
     knotifications \
     kwidgetsaddons \
     kpackage \
+    kpackage-native \
     knewstuff \
 "
 

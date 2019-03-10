@@ -15,6 +15,7 @@ DEPENDS = " \
     kauth-native \
     kservice \
     plasma-framework \
+    kpackage-native \
     solid \
     threadweaver \
 "

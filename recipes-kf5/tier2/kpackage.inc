@@ -9,18 +9,14 @@ DEPENDS = " \
     qtbase \
     karchive \
     kcoreaddons \
-    ki18n \
     kpackage-native \
 "
 
-SRC_URI = "git://anongit.kde.org/kpackage;nobranch=1"
+SRC_URI = " \
+    git://anongit.kde.org/kpackage;nobranch=1 \
+    file://0001-kf5-host-tooling-support.diff \
+"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
-inherit gettext
-inherit python3native
-
-sysroot_stage_all_append_class-target() {
-    mkdir -p ${SYSROOT_DESTDIR}${bindir}
-    cp ${STAGING_BINDIR_NATIVE}/kpackagetool5 ${SYSROOT_DESTDIR}/${bindir}
-}
+inherit ki18n

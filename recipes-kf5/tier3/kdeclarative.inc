@@ -17,6 +17,7 @@ DEPENDS = " \
     kglobalaccel \
     kguiaddons \
     kpackage \
+    kpackage-native \
     libepoxy \
 "
 
