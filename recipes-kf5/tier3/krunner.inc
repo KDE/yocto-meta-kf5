@@ -7,6 +7,7 @@ PR = "r0"
 DEPENDS = " \
     qtbase \
     qtdeclarative \
+    libxml2-native \
     kconfig \
     kconfig-native \
     kcoreaddons \

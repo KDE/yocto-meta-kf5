@@ -6,6 +6,7 @@ PR = "r0"
 
 DEPENDS = " \
     qtbase \
+    libxml2-native \
     kitemviews \
     kconfigwidgets \
     kconfig-native \
