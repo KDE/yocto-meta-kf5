@@ -14,7 +14,6 @@ DEPENDS = " \
 
 SRC_URI = " \
     git://anongit.kde.org/kpackage;nobranch=1 \
-    file://0001-kf5-host-tooling-support.diff \
 "
 S = "${WORKDIR}/git"
 
