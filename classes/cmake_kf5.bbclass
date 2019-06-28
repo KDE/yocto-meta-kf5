@@ -36,6 +36,7 @@ BBCLASSEXTEND = "native nativesdk"
 FILES_${PN} += " \
     ${datadir}/dbus-1/services/*.service \
     ${datadir}/dbus-1/system-services/*.service \
+    ${datadir}/dbus-1/system.d/*.conf \
     ${datadir}/knotifications5/*.notifyrc \
     ${datadir}/kservices5/*.desktop \
     ${datadir}/kservices5/*.protocol \
