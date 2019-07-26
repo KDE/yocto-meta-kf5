@@ -11,6 +11,10 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
+EXTRA_OECMAKE_class-target += " \
+                  -DUDEV_RULES_INSTALL_DIR=${libdir}/udev/rules.d \
+                  "
+
 FILES_${PN} += " \
     ${libdir}/qml/org/kde/bluezqt/* \
 "
