@@ -14,6 +14,7 @@ DEPENDS = " \
     kconfig-native \
     kio \
     kauth-native \
+    kirigami \
 "
 
 SRC_URI = "git://anongit.kde.org/${BPN};nobranch=1"
