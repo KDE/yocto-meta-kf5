@@ -19,3 +19,4 @@ S = "${WORKDIR}/git"
 inherit cmake_kf5
 inherit gettext
 inherit python3native
+inherit kdoctools

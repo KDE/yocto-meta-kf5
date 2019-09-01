@@ -26,6 +26,7 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 inherit ki18n
+inherit kdoctools
 
 FILES_${PN} += " \
     ${libdir}/plugins/kf5/FrameworkIntegrationPlugin.so \
