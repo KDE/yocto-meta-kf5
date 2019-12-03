@@ -13,7 +13,6 @@ DEPENDS = " \
     kcoreaddons \
     kcoreaddons-native \
     kdbusaddons \
-    kiconthemes \
     knotifications \
     kservice \
     kwidgetsaddons \

@@ -3,12 +3,14 @@ inherit cmake_qt5
 EXTRA_OECMAKE_class-native += " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DBUILD_TESTING=OFF \
+    -DBUILD_DESIGNERPLUGIN=OFF \
 "
 
 EXTRA_OECMAKE_class-target += " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DBUILD_TESTING=OFF \
     -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake \
+    -DBUILD_DESIGNERPLUGIN=OFF \
 "
 
 DEPENDS += "extra-cmake-modules qttools-native"
@@ -50,5 +52,6 @@ FILES_${PN}-dev += " \
     ${datadir}/kdevappwizard/templates/*.tar.bz2 \
     ${datadir}/qlogging-categories5 \
     ${libdir}/cmake \
+    ${libdir}/plugins/designer/*.so \
     ${prefix}/mkspecs/modules/qt_*.pri \
 "

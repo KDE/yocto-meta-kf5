@@ -13,6 +13,7 @@ RDEPENDS_${PN} = " \
     bluez-qt \
     breeze-icons \
     karchive \
+    kcalendarcore \
     kcodecs \
     kconfig \
     kcoreaddons \
@@ -41,6 +42,7 @@ RDEPENDS_${PN} = " \
     \
     kactivities \
     kauth \
+    kcontacts \
     kcrash \
     kdoctools \
     kfilemetadata \
@@ -83,7 +85,4 @@ RDEPENDS_${PN} = " \
     kjs \
     kjsembed \
     kdelibs4support \
-    \
-    kcalcore \
-    kcontacts \
 "
