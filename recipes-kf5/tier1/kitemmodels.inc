@@ -11,3 +11,8 @@ SRC_URI = "git://anongit.kde.org/kitemmodels;nobranch=1"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
+
+FILES_${PN} += " \
+    ${libdir}/qml/org/kde/kitemmodels/qmldir \
+    ${libdir}/qml/org/kde/kitemmodels/libitemmodelsplugin.so \
+"

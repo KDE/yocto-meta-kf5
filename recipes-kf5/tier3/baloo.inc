@@ -35,3 +35,5 @@ FILES_${PN} += " \
     ${libdir}/qml/org/kde/baloo/experimental/* \
     ${datadir}/icons/hicolor/128x128/apps/baloo.png \
 "
+
+RDEPENDS_${PN} += "lmdb"
