@@ -28,6 +28,7 @@ RDEPENDS_${PN} = " \
     kitemmodels \
     kitemviews \
     kplotting \
+    kquickcharts \
     ksyntaxhighlighting \
     kwayland \
     kwidgetsaddons \
