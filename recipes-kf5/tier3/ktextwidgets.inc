@@ -14,7 +14,6 @@ DEPENDS = "qtbase \
     kiconthemes \
     kservice \
     kwidgetsaddons \
-    kwindowsystem \
     sonnet \
 "
 

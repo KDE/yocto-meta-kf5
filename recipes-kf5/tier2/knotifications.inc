@@ -10,7 +10,6 @@ DEPENDS = " \
     kwindowsystem \
     kconfig \
     kconfig-native \
-    kcodecs \
     kcoreaddons \
     kcoreaddons-native \
     phonon \
