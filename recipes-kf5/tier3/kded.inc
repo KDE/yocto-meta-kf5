@@ -14,7 +14,6 @@ DEPENDS = " \
     kdbusaddons \
     kio \
     kauth-native \
-    kinit \
     kservice \
 "
 
