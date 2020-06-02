@@ -7,6 +7,8 @@ PR = "r0"
 
 DEPENDS = " \
     qtbase \
+    qtwayland \
+    qtwayland-native \
     wayland-native \
     wayland \
     wayland-protocols \
