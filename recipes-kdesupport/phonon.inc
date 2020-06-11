@@ -5,7 +5,7 @@ PR = "r0"
 
 DEPENDS = "qtbase extra-cmake-modules"
 
-SRC_URI = "git://anongit.kde.org/phonon"
+SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_qt5

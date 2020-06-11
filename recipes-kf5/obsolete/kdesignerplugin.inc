@@ -11,9 +11,7 @@ DEPENDS = " \
     kdesignerplugin-native \
 "
 
-SRC_URI = " \
-    git://anongit.kde.org/kdesignerplugin;nobranch=1 \
-"
+SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

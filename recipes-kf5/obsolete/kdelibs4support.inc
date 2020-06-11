@@ -28,9 +28,7 @@ DEPENDS = " \
     openssl \
 "
 
-SRC_URI = " \
-    git://anongit.kde.org/kdelibs4support;nobranch=1 \
-"
+SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 EXTRA_OECMAKE_class-target += " -DHAVE_GOOD_GETADDRINFO=ON"

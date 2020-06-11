@@ -6,9 +6,7 @@ PR = "r0"
 
 DEPENDS = "qtbase ksyntaxhighlighting-native"
 
-SRC_URI = " \
-    git://anongit.kde.org/syntax-highlighting;nobranch=1 \
-"
+SRC_URI = "git://invent.kde.org/frameworks/syntax-highlighting;nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

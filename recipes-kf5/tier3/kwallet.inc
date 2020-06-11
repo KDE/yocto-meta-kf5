@@ -20,9 +20,7 @@ DEPENDS = " \
     libgcrypt \
 "
 
-SRC_URI = " \
-    git://anongit.kde.org/kwallet;nobranch=1 \
-"
+SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

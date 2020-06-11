@@ -7,7 +7,7 @@ PR = "r0"
 
 DEPENDS = "zlib bzip2 xz qtbase"
 
-SRC_URI = "git://anongit.kde.org/karchive;nobranch=1"
+SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

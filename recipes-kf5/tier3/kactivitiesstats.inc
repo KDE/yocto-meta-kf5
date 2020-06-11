@@ -14,7 +14,7 @@ DEPENDS = " \
     boost \
 "
 
-SRC_URI = "git://anongit.kde.org/kactivities-stats;nobranch=1"
+SRC_URI = "git://invent.kde.org/frameworks/kactivities-stats;nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5

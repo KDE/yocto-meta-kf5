@@ -8,9 +8,7 @@ PR = "r0"
 DEPENDS_class-native = "extra-cmake-modules qtbase-native kcoreaddons-native"
 DEPENDS_class-target = "qtbase kcoreaddons kauth-native polkit-qt-1"
 
-SRC_URI = " \
-    git://anongit.kde.org/kauth;nobranch=1 \
-"
+SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_kf5
