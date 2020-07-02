@@ -23,6 +23,9 @@ DEPENDS = " \
     kwidgetsaddons \
     kxmlgui \
     attica \
+    kpackage \
+    kpackage-native \
+    kirigami \
 "
 
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
