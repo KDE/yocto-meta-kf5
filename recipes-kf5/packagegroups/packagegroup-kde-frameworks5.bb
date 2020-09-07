@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup distro_features_check
 
-REQUIRED_DISTRO_FEATURES = "wayland x11 kde"
+REQUIRED_DISTRO_FEATURES = "wayland x11"
 
 RDEPENDS_${PN} = " \
     attica \
