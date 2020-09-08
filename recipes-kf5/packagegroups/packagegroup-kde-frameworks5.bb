@@ -58,6 +58,7 @@ RDEPENDS_${PN} = " \
     kactivitiesstats \
     kbookmarks \
     kcmutils \
+    kdav \
     kdeclarative \
     kded \
     kdesu \
