@@ -1,10 +1,11 @@
 DESCRIPTION = "Extra CMake Modules"
 HOMEPAGE = "https://api.kde.org/frameworks/extra-cmake-modules/html/index.html"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://COPYING-CMAKE-SCRIPTS;md5=54c7042be62e169199200bc6477f04d1"
 PR = "r0"
 
 DEPENDS = "cmake-native qttools"
+
+inherit reuse_license_checksums
 
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"

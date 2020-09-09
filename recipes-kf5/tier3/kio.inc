@@ -1,7 +1,6 @@
 DESCRIPTION = "KIO"
 HOMEPAGE = "https://api.kde.org/frameworks/kio/html/index.html"
-LICENSE = "LGPL-2.1"
-LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
+LICENSE = "LGPL-2.0"
 PR = "r0"
 
 DEPENDS = " \
@@ -29,6 +28,7 @@ inherit kconfig
 inherit ki18n
 inherit kdoctools
 inherit kauth
+inherit reuse_license_checksums
 
 FILES_${PN} += " \
     ${libdir}/plugins/kcm_*.so \

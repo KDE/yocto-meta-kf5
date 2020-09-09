@@ -1,7 +1,6 @@
 DESCRIPTION = "KDAV"
 HOMEPAGE = "https://api.kde.org/frameworks/kdav/html/index.html"
-LICENSE = "LGPL-2.1"
-LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=5f30f0716dfdd0d91eb439ebec522ec2"
+LICENSE = "LGPL-2.0"
 PR = "r0"
 
 DEPENDS = " \
@@ -20,3 +19,4 @@ inherit cmake_kf5
 inherit kdoctools
 inherit kconfig
 inherit kauth
+inherit reuse_license_checksums
