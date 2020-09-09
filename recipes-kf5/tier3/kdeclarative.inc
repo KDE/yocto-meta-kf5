@@ -5,21 +5,22 @@ LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
 PR = "r0"
 
 DEPENDS = " \
+    kauth-native \
+    kconfig \
+    kconfig-native \
+    kglobalaccel \
+    kguiaddons \
+    kiconthemes \
+    kio \
+    knotifications \
+    kpackage \
+    kpackage-native \
+    kwidgetsaddons \
+    kwindowsystem \
+    libepoxy \
     libxml2-native \
     qtbase \
     qtdeclarative \
-    kconfig \
-    kconfig-native \
-    kiconthemes \
-    kio \
-    kauth-native \
-    kwidgetsaddons \
-    kwindowsystem \
-    kglobalaccel \
-    kguiaddons \
-    kpackage \
-    kpackage-native \
-    libepoxy \
 "
 
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"

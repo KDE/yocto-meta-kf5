@@ -17,4 +17,5 @@ inherit cmake_kf5
 
 FILES_${PN} += " \
     ${libdir}/plugins/kf5/org.kde.kwindowsystem.platforms/* \
+    ${libdir}/plugins/kf5/kwindowsystem/* \
 "
