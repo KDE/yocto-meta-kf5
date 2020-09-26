@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "KDELibs4Support"
 HOMEPAGE = "https://api.kde.org/frameworks/kdelibs4support/html/index.html"
 LICENSE = "LGPL-2.1"

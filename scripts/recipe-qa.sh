@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# SPDX-FileCopyrightText: 2017 Volker Krause <vkrause@kde.org>
+#
+# SPDX-License-Identifier: MIT
 
 function validate_url()
 {

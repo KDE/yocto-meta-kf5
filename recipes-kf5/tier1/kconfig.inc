@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+#
+# SPDX-License-Identifier: MIT
+#
 # requires session management support in QtGui
 # eg. via PACKAGECONFIG_append_pn-qtbase = "sm" in local.conf
 

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "KDesignerPlugin"
 HOMEPAGE = "https://api.kde.org/frameworks/kdesignerplugin/html/index.html"
 LICENSE = "LGPL-2.1"

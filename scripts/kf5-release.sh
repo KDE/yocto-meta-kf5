@@ -2,6 +2,10 @@
 #
 # add/remove KF5 release recipes
 #
+# SPDX-FileCopyrightText: 2017-2018 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+#
+# SPDX-License-Identifier: MIT
 
 function usage()
 {

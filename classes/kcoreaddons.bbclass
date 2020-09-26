@@ -1,4 +1,8 @@
 # Class for recipes using kcoreaddons host tools
+#
+# SPDX-FileCopyrightText: 2019 Volker Krause <vkrause@kde.org>
+#
+# SPDX-License-Identifier: MIT
 
 do_compile_prepend() {
     # desktoptojson needs to find installed service type files

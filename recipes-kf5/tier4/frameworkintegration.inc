@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "Workspace and cross-framework integration plugins"
 HOMEPAGE = "https://api.kde.org/frameworks/frameworkintegration/html/index.html"
 LICENSE = "LGPL-2.0"

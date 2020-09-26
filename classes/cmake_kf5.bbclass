@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
+# SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
+# SPDX-FileCopyrightText: 2017-2019 Volker Krause <vkrause@kde.org>
+#
+# SPDX-License-Identifier: MIT
+
 inherit cmake_qt5
 
 EXTRA_OECMAKE_class-native += " \

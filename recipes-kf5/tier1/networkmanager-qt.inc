@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "NetworkManagerQt"
 HOMEPAGE = "https://api.kde.org/frameworks/networkmanager-qt/html/index.html"
 LICENSE = "LGPL-2.1"

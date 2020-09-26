@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2017-2019 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2019 Hannah Kiekens <hannahkiekens@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
 SUMMARY = "Lightning Memory-Mapped Database (LMDB)"
 HOMEPAGE = "https://symas.com/lightning-memory-mapped-database/"
 LICENSE = "OLDAP-2.8"

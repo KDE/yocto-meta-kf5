@@ -1,4 +1,8 @@
 # Class for recipes using KAuth host tools
+#
+# SPDX-FileCopyrightText: 2019 Volker Krause <vkrause@kde.org>
+#
+# SPDX-License-Identifier: MIT
 
 DEPENDS += " \
     kauth \

@@ -1,8 +1,9 @@
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-# SPDX-License-Identifier: MIT
-#
 # Class for providing default checksum values based on licenses
 # installed according to REUSE specification
+#
+# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+#
+# SPDX-License-Identifier: MIT
 
 do_populate_lic_prepend() {
     license = d.getVar('LICENSE') or ''

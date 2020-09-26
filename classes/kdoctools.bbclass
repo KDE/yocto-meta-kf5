@@ -1,4 +1,8 @@
 # Class for recipes using kdoctools to build their documentation
+#
+# SPDX-FileCopyrightText: 2019 Volker Krause <vkrause@kde.org>
+#
+# SPDX-License-Identifier: MIT
 
 do_compile_prepend() {
     # meinproc5 needs to find installed service type files

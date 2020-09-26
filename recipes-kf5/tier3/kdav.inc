@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "KDAV"
 HOMEPAGE = "https://api.kde.org/frameworks/kdav/html/index.html"
 LICENSE = "LGPL-2.0"

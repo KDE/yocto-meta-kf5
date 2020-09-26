@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2017 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2019 Alistair Francis <alistair.francis@wdc.com>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "Library for reading and writing data matrix barcodes"
 HOMEPAGE = "http://libdmtx.sourceforge.net/"
 LICENSE = "BSD-2-Clause"

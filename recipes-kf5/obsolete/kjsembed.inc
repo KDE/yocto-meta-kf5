@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "KJSEmbed"
 HOMEPAGE = "https://api.kde.org/frameworks/kjsembed/html/index.html"
 LICENSE = "LGPL-2.1"

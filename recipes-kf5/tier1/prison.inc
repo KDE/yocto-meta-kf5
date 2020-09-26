@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+#
+# SPDX-License-Identifier: MIT
+
 DESCRIPTION = "Prison"
 HOMEPAGE = "https://api.kde.org/frameworks/prison/html/index.html"
 LICENSE = "MIT"
