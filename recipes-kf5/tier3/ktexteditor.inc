@@ -6,7 +6,7 @@
 
 DESCRIPTION = "KTextEditor"
 HOMEPAGE = "https://api.kde.org/frameworks/ktexteditor/html/index.html"
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.0"
 PR = "r0"
 
 DEPENDS = " \
