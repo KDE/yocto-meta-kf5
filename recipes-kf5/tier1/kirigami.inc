@@ -8,7 +8,10 @@ HOMEPAGE = "https://api.kde.org/frameworks/kirigami/html/index.html"
 LICENSE = "LGPL-2.0"
 PR = "r0"
 
-DEPENDS = "qtquickcontrols2 qtsvg"
+DEPENDS = " \
+    qtquickcontrols2 \
+    qtsvg \
+"
 
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
