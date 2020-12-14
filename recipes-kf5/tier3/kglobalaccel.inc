@@ -27,4 +27,5 @@ inherit reuse_license_checksums
 
 FILES_${PN} += " \
     ${libdir}/plugins/org.kde.kglobalaccel5.platforms/*.so \
+    ${libdir}/systemd \
 "
