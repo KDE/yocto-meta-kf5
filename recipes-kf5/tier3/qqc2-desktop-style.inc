@@ -3,8 +3,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "QQC2 Desktop Style"
-HOMEPAGE = "https://api.kde.org/frameworks/qqc2-desktop-style/html/index.html"
 LICENSE = "LGPL-3.0"
 PR = "r0"
 
@@ -22,6 +20,7 @@ DEPENDS = " \
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require qqc2-desktop-style_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 

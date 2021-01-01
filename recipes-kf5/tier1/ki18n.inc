@@ -5,8 +5,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "Ki18n"
-HOMEPAGE = "https://api.kde.org/frameworks/ki18n/html/index.html"
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
@@ -24,6 +22,7 @@ DEPENDS_class-target += " \
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require ki18n_metainfo.inc
 inherit cmake_kf5
 inherit python3native
 inherit reuse_license_checksums

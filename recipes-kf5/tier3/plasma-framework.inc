@@ -4,8 +4,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "Plama Framework"
-HOMEPAGE = "https://api.kde.org/plasma-framework/html/index.html"
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
@@ -38,6 +36,7 @@ DEPENDS = " \
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require plasma-framework_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
 inherit kdoctools

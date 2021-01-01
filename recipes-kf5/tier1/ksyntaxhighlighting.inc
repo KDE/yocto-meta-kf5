@@ -3,8 +3,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "KSyntaxHighlighting"
-HOMEPAGE = "https://api.kde.org/frameworks/syntax-highlighting/html/index.html"
 LICENSE = "MIT"
 PR = "r0"
 
@@ -13,6 +11,7 @@ DEPENDS = "qtbase ksyntaxhighlighting-native"
 SRC_URI = "git://invent.kde.org/frameworks/syntax-highlighting;nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require ksyntaxhighlighting_metainfo.inc
 inherit cmake_kf5
 inherit perlnative
 inherit reuse_license_checksums

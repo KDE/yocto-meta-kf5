@@ -5,8 +5,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "KCoreAddons"
-HOMEPAGE = "https://api.kde.org/frameworks/kcoreaddons/html/index.html"
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
@@ -15,6 +13,7 @@ DEPENDS = "qtbase kcoreaddons-native"
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require kcoreaddons_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 

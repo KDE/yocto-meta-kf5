@@ -4,8 +4,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "KDeclarative"
-HOMEPAGE = "https://api.kde.org/frameworks/kdeclarative/html/index.html"
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
@@ -31,6 +29,7 @@ DEPENDS = " \
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require kdeclarative_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
 inherit reuse_license_checksums

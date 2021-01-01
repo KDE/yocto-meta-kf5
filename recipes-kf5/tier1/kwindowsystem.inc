@@ -5,8 +5,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "KWindowSystem"
-HOMEPAGE = "https://api.kde.org/frameworks/kwindowsystem/html/index.html"
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
@@ -18,6 +16,7 @@ DEPENDS = " \
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require kwindowsystem_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 

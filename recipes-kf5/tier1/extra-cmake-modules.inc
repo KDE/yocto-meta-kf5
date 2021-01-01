@@ -3,13 +3,12 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "Extra CMake Modules"
-HOMEPAGE = "https://api.kde.org/frameworks/extra-cmake-modules/html/index.html"
 LICENSE = "BSD-3-Clause"
 PR = "r0"
 
 DEPENDS = "cmake-native qttools qtbase-native qttools-native"
 
+require extra-cmake-modules_metainfo.inc
 inherit cmake_qt5
 inherit reuse_license_checksums
 

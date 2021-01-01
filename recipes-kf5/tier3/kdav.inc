@@ -2,8 +2,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "KDAV"
-HOMEPAGE = "https://api.kde.org/frameworks/kdav/html/index.html"
 LICENSE = "LGPL-2.0"
 PR = "r0"
 
@@ -19,6 +17,7 @@ DEPENDS = " \
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require kdav_metainfo.inc
 inherit cmake_kf5
 inherit kdoctools
 inherit kconfig

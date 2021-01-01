@@ -4,8 +4,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "KAuth"
-HOMEPAGE = "https://api.kde.org/frameworks/kauth/html/index.html"
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
@@ -15,6 +13,7 @@ DEPENDS_class-target = "qtbase kcoreaddons kauth-native polkit-qt-1"
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require kauth_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 

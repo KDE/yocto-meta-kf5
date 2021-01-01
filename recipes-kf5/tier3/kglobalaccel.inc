@@ -3,8 +3,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-DESCRIPTION = "KGlobalAccel"
-HOMEPAGE = "https://api.kde.org/frameworks/kglobalaccel/html/index.html"
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
@@ -22,6 +20,7 @@ DEPENDS = " \
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
+require kglobalaccel_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
