@@ -35,7 +35,7 @@ RDEPENDS_${PN} = " \
     kitemviews \
     kplotting \
     kquickcharts \
-    ksyntaxhighlighting \
+    syntax-highlighting \
     kwayland \
     kwidgetsaddons \
     kwindowsystem \

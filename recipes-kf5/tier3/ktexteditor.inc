@@ -20,7 +20,7 @@ DEPENDS = " \
     kparts \
     sonnet \
     kiconthemes \
-    ksyntaxhighlighting \
+    syntax-highlighting \
 "
 
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
