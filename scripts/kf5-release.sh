@@ -10,7 +10,19 @@
 function usage()
 {
     echo "$1 [add|remove] <version>"
+    echo "$1 metainfo"
     exit 1
+}
+
+function yaml() {
+    python3 -c "
+import yaml
+metainfo=yaml.safe_load(open('$1'))
+if '$2' in metainfo:
+    print(metainfo['$2'])
+else:
+    print()
+"
 }
 
 command=$1
@@ -23,7 +35,8 @@ base=`dirname $0`/../recipes-kf5
 
 case $command in
 add)
-    for recipe in `find $base -name "*.inc" | grep -v /staging/`; do
+    # search for all non-staging inc files without underlines
+    for recipe in `find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/`; do
         name=`echo $recipe | sed -e "s,\.inc,_${version}.bb,"`
 cat <<EOM > $name
 # SPDX-FileCopyrightText: none
@@ -38,6 +51,27 @@ EOM
 remove)
     for recipe in `find $base -name "*_$version.bb"`; do
         git rm -f $recipe
+    done
+    ;;
+metainfo)
+    echo "Updating metainfo..."
+    for recipe in `find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/`; do
+        framework=`echo $recipe | grep -P -o '[0-9a-zA-Z\-]+(?=\.inc)'`
+        filename=`echo $recipe | sed -e "s,\.inc,_metainfo\.inc,"`
+        url="https://invent.kde.org/frameworks/$framework/-/raw/v$version/metainfo.yaml"
+        curl $url > /tmp/$framework
+        description=$(yaml /tmp/$framework "description")
+        if [[ $description == "" ]] ; then
+            echo "WARNING: no description for $framework"
+        fi
+cat <<EOM > $filename
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: CC0-1.0
+
+SUMMARY ?= "$description"
+HOMEPAGE ?= "https://api.kde.org/frameworks/$framework/html/index.html"
+EOM
+        git add $filename
     done
     ;;
 *)
