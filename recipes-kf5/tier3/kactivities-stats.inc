@@ -6,6 +6,8 @@
 LICENSE = "LGPL-2.1"
 PR = "r0"
 
+PROVIDES += "kactivitiesstats"
+
 DEPENDS = " \
     qtbase \
     kconfig \
