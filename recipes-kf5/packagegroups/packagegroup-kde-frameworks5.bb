@@ -61,7 +61,7 @@ RDEPENDS_${PN} = " \
     syndication \
     \
     baloo \
-    kactivitiesstats \
+    kactivities-stats \
     kbookmarks \
     kcmutils \
     kdav \
