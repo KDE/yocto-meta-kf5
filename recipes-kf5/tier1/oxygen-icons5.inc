@@ -9,7 +9,7 @@ PR = "r0"
 SRC_URI = "git://invent.kde.org/frameworks/oxygen-icons5;nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
-require oxygen-icons_metainfo.inc
+require oxygen-icons5_metainfo.inc
 inherit cmake_kf5
 
 FILES_${PN} += " \

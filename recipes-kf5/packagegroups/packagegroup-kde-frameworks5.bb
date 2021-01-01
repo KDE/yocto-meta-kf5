@@ -41,7 +41,7 @@ RDEPENDS_${PN} = " \
     kwindowsystem \
     modemmanager-qt \
     networkmanager-qt \
-    oxygen-icons \
+    oxygen-icons5 \
     prison \
     solid \
     sonnet \
