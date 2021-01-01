@@ -25,7 +25,7 @@ for r in `find -name *.inc -o -name *.bb`; do
         echo "ERROR: $r uses hard-coded paths."
     fi
 
-    url=`cat $r | grep HOMEPAGE | sed -e 's,HOMEPAGE\s*=\s*\"\(.*\)\",\1,'`
+    url=`cat $r | grep HOMEPAGE | sed -e 's,HOMEPAGE\s*?=\s*\"\(.*\)\",\1,'`
     if ! [ -z "$url" ]; then
         validate_url "$r" "$url"
     fi
