@@ -10,7 +10,7 @@
 function usage()
 {
     echo "$1 [add|remove] <version>"
-    echo "$1 metainfo"
+    echo "$1 metainfo <version> [sourcedir]"
     exit 1
 }
 
@@ -32,6 +32,7 @@ version=$2
 if [ -z "$version" ]; then usage $0; fi
 
 base=`dirname $0`/../recipes-kf5
+rootdir=$PWD
 
 case $command in
 add)
@@ -55,18 +56,30 @@ remove)
     ;;
 metainfo)
     echo "Updating metainfo..."
-    tmpdir="$PWD/tmp"
-    if [ -d "$tmpdir" ]; then
-        echo "Temporary directory $tmpdir exists, remove it before running script."
-        exit 1
+    sourcedir=$3
+    if [ -z "$sourcedir" ]; then
+        sourcedir="$PWD/tmp";
     fi
-    mkdir -p $tmpdir
+    if [ -d "$sourcedir" ]; then
+        echo "Using existing source directory $sourcedir: repositories expected in subfolders"
+    else
+        mkdir -p $sourcedir
+    fi
     for recipe in `find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/`; do
         framework=`echo $recipe | grep -P -o '[0-9a-zA-Z\-]+(?=\.inc)'`
         filename=`echo $recipe | sed -e "s,\.inc,_metainfo\.inc,"`
         url="https://invent.kde.org/frameworks/$framework.git"
-        git clone -c advice.detachedHead=false -q --depth 1 --branch v$version $url $tmpdir/$framework > /dev/null
-        description=$(yaml $tmpdir/$framework/metainfo.yaml "description")
+        if [ -d "$sourcedir/$framework" ]; then
+            cd $sourcedir/$framework
+            git fetch > /dev/null
+            cd $rootdir
+        else
+            git clone -c advice.detachedHead=false -q --branch v$version $url $sourcedir/$framework > /dev/null
+        fi
+        cd $sourcedir/$framework
+        git show v$version:metainfo.yaml > ../$framework.yaml
+        cd $rootdir
+        description=$(yaml $sourcedir/$framework.yaml "description")
         if [[ $description == "" ]] ; then
             echo "WARNING: no description for $framework"
         fi
