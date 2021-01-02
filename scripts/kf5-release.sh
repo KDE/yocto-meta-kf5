@@ -55,12 +55,18 @@ remove)
     ;;
 metainfo)
     echo "Updating metainfo..."
+    tmpdir="$PWD/tmp"
+    if [ -d "$tmpdir" ]; then
+        echo "Temporary directory $tmpdir exists, remove it before running script."
+        exit 1
+    fi
+    mkdir -p $tmpdir
     for recipe in `find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/`; do
         framework=`echo $recipe | grep -P -o '[0-9a-zA-Z\-]+(?=\.inc)'`
         filename=`echo $recipe | sed -e "s,\.inc,_metainfo\.inc,"`
-        url="https://invent.kde.org/frameworks/$framework/-/raw/v$version/metainfo.yaml"
-        curl $url > /tmp/$framework
-        description=$(yaml /tmp/$framework "description")
+        url="https://invent.kde.org/frameworks/$framework.git"
+        git clone -c advice.detachedHead=false -q --depth 1 --branch v$version $url $tmpdir/$framework > /dev/null
+        description=$(yaml $tmpdir/$framework/metainfo.yaml "description")
         if [[ $description == "" ]] ; then
             echo "WARNING: no description for $framework"
         fi
@@ -72,6 +78,7 @@ SUMMARY ?= "$description"
 HOMEPAGE ?= "https://api.kde.org/frameworks/$framework/html/index.html"
 EOM
         git add $filename
+        echo "$framework: DONE"
     done
     ;;
 *)
