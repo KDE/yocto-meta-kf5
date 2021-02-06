@@ -87,8 +87,8 @@ cat <<EOM > $filename
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: CC0-1.0
 
-SUMMARY ?= "$description"
-HOMEPAGE ?= "https://api.kde.org/frameworks/$framework/html/index.html"
+SUMMARY = "$description"
+HOMEPAGE = "https://api.kde.org/frameworks/$framework/html/index.html"
 EOM
         git add $filename
         echo "$framework: DONE"
