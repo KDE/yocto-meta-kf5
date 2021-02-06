@@ -1,37 +1,105 @@
 # Class for providing default checksum values based on licenses
 # installed according to REUSE specification
 #
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+# SPDX-FileCopyrightText: 2020-2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
 
 do_populate_lic_prepend() {
-    license = d.getVar('LICENSE') or ''
     srcdir = d.getVar('S')
+
+    # keys are only Yocto's SPDX(-like) identifiers from licenses.conf
+    yocto_to_spdx_id_map = {
+        'LGPL-2.0' : [
+            'LGPL-2.0-only',
+            'LGPL-2.0-or-later'
+        ],
+        'LGPL-2.0+' : [
+            'LGPL-2.0-or-later'
+        ],
+        'LGPL-2.1' : [
+            'LGPL-2.1-only',
+            'LGPL-2.1-or-later'
+        ],
+        'LGPL-2.1+' : [
+            'LGPL-2.1-or-later'
+        ],
+        'LGPL-3.0' : [
+            'LGPL-3.0-only',
+            'LGPL-3.0-later'
+        ],
+        'BSD-2-Clause' : [
+            'BSD-2-Clause'
+        ],
+        'BSD-3-Clause' : [
+            'BSD-3-Clause'
+        ],
+        'MIT' : [
+            'MIT'
+        ],
+        'LicenseRef-KDE-Accepted-LGPL': [
+            'LicenseRef-KDE-Accepted-LGPL'
+        ]
+    }
+    spdx_id_to_yocto_map = {}
+    for yocto_id in yocto_to_spdx_id_map:
+        for spdx_id in yocto_to_spdx_id_map[yocto_id]:
+            if spdx_id in spdx_id_to_yocto_map:
+                spdx_id_to_yocto_map[spdx_id].append(yocto_id)
+            else:
+                spdx_id_to_yocto_map[spdx_id] = [ yocto_id ]
+
+    checksum_map = {
+        'LGPL-2.0-only': '6d2d9952d88b50a51a5c73dc431d06c7',
+        'LGPL-2.0-or-later': '6d2d9952d88b50a51a5c73dc431d06c7',
+        'LGPL-2.1-only': 'fabba2a3bfeb22a6483d44e9ae824d3f',
+        'LGPL-2.1-or-later': '2a4f4fd2128ea2f65047ee63fbca9f68',
+        'LGPL-3.0-only': 'c51d3eef3be114124d11349ca0d7e117',
+        'LGPL-3.0-or-later': 'c51d3eef3be114124d11349ca0d7e117',
+        'BSD-2-Clause': '63d6ee386b8aaba70b1bf15a79ca50f2',
+        'BSD-3-Clause': '954f4d71a37096249f837652a7f586c0',
+        'MIT': '38aa75cf4c4c87f018227d5ec9638d75',
+        'LicenseRef-KDE-Accepted-LGPL': "6a2eced623a7c9d0c8996ce24917d006",
+    }
+
+    # generate flat list of used license identifiers
+    package_license_statement = d.getVar('LICENSE') or ''
+    package_license_statement = package_license_statement.replace("&", " ")
+    package_license_statement = package_license_statement.replace("(", " ")
+    package_license_statement = package_license_statement.replace("|", " ")
+    package_license_statement = package_license_statement.replace(")", " ")
+    recipe_licenses = package_license_statement.split()
+    recipe_licenses = list(map(str.strip, recipe_licenses))
 
     if d.getVar('LIC_FILES_CHKSUM') and not d.getVar('LIC_FILES_CHKSUM') == '':
         print("Aborting LIC_FILES_CHKSUM computation, value already set to:", d.getVar('LIC_FILES_CHKSUM'))
     else:
-        # TODO computation logic should also be able to handle multi-license statements
-        # right now, in KF5 only single license statements are contained
-        if license == 'LGPL-2.0':
-            if os.path.exists(os.path.join(srcdir, 'LICENSES/LGPL-2.0-only.txt')):
-                d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/LGPL-2.0-only.txt;md5=6d2d9952d88b50a51a5c73dc431d06c7")
-            elif os.path.exists(os.path.join(srcdir, 'LICENSES/LGPL-2.0-or-later.txt')):
-                d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a5c73dc431d06c7")
-        elif license == 'LGPL-2.1':
-            if os.path.exists(os.path.join(srcdir, 'LICENSES/LGPL-2.1-only.txt')):
-                d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/LGPL-2.1-only.txt;md5=fabba2a3bfeb22a6483d44e9ae824d3f")
-            elif os.path.exists(os.path.join(srcdir, 'LICENSES/LGPL-2.1-or-later.txt')):
-                d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/LGPL-2.1-or-later.txt;md5=2a4f4fd2128ea2f65047ee63fbca9f68")
-        elif license == 'LGPL-3.0':
-            if os.path.exists(os.path.join(srcdir, 'LICENSES/LGPL-3.0-only.txt')):
-                d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/LGPL-3.0-only.txt;md5=c51d3eef3be114124d11349ca0d7e117")
-            elif os.path.exists(os.path.join(srcdir, 'LICENSES/LGPL-3.0-or-later.txt')):
-                d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/LGPL-3.0-or-later.txt;md5=c51d3eef3be114124d11349ca0d7e117")
-        elif license == 'BSD-3-Clause':
-            d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/BSD-3-Clause.txt;md5=954f4d71a37096249f837652a7f586c0")
-        elif license == 'MIT':
-            d.setVar('LIC_FILES_CHKSUM', "file://LICENSES/MIT.txt;md5=38aa75cf4c4c87f018227d5ec9638d75")
+        checksum_entries = [" "]
+        for license_id in recipe_licenses:
+            if license_id in yocto_to_spdx_id_map:
+                for license_file in yocto_to_spdx_id_map[license_id]:
+                    if os.path.exists(os.path.join(srcdir, 'LICENSES/' + license_file + '.txt')):
+                        entry = "file://LICENSES/" + license_file + ".txt;md5=" + checksum_map[license_file]
+                        checksum_entries.append(entry)
+                        break
+            else:
+                bb.warn("License checksum database has no entry: ", license_id)
+
+        separator = " "
+        d.setVar('LIC_FILES_CHKSUM', separator.join(checksum_entries))
         print('Set LIC_FILES_CHKSUM from known SPDX files to:', d.getVar('LIC_FILES_CHKSUM'))
+
+    # QA test for complete statement
+    src_licenses = os.listdir(os.path.join(srcdir, 'LICENSES/'))
+    for license_file in src_licenses:
+        # convert license_file to SPDX identifier
+        license_name = license_file
+        if license_name.endswith('.txt'):
+            license_name = license_name[:-4]
+
+        # compute list intersection and test if empty
+        if license_name in spdx_id_to_yocto_map:
+            if list(set(recipe_licenses) & set(spdx_id_to_yocto_map[license_name])):
+                continue
+        bb.warn("QA Issue: %s [%s]" % (license_name + " found in SRC but not in package license statement", "reuse_license"))
 }
