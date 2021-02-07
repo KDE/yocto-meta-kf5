@@ -90,16 +90,17 @@ do_populate_lic_prepend() {
         print('Set LIC_FILES_CHKSUM from known SPDX files to:', d.getVar('LIC_FILES_CHKSUM'))
 
     # QA test for complete statement
-    src_licenses = os.listdir(os.path.join(srcdir, 'LICENSES/'))
-    for license_file in src_licenses:
-        # convert license_file to SPDX identifier
-        license_name = license_file
-        if license_name.endswith('.txt'):
-            license_name = license_name[:-4]
+    if d.getVar('KF5_REUSE_LICENSECHECK_ENABLED') and d.getVar('KF5_REUSE_LICENSECHECK_ENABLED') == '1':
+        src_licenses = os.listdir(os.path.join(srcdir, 'LICENSES/'))
+        for license_file in src_licenses:
+            # convert license_file to SPDX identifier
+            license_name = license_file
+            if license_name.endswith('.txt'):
+                license_name = license_name[:-4]
 
-        # compute list intersection and test if empty
-        if license_name in spdx_id_to_yocto_map:
-            if list(set(recipe_licenses) & set(spdx_id_to_yocto_map[license_name])):
-                continue
-        bb.warn("QA Issue: %s [%s]" % (license_name + " found in SRC but not in package license statement", "reuse_license"))
+            # compute list intersection and test if empty
+            if license_name in spdx_id_to_yocto_map:
+                if list(set(recipe_licenses) & set(spdx_id_to_yocto_map[license_name])):
+                    continue
+            bb.warn("QA Issue: %s [%s]" % (license_name + " found in SRC but not in package license statement", "reuse_license"))
 }
