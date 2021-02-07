@@ -6,7 +6,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.0"
+LICENSE = "BSD-2-Clause & (LGPL-2.0 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
 DEPENDS = "zlib bzip2 xz qtbase"
