@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "MIT"
+LICENSE = "MIT & BSD-3-Clause"
 PR = "r0"
 
 DEPENDS = "qtbase qtdeclarative qrencode libdmtx"
