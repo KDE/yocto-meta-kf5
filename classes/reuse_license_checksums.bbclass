@@ -49,17 +49,21 @@ do_populate_lic_prepend() {
             else:
                 spdx_id_to_yocto_map[spdx_id] = [ yocto_id ]
 
+    # unfortunatly license text may differ in whitespaces and empty lines
     checksum_map = {
-        'LGPL-2.0-only': '6d2d9952d88b50a51a5c73dc431d06c7',
-        'LGPL-2.0-or-later': '6d2d9952d88b50a51a5c73dc431d06c7',
-        'LGPL-2.1-only': 'fabba2a3bfeb22a6483d44e9ae824d3f',
-        'LGPL-2.1-or-later': '2a4f4fd2128ea2f65047ee63fbca9f68',
-        'LGPL-3.0-only': 'c51d3eef3be114124d11349ca0d7e117',
-        'LGPL-3.0-or-later': 'c51d3eef3be114124d11349ca0d7e117',
-        'BSD-2-Clause': '63d6ee386b8aaba70b1bf15a79ca50f2',
-        'BSD-3-Clause': '954f4d71a37096249f837652a7f586c0',
-        'MIT': '38aa75cf4c4c87f018227d5ec9638d75',
-        'LicenseRef-KDE-Accepted-LGPL': "6a2eced623a7c9d0c8996ce24917d006",
+        'LGPL-2.0-only': [ '6d2d9952d88b50a51a5c73dc431d06c7' ],
+        'LGPL-2.0-or-later': [ '6d2d9952d88b50a51a5c73dc431d06c7' ],
+        'LGPL-2.1-only': [ 'fabba2a3bfeb22a6483d44e9ae824d3f' ],
+        'LGPL-2.1-or-later': [ '2a4f4fd2128ea2f65047ee63fbca9f68' ],
+        'LGPL-3.0-only': [ 'c51d3eef3be114124d11349ca0d7e117' ],
+        'LGPL-3.0-or-later': [ 'c51d3eef3be114124d11349ca0d7e117' ],
+        'BSD-2-Clause': [ '63d6ee386b8aaba70b1bf15a79ca50f2' ],
+        'BSD-3-Clause': [ '954f4d71a37096249f837652a7f586c0' ],
+        'MIT': [ '38aa75cf4c4c87f018227d5ec9638d75' ],
+        'LicenseRef-KDE-Accepted-LGPL': [
+            "6a2eced623a7c9d0c8996ce24917d006",
+            "e4b79a181b6483b37d39a27f4d75e60a",
+        ],
     }
 
     # generate flat list of used license identifiers
@@ -78,9 +82,14 @@ do_populate_lic_prepend() {
         for license_id in recipe_licenses:
             if license_id in yocto_to_spdx_id_map:
                 for license_file in yocto_to_spdx_id_map[license_id]:
-                    if os.path.exists(os.path.join(srcdir, 'LICENSES/' + license_file + '.txt')):
-                        entry = "file://LICENSES/" + license_file + ".txt;md5=" + checksum_map[license_file]
-                        checksum_entries.append(entry)
+                    license_file_path = os.path.join(srcdir, 'LICENSES/' + license_file + '.txt')
+                    if os.path.exists(license_file_path):
+                        md5chksum = bb.utils.md5_file(license_file_path)
+                        if md5chksum in checksum_map[license_file]:
+                            entry = "file://LICENSES/" + license_file + ".txt;md5=" + md5chksum
+                            checksum_entries.append(entry)
+                        else:
+                            bb.warn("QA Issue: %s [%s]" % (license_name + " not found in checksum table", "reuse_license"))
                         break
             else:
                 bb.warn("License checksum database has no entry: ", license_id)
