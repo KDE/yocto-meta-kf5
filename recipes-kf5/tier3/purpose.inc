@@ -17,6 +17,7 @@ DEPENDS = " \
     kio \
     kauth-native \
     kirigami \
+    knotifications \
 "
 
 SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
