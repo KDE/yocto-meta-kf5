@@ -13,5 +13,5 @@ PR = "r0"
 inherit autotools
 
 SRC_URI = "https://github.com/dmtx/libdmtx/archive/v${PV}.tar.gz"
-SRC_URI[md5sum] = "aee0184c1374242996c9991a3133ada9"
-SRC_URI[sha256sum] = "15c6411f56cad4f58fa426f0ce96e0baf32b280af50082bd28edb651638e9c32"
+SRC_URI[md5sum] = "82edcd68e9f4fa779f5f7573baf2a9f5"
+SRC_URI[sha256sum] = "be0c5275695a732a5f434ded1fcc232aa63b1a6015c00044fe87f3a689b75f2e"
