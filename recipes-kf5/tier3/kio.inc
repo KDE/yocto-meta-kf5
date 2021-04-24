@@ -33,6 +33,7 @@ inherit kconfig
 inherit ki18n
 inherit kdoctools
 inherit kauth
+inherit mime-xdg
 inherit reuse_license_checksums
 
 FILES_${PN} += " \
