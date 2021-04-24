@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "BSD-3-Clause"
+LICENSE = "BSD-2-Clause & BSD-3-Clause & MIT"
 PR = "r0"
 
 DEPENDS = "cmake-native qttools qtbase-native qttools-native"
