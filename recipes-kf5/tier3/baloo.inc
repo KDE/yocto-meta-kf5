@@ -36,6 +36,7 @@ inherit reuse_license_checksums
 FILES_${PN} += " \
     ${libdir}/plugins/kf5/kio/*.so \
     ${libdir}/plugins/kf5/kded/*.so \
+    ${libdir}/systemd/user/* \
     ${libdir}/qml/org/kde/baloo/* \
     ${libdir}/qml/org/kde/baloo/experimental/* \
     ${datadir}/icons/hicolor/128x128/apps/baloo.png \
