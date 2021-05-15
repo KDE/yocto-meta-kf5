@@ -20,7 +20,7 @@ S = "${WORKDIR}/git"
 require kfilemetadata_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
-inherit distro_features_check
+inherit features_check
 inherit reuse_license_checksums
 
 REQUIRED_DISTRO_FEATURES += "xattr"
