@@ -1,0 +1,55 @@
+From 6f083d08a87283783ceb7af15ca71fe7b1cd4ccd Mon Sep 17 00:00:00 2001
+From: Andreas Cord-Landwehr <cordlandwehr@kde.org>
+Date: Sat, 19 Jun 2021 17:25:11 +0200
+Subject: [PATCH] Revert Linking to EGL::EGL target
+
+This reverts a70957d96c29aa6059753cbfe23d0615ea688b36 because it
+requires GLVND support in CMake's FindOpenGL.cmake logic, which
+currently is not available on Yocto.
+---
+ CMakeLists.txt                             | 10 ++++++----
+ src/declarativeimports/core/CMakeLists.txt |  2 +-
+ tests/testengine/testengine.cpp            |  0
+ 3 files changed, 7 insertions(+), 5 deletions(-)
+ mode change 100644 => 100755 tests/testengine/testengine.cpp
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3e68d148f..c24d1207d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -111,10 +111,12 @@ else()
+     set(HAVE_GLX 0)
+ endif()
+ 
+-add_feature_info(EGL ${OpenGL_EGL_FOUND}
+-                 "A platform-agnostic mechanism for creating rendering surfaces for use with other graphics libraries, such as OpenGL|ES and OpenVG.")
+-# OpenGL_EGL_FOUND is defined by FindOpenGL
+-set(HAVE_EGL ${OpenGL_EGL_FOUND})
++find_package(EGL)
++set_package_properties(EGL PROPERTIES
++                       PURPOSE "Support for Window Thumbnail on EGL platform"
++                       TYPE OPTIONAL
++                      )
++set(HAVE_EGL ${EGL_FOUND})
+ 
+ 
+ #########################################################################
+diff --git a/src/declarativeimports/core/CMakeLists.txt b/src/declarativeimports/core/CMakeLists.txt
+index 816f8fda7..c89dbf2dc 100644
+--- a/src/declarativeimports/core/CMakeLists.txt
++++ b/src/declarativeimports/core/CMakeLists.txt
+@@ -58,7 +58,7 @@ if(HAVE_X11)
+ endif()
+ 
+ if(HAVE_EGL)
+-    target_link_libraries(corebindingsplugin OpenGL::EGL)
++    target_link_libraries(corebindingsplugin EGL::EGL)
+ endif()
+ 
+ if (${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GLESv2")
+diff --git a/tests/testengine/testengine.cpp b/tests/testengine/testengine.cpp
+old mode 100644
+new mode 100755
+-- 
+2.30.2
+
