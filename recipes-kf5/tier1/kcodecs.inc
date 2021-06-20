@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.1"
+LICENSE = "MIT & BSD-3-Clause & LGPL-2.0+ & LGPL-2.0"
 PR = "r0"
 
 DEPENDS = "qtbase gperf-native"

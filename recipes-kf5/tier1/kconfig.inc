@@ -6,7 +6,7 @@
 # requires session management support in QtGui
 # eg. via PACKAGECONFIG_append_pn-qtbase = "sm" in local.conf
 
-LICENSE = "LGPL-2.1"
+LICENSE = "MIT & BSD-2-Clause & BSD-3-Clause & LGPL-2.0+ & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
 DEPENDS = "qtbase kconfig-native"

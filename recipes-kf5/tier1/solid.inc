@@ -6,7 +6,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.1"
+LICENSE = "BSD-3-Clause & LGPL-2.1+ & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
 DEPENDS = "qtbase bison-native"

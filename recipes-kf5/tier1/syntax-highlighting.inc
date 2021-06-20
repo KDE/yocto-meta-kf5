@@ -3,8 +3,11 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "MIT"
+LICENSE = "MIT & LGPL-2.0+"
 PR = "r0"
+
+# licenses only contained in autotests
+REUSE_LICENSECHECK_WHITELIST = "LGPL-2.1-or-later GPL-2.0-only"
 
 DEPENDS = " \
     qtbase \

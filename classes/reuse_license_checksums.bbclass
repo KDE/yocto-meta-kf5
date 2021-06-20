@@ -64,6 +64,8 @@ do_populate_lic_prepend() {
             "6a2eced623a7c9d0c8996ce24917d006",
             "e4b79a181b6483b37d39a27f4d75e60a",
         ],
+        'MIT-CMU': [ 'b6936b5be2ab721140d9bf57c37b0b92' ],
+        'Unicode-DFS-2016': [ '3daac258519ec32945c80ae0f7ba88f4' ]
     }
 
     # generate flat list of used license identifiers
@@ -74,6 +76,10 @@ do_populate_lic_prepend() {
     package_license_statement = package_license_statement.replace(")", " ")
     recipe_licenses = package_license_statement.split()
     recipe_licenses = list(map(str.strip, recipe_licenses))
+
+    package_license_qa_whitelist = d.getVar('REUSE_LICENSECHECK_WHITELIST') or ''
+    recipe_licenses_qa_whitelist = package_license_qa_whitelist.split()
+    recipe_licenses_qa_whitelist = list(map(str.strip, recipe_licenses_qa_whitelist))
 
     if d.getVar('LIC_FILES_CHKSUM') and not d.getVar('LIC_FILES_CHKSUM') == '':
         print("Aborting LIC_FILES_CHKSUM computation, value already set to:", d.getVar('LIC_FILES_CHKSUM'))
@@ -111,5 +117,7 @@ do_populate_lic_prepend() {
             if license_name in spdx_id_to_yocto_map:
                 if list(set(recipe_licenses) & set(spdx_id_to_yocto_map[license_name])):
                     continue
+            if license_name in recipe_licenses_qa_whitelist:
+                continue
             bb.warn("QA Issue: %s [%s]" % (license_name + " found in SRC but not in package license statement", "reuse_license"))
 }
