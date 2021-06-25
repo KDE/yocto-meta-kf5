@@ -59,8 +59,10 @@ add-tarball)
         framework=$(echo $recipe | grep -P -o '[0-9a-zA-Z\-]+(?=\.inc)')
 
         # due to historic reasons manual rewriting certain names
+        extraconfig=""
         if [[ "${framework}" == "kirigami" ]]; then
             framework="kirigami2"
+            extraconfig="S = \"\${WORKDIR}/kirigami2-\${PV}\""
         fi
 
         # deprecated modules are stored in portingAids folder
@@ -86,6 +88,7 @@ cat <<EOM > $name
 require \${PN}.inc
 SRC_URI = "${url}"
 SRC_URI[sha256sum] = "${sha256}"
+${extraconfig}
 EOM
          git add $name
     done
