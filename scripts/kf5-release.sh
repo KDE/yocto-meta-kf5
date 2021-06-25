@@ -45,6 +45,8 @@ cat <<EOM > $name
 
 require \${PN}.inc
 SRCREV = "v\${PV}"
+SRC_URI = "git://invent.kde.org/frameworks/\${BPN};nobranch=1;protocol=https"
+S = "\${WORKDIR}/git"
 EOM
         git add $name
     done
