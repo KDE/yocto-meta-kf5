@@ -13,9 +13,6 @@ DEPENDS = " \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require kidletime_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums

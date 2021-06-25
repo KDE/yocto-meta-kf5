@@ -20,9 +20,6 @@ DEPENDS = " \
     knotifications \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require purpose_metainfo.inc
 inherit cmake_kf5
 inherit gettext

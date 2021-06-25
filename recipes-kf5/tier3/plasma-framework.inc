@@ -33,11 +33,9 @@ DEPENDS = " \
     gzip-native \
 "
 
-SRC_URI = " \
-    git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https \
+SRC_URI_append = " \
     file://0001-Revert-Linking-to-EGL-EGL-target.patch \
 "
-S = "${WORKDIR}/git"
 
 require plasma-framework_metainfo.inc
 inherit cmake_kf5

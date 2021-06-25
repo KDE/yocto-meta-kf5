@@ -14,9 +14,6 @@ DEPENDS = " \
     ${BPN}-native \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/syntax-highlighting;nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require syntax-highlighting_metainfo.inc
 inherit cmake_kf5
 inherit perlnative

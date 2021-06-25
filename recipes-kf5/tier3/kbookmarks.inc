@@ -20,9 +20,6 @@ DEPENDS = " \
     kxmlgui \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require kbookmarks_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums

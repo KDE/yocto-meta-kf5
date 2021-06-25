@@ -13,9 +13,6 @@ DEPENDS = " \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras libxrender", "", d)} \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require kwindowsystem_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums

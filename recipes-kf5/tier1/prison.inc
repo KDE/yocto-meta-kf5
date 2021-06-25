@@ -8,9 +8,6 @@ PR = "r0"
 
 DEPENDS = "qtbase qtdeclarative qrencode libdmtx"
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require prison_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums

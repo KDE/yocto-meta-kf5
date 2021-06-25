@@ -11,9 +11,6 @@ PR = "r0"
 
 DEPENDS = "zlib bzip2 xz qtbase"
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require karchive_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums

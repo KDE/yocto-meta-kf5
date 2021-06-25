@@ -14,9 +14,6 @@ DEPENDS = " \
     kjs \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require kjsembed_metainfo.inc
 inherit cmake_kf5
 inherit ki18n

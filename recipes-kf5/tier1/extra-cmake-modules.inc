@@ -12,10 +12,7 @@ require extra-cmake-modules_metainfo.inc
 inherit cmake_qt5
 inherit reuse_license_checksums
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
 CLEANBROKEN = "1"
-
 
 FILES_${PN}-dev += " ${datadir}/ECM"
 

@@ -10,9 +10,6 @@ PR = "r0"
 
 DEPENDS = "qtbase"
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require kunitconversion_metainfo.inc
 inherit cmake_kf5
 inherit ki18n

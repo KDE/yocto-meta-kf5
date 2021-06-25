@@ -23,9 +23,6 @@ DEPENDS = " \
     kwindowsystem \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 require kio_metainfo.inc
 inherit cmake_kf5
 inherit kcoreaddons

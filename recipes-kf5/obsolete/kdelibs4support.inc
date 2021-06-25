@@ -30,9 +30,6 @@ DEPENDS = " \
     openssl \
 "
 
-SRC_URI = "git://invent.kde.org/frameworks/${BPN};nobranch=1;protocol=https"
-S = "${WORKDIR}/git"
-
 EXTRA_OECMAKE_class-target += " -DHAVE_GOOD_GETADDRINFO=ON"
 
 require kdelibs4support_metainfo.inc
