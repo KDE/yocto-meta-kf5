@@ -9,7 +9,7 @@
 
 function usage()
 {
-    echo "$1 [add|remove] <version>"
+    echo "$1 [add|add-tarball|remove] <version>"
     echo "$1 metainfo <version> [sourcedir]"
     exit 1
 }
@@ -31,14 +31,14 @@ if [ -z "$command" ]; then usage $0; fi
 version=$2
 if [ -z "$version" ]; then usage $0; fi
 
-base=`dirname $0`/../recipes-kf5
+base=$(dirname $0)/../recipes-kf5
 rootdir=$PWD
 
 case $command in
 add)
     # search for all non-staging inc files without underlines
-    for recipe in `find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/`; do
-        name=`echo $recipe | sed -e "s,\.inc,_${version}.bb,"`
+    for recipe in $(find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/); do
+        name=$(echo $recipe | sed -e "s,\.inc,_${version}.bb,")
 cat <<EOM > $name
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: CC0-1.0
@@ -47,6 +47,45 @@ require \${PN}.inc
 SRCREV = "v\${PV}"
 EOM
         git add $name
+    done
+    ;;
+add-tarball)
+    foldername=$(echo "${version}" | grep -o -E "^([0-9]+\.[0-9]+)")
+    # search for all non-staging inc files without underlines
+    for recipe in $(find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/); do
+        name=$(echo $recipe | sed -e "s,\.inc,_${version}.bb,")
+        framework=$(echo $recipe | grep -P -o '[0-9a-zA-Z\-]+(?=\.inc)')
+
+        # due to historic reasons manual rewriting certain names
+        if [[ "${framework}" == "kirigami" ]]; then
+            framework="kirigami2"
+        fi
+
+        # deprecated modules are stored in portingAids folder
+        portingAidSubfolder=""
+        if [[ "$framework" == "kxmlrpcclient" ]] \
+        || [[ "$framework" == "kjs" ]] \
+        || [[ "$framework" == "kjsembed" ]] \
+        || [[ "$framework" == "kdesignerplugin" ]] \
+        || [[ "$framework" == "kdelibs4support" ]];
+        then
+            portingAidSubfolder="portingAids/"
+        fi
+        url="https://download.kde.org/stable/frameworks/${foldername}/${portingAidSubfolder}${framework}-${version}.tar.xz"
+        sha256=$(curl -s "${url}.sha256" | cut -d" " -f1)
+        echo "${url} : ${sha256}"
+# examples:
+#https://download.kde.org/stable/frameworks/5.83/kconfig-5.83.0.tar.xz
+#https://download.kde.org/stable/frameworks/5.83/kconfig-5.83.0.tar.xz.sha256
+cat <<EOM > $name
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: CC0-1.0
+
+require \${PN}.inc
+SRC_URI = "${url}"
+SRC_URI[sha256sum] = "${sha256}"
+EOM
+         git add $name
     done
     ;;
 remove)
@@ -66,8 +105,8 @@ metainfo)
         mkdir -p $sourcedir
     fi
     for recipe in `find $base -regex ".*/[0-9a-zA-Z\-]+\.inc" | grep -v /staging/`; do
-        framework=`echo $recipe | grep -P -o '[0-9a-zA-Z\-]+(?=\.inc)'`
-        filename=`echo $recipe | sed -e "s,\.inc,_metainfo\.inc,"`
+        framework=$(echo $recipe | grep -P -o '[0-9a-zA-Z\-]+(?=\.inc)')
+        filename=$(echo $recipe | sed -e "s,\.inc,_metainfo\.inc,")
         url="https://invent.kde.org/frameworks/$framework.git"
         if [ -d "$sourcedir/$framework" ]; then
             cd $sourcedir/$framework
