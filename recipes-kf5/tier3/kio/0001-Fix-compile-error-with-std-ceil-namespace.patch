@@ -1,0 +1,28 @@
+From e42fe340c1107b12103871163479960cc16f8992 Mon Sep 17 00:00:00 2001
+From: Andreas Cord-Landwehr <cordlandwehr@kde.org>
+Date: Tue, 13 Jul 2021 20:45:34 +0200
+Subject: [PATCH] Fix compile error with std::ceil namespace
+
+In 561912b0610f60cd4992f640caa22919a85e5f90 std::ceil was introduced,
+which requires the std namespace. Switching to cmath header which
+defines that namespace.
+---
+ src/widgets/previewjob.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/widgets/previewjob.cpp b/src/widgets/previewjob.cpp
+index f5bb0eb9..f270b13d 100644
+--- a/src/widgets/previewjob.cpp
++++ b/src/widgets/previewjob.cpp
+@@ -47,7 +47,7 @@
+ #include <Solid/StorageAccess>
+ 
+ #include <algorithm>
+-#include <math.h>
++#include <cmath>
+ 
+ #include "job_p.h"
+ 
+-- 
+2.30.2
+

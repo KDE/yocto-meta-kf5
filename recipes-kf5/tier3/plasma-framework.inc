@@ -33,10 +33,6 @@ DEPENDS = " \
     gzip-native \
 "
 
-SRC_URI_append = " \
-    file://0001-Revert-Linking-to-EGL-EGL-target.patch \
-"
-
 require plasma-framework_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
