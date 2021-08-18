@@ -7,10 +7,6 @@
 LICENSE = "LGPL-2.0"
 PR = "r0"
 
-SRC_URI_append = " \
-    file://0001-Fix-compile-error-with-std-ceil-namespace.patch \
-"
-
 DEPENDS = " \
     qtbase \
     karchive \
