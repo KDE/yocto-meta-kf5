@@ -41,6 +41,7 @@ inherit reuse_license_checksums
 
 FILES_${PN} += " \
     ${libdir}/plugins/*.so \
+    ${libdir}/plugins/kf5/kirigami/KirigamiPlasmaStyle.so \
     ${libdir}/plugins/kpackage/packagestructure/*.so \
     ${libdir}/plugins/plasma/scriptengines/*.so \
     ${libdir}/qml/org/kde/plasma/accessdenied/* \

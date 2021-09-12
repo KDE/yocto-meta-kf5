@@ -26,3 +26,7 @@ sysroot_stage_all_append_class-native () {
     mkdir -p ${SYSROOT_DESTDIR}/${bindir}
     cp ${B}/bin/katehighlightingindexer ${SYSROOT_DESTDIR}/${bindir}
 }
+
+FILES_${PN} += " \
+    ${libdir}/qml/org/kde/syntaxhighlighting/ \
+"

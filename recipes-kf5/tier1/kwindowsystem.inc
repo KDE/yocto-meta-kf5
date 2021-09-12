@@ -10,7 +10,7 @@ PR = "r0"
 
 DEPENDS = " \
     qtbase \
-    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras libxrender", "", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "
 
 require kwindowsystem_metainfo.inc
