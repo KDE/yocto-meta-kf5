@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.0+ & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL) & BSD-3-Clause"
 PR = "r0"
 
 DEPENDS_class-native += " \

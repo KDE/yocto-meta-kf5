@@ -4,6 +4,8 @@
 #
 # SPDX-License-Identifier: MIT
 
+# the licenses are only options for some files
+REUSE_LICENSECHECK_WHITELIST = "LicenseRef-KDE-Accepted-GPL LGPL-3.0"
 LICENSE = "LGPL-2.0"
 PR = "r0"
 

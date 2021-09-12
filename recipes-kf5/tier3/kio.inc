@@ -4,7 +4,8 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.0"
+REUSE_LICENSECHECK_WHITELIST = "Qt-Commercial-exception-1.0 CC0-1.0"
+LICENSE = "LGPL-2.0 & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL) & BSD-2-Clause & BSD-3-Clause & MIT & (GPL-2.0 | GPL-3.0 | LicenseRef-KDE-Accepted-GPL)"
 PR = "r0"
 
 DEPENDS = " \

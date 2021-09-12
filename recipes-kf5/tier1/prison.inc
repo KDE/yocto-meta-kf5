@@ -3,6 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
+REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 LICENSE = "MIT & BSD-3-Clause"
 PR = "r0"
 
