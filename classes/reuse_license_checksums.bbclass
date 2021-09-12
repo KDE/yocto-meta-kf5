@@ -47,7 +47,10 @@ do_populate_lic_prepend() {
         ],
         'LicenseRef-KDE-Accepted-LGPL': [
             'LicenseRef-KDE-Accepted-LGPL'
-        ]
+        ],
+        'LicenseRef-KDE-Accepted-GPL': [
+            'LicenseRef-KDE-Accepted-GPL'
+        ],
     }
     spdx_id_to_yocto_map = {}
     for yocto_id in yocto_to_spdx_id_map:
@@ -75,6 +78,10 @@ do_populate_lic_prepend() {
         'LicenseRef-KDE-Accepted-LGPL': [
             "6a2eced623a7c9d0c8996ce24917d006",
             "e4b79a181b6483b37d39a27f4d75e60a",
+        ],
+        'LicenseRef-KDE-Accepted-GPL': [
+            'b8a14d4a3321110bced049d26f38c352',
+            'b4c280013bbbadfbe92219498dc5228c',
         ],
         'MIT-CMU': [ 'b6936b5be2ab721140d9bf57c37b0b92' ],
         'Unicode-DFS-2016': [ '3daac258519ec32945c80ae0f7ba88f4' ]
@@ -107,7 +114,7 @@ do_populate_lic_prepend() {
                             entry = "file://LICENSES/" + license_file + ".txt;md5=" + md5chksum
                             checksum_entries.append(entry)
                         else:
-                            bb.warn("QA Issue: %s [%s]" % (license_name + " not found in checksum table", "reuse_license"))
+                            bb.warn("QA Issue: %s [%s]" % (license_id + " not found in checksum table, md5sum=" + md5chksum, "reuse_license"))
                         break
             else:
                 bb.warn("License checksum database has no entry: ", license_id)
