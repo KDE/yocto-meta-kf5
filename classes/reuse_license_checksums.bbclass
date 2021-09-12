@@ -26,7 +26,15 @@ do_populate_lic_prepend() {
         ],
         'LGPL-3.0' : [
             'LGPL-3.0-only',
-            'LGPL-3.0-later'
+            'LGPL-3.0-or-later'
+        ],
+        'GPL-2.0' : [
+            'GPL-2.0-only',
+            'GPL-2.0-or-later'
+        ],
+        'GPL-3.0' : [
+            'GPL-3.0-only',
+            'GPL-3.0-or-later'
         ],
         'BSD-2-Clause' : [
             'BSD-2-Clause'
@@ -57,6 +65,10 @@ do_populate_lic_prepend() {
         'LGPL-2.1-or-later': [ '2a4f4fd2128ea2f65047ee63fbca9f68' ],
         'LGPL-3.0-only': [ 'c51d3eef3be114124d11349ca0d7e117' ],
         'LGPL-3.0-or-later': [ 'c51d3eef3be114124d11349ca0d7e117' ],
+        'GPL-2.0-only': [ '93e64b4a83c7e441e48bbdeeea05c977' ],
+        'GPL-2.0-or-later': [ 'fed54355545ffd980b814dab4a3b312c' ],
+        'GPL-3.0-only': [ '1c76c4cc354acaac30ed4d5eefea7245' ],
+        'GPL-3.0-or-later´': [ '1c76c4cc354acaac30ed4d5eefea7245' ],
         'BSD-2-Clause': [ '63d6ee386b8aaba70b1bf15a79ca50f2' ],
         'BSD-3-Clause': [ '954f4d71a37096249f837652a7f586c0' ],
         'MIT': [ '38aa75cf4c4c87f018227d5ec9638d75' ],
