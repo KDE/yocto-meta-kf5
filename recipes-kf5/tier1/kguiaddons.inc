@@ -15,8 +15,13 @@ DEPENDS = " \
     qtbase \
     qtwayland \
     qtwayland-native \
+    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "
 
 require kguiaddons_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
+
+FILES_${PN} += " \
+    ${libdir}/plugins/kf5/kguiaddons/kmodifierkey/ \
+"
