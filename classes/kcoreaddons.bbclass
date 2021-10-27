@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-do_compile_prepend() {
+do_compile:prepend() {
     # desktoptojson needs to find installed service type files
     export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
 }

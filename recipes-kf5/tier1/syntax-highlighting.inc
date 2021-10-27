@@ -19,14 +19,14 @@ inherit cmake_kf5
 inherit perlnative
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE_class-native += " -DKSYNTAXHIGHLIGHTING_USE_GUI=OFF"
-EXTRA_OECMAKE_class-target += " -DKATEHIGHLIGHTINGINDEXER_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/katehighlightingindexer"
+EXTRA_OECMAKE:class-native += " -DKSYNTAXHIGHLIGHTING_USE_GUI=OFF"
+EXTRA_OECMAKE:class-target += " -DKATEHIGHLIGHTINGINDEXER_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/katehighlightingindexer"
 
-sysroot_stage_all_append_class-native () {
+sysroot_stage_all:append:class-native () {
     mkdir -p ${SYSROOT_DESTDIR}/${bindir}
     cp ${B}/bin/katehighlightingindexer ${SYSROOT_DESTDIR}/${bindir}
 }
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/qml/org/kde/syntaxhighlighting/ \
 "

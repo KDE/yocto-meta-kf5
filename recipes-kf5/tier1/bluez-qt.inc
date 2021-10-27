@@ -13,12 +13,12 @@ require bluez-qt_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE_class-target += " \
+EXTRA_OECMAKE:class-target += " \
                   -DUDEV_RULES_INSTALL_DIR=${libdir}/udev/rules.d \
                   "
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/qml/org/kde/bluezqt/* \
 "
 
-RDEPENDS_${PN} += "bluez5"
+RDEPENDS:${PN} += "bluez5"

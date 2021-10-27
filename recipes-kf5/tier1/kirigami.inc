@@ -15,11 +15,11 @@ require kirigami_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/qml/org/kde/kirigami.2 \
 "
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     qtgraphicaleffects-qmlplugins \
     qtquickcontrols2-qmlplugins \
 "

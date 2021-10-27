@@ -14,7 +14,7 @@ require kitemmodels_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/qml/org/kde/kitemmodels/qmldir \
     ${libdir}/qml/org/kde/kitemmodels/libitemmodelsplugin.so \
 "

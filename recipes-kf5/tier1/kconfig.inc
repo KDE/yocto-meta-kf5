@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 #
 # requires session management support in QtGui
-# eg. via PACKAGECONFIG_append_pn-qtbase = "sm" in local.conf
+# eg. via PACKAGECONFIG:append:pn-qtbase = "sm" in local.conf
 
 LICENSE = "MIT & BSD-2-Clause & BSD-3-Clause & LGPL-2.0+ & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
@@ -14,8 +14,8 @@ DEPENDS = "qtbase kconfig-native"
 require kconfig_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
-EXTRA_OECMAKE_class-native += " -DKCONFIG_USE_GUI=OFF"
+EXTRA_OECMAKE:class-native += " -DKCONFIG_USE_GUI=OFF"
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${libexecdir}/kf5/kconfig_compiler_kf5 \
 "

@@ -26,6 +26,6 @@ inherit kdoctools
 inherit reuse_license_checksums
 
 FILES_SOLIBSDEV = ""
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/libkdeinit5_klauncher.so \
 "

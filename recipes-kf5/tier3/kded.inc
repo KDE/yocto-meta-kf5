@@ -26,7 +26,7 @@ inherit kdoctools
 inherit reuse_license_checksums
 
 FILES_SOLIBSDEV = ""
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/libkdeinit5_kded5.so \
     ${libdir}/systemd/user/plasma-kded.service \
 "

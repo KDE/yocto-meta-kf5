@@ -30,7 +30,7 @@ DEPENDS = " \
     openssl \
 "
 
-EXTRA_OECMAKE_class-target += " -DHAVE_GOOD_GETADDRINFO=ON"
+EXTRA_OECMAKE:class-target += " -DHAVE_GOOD_GETADDRINFO=ON"
 
 require kdelibs4support_metainfo.inc
 inherit cmake_kf5
@@ -38,16 +38,16 @@ inherit ki18n
 inherit perlnative
 inherit kdoctools
 
-do_compile_prepend() {
+do_compile:prepend() {
     # desktoptojson needs to find installed service type files
     export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
 }
 
-do_install_append_class-target() {
+do_install:append:class-target() {
     rm -rf ${D}${libdir}/plugins/designer
 }
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/*.so \
     ${libdir}/plugins/kf5/kio/*.so \
     ${libdir}/plugins/kf5/kded/*.so \
@@ -61,8 +61,8 @@ FILES_${PN} += " \
     ${datadir}/kf5/kdoctools/customization/dtd/kdex.dtd \
 "
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${datadir}/kf5/widgets/pics/*.png \
 "
 
-RDEPENDS_kdelibs4support += "perl"
+RDEPENDS:kdelibs4support += "perl"

@@ -14,6 +14,6 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kf5
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${libdir}/cmake/PolkitQt5-1/* \
 "

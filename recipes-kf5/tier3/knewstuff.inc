@@ -37,7 +37,7 @@ inherit cmake_kf5
 inherit ki18n
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/qml/org/kde/newstuff/* \
     ${libdir}/qml/org/kde/newstuff/qml/* \
     ${datadir}/kf5/knewstuff/pics/*.png \

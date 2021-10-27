@@ -21,7 +21,7 @@ require kglobalaccel_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/org.kde.kglobalaccel5.platforms/*.so \
     ${libdir}/systemd \
 "

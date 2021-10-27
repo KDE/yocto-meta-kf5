@@ -14,7 +14,7 @@ inherit packagegroup features_check
 
 REQUIRED_DISTRO_FEATURES = "wayland x11"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
     attica \
     bluez-qt \
     breeze-icons \

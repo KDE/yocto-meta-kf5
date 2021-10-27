@@ -30,7 +30,7 @@ inherit cmake_kf5
 inherit ki18n
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/kf5/kio/*.so \
     ${libdir}/plugins/kf5/kded/*.so \
     ${libdir}/systemd/user/* \
@@ -42,4 +42,4 @@ PRIVATE_LIBS += " \
     liblmdb.so.* \
 "
 
-RDEPENDS_${PN} += "lmdb"
+RDEPENDS:${PN} += "lmdb"

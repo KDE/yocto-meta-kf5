@@ -20,7 +20,7 @@ require kemoticons_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/kf5/*.so \
     ${libdir}/plugins/kf5/emoticonsthemes/*.so \
     ${datadir}/emoticons/Konqi/*.png \

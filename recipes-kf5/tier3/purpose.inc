@@ -27,7 +27,7 @@ inherit python3native
 inherit kdoctools
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/kf5/kfileitemaction \
     ${libdir}/plugins/kf5/purpose \
     ${libdir}/qml/org/kde/purpose \

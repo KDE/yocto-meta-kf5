@@ -16,11 +16,11 @@ inherit cmake_kf5
 inherit reuse_license_checksums
 inherit mime-xdg
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${datadir}/mime/packages/kde5.xml \
     ${datadir}/kf5/licenses/* \
 "
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${bindir}/desktoptojson \
 "

@@ -12,9 +12,9 @@ require sonnet_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE_append_class-native += " -DSONNET_USE_WIDGETS=OFF"
-EXTRA_OECMAKE_append_class-target += " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/parsetrigrams"
+EXTRA_OECMAKE:append:class-native += " -DSONNET_USE_WIDGETS=OFF"
+EXTRA_OECMAKE:append:class-target += " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}/${bindir}/parsetrigrams"
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${datadir}/kf5/sonnet/* \
 "

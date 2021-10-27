@@ -39,7 +39,7 @@ inherit ki18n
 inherit kdoctools
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/*.so \
     ${libdir}/plugins/kf5/kirigami/KirigamiPlasmaStyle.so \
     ${libdir}/plugins/kpackage/packagestructure/*.so \

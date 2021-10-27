@@ -10,9 +10,9 @@ require breeze-icons_metainfo.inc
 inherit cmake_kf5
 # bash is in the hosttools folder in PATH, but that's not detected automatically
 # due to the CMAKE_FIND_ROOT_PATH settings
-EXTRA_OECMAKE_class-target += " -DBASH_EXE=`which bash`"
+EXTRA_OECMAKE:class-target += " -DBASH_EXE=`which bash`"
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${datadir}/icons/breeze \
     ${datadir}/icons/breeze-dark \
 "

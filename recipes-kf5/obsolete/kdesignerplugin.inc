@@ -16,15 +16,15 @@ DEPENDS = " \
 require kdesignerplugin_metainfo.inc
 inherit cmake_kf5
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
   ${datadir}/kf5/widgets/pics/*.png \
 "
 
-sysroot_stage_all_append_class-target () {
+sysroot_stage_all:append:class-target () {
     mkdir -p ${SYSROOT_DESTDIR}${bindir}
     cp ${STAGING_BINDIR_NATIVE}/kgendesignerplugin ${SYSROOT_DESTDIR}/${bindir}
 }
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${bindir}/kgendesignerplugin \
 "

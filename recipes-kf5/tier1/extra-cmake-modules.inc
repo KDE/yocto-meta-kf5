@@ -14,6 +14,6 @@ inherit reuse_license_checksums
 
 CLEANBROKEN = "1"
 
-FILES_${PN}-dev += " ${datadir}/ECM"
+FILES:${PN}-dev += " ${datadir}/ECM"
 
 BBCLASSEXTEND = "native nativesdk"

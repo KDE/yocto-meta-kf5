@@ -24,8 +24,8 @@ inherit cmake_kf5
 inherit ki18n
 inherit reuse_license_checksums
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${bindir}/preparetips5 \
 "
 
-RDEPENDS_${PN}-dev += "perl"
+RDEPENDS:${PN}-dev += "perl"

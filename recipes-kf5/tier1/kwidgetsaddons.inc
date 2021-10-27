@@ -14,6 +14,6 @@ require kwidgetsaddons_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${datadir}/kf5/kcharselect/kcharselect-data \
 "

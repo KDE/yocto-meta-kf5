@@ -13,11 +13,11 @@ require kjs_metainfo.inc
 inherit cmake_kf5
 inherit perlnative
 
-sysroot_stage_all_append_class-native () {
+sysroot_stage_all:append:class-native () {
     mkdir -p ${SYSROOT_DESTDIR}/${bindir}
     cp ${B}/bin/icemaker ${SYSROOT_DESTDIR}/${bindir}
 }
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${datadir}/kf5/kjs/create_hash_table \
 "

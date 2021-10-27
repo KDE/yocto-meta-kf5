@@ -29,6 +29,6 @@ inherit cmake_kf5
 inherit ki18n
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
   ${libdir}/qml/org/kde/runnermodel/* \
 "

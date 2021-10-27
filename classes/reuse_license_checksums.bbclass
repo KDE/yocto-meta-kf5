@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-do_populate_lic_prepend() {
+do_populate_lic:prepend() {
     srcdir = d.getVar('S')
 
     # keys are only Yocto's SPDX(-like) identifiers from licenses.conf

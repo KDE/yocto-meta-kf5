@@ -27,7 +27,7 @@ inherit ki18n
 inherit kdoctools
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/kf5/FrameworkIntegrationPlugin.so \
     ${datadir}/kf5/infopage \
 "

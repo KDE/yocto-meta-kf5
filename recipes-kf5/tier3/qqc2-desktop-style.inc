@@ -21,7 +21,7 @@ require qqc2-desktop-style_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/kf5/kirigami/*.so \
     ${libdir}/qml/org/kde/qqc2desktopstyle/private/* \
     ${libdir}/qml/QtQuick/Controls.2/org.kde.desktop/* \

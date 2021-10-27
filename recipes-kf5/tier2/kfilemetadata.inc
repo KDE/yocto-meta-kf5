@@ -22,6 +22,6 @@ inherit reuse_license_checksums
 
 REQUIRED_DISTRO_FEATURES += "xattr"
 
-FILES_${PN} += " \
+FILES:${PN} += " \
   ${libdir}/plugins/kf5/kfilemetadata/*.so \
 "

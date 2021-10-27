@@ -14,11 +14,11 @@ require kimageformats_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-FILES_${PN}-dbg += " \
+FILES:${PN}-dbg += " \
     ${libdir}/plugins/imageformats/.debug/*.so \
 "
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/imageformats/*.so \
     ${datadir}/kservices5/qimageioplugins/*.desktop \
 "

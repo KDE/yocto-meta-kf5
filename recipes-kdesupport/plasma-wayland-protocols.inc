@@ -16,7 +16,7 @@ S = "${WORKDIR}/git"
 
 inherit cmake_qt5
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${libdir}/cmake/* \
     ${datadir}/plasma-wayland-protocols/* \
 "

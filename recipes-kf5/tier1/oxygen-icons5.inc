@@ -9,7 +9,7 @@ PR = "r0"
 require oxygen-icons5_metainfo.inc
 inherit cmake_kf5
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${datadir}/icons/oxygen/index.theme \
     ${datadir}/icons/oxygen/base/*/*/*.png \
 "

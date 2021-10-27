@@ -34,7 +34,7 @@ inherit kauth
 inherit mime-xdg
 inherit reuse_license_checksums
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/plugins/kcm_*.so \
     ${libdir}/plugins/kf5/kio/*.so \
     ${libdir}/plugins/kf5/kded/*.so \
@@ -46,6 +46,6 @@ FILES_${PN} += " \
     ${datadir}/kconf_update \
 "
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     ca-certificates \
 "

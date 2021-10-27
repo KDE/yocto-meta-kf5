@@ -16,7 +16,7 @@ DEPENDS = " \
     kcodecs \
 "
 
-RDEPENDS_${PN} += "iso-codes"
+RDEPENDS:${PN} += "iso-codes"
 
 require kcontacts_metainfo.inc
 inherit cmake_kf5

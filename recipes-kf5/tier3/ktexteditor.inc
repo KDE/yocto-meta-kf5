@@ -28,12 +28,12 @@ inherit cmake_kf5
 inherit ki18n
 inherit reuse_license_checksums
 
-do_compile_prepend() {
+do_compile:prepend() {
     # desktoptojson needs to find installed service type files
     export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
 }
 
-FILES_${PN} += " \
+FILES:${PN} += " \
   ${libdir}/plugins/kf5/parts/katepart.so \
   ${datadir}/katepart5/script/README.md \
 "
