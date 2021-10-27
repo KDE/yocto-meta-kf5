@@ -11,7 +11,7 @@ PR = "r0"
 DEPENDS_class-native += " \
     qtbase \
     gettext-native \
-    extra-cmake-modules \
+    extra-cmake-modules-native \
 "
 DEPENDS_class-target += " \
     qtdeclarative \
