@@ -32,6 +32,9 @@ do_populate_lic:prepend() {
             'GPL-2.0-only',
             'GPL-2.0-or-later'
         ],
+        'GPL-2.0+' : [
+            'GPL-2.0-or-later'
+        ],
         'GPL-3.0' : [
             'GPL-3.0-only',
             'GPL-3.0-or-later'
@@ -65,7 +68,10 @@ do_populate_lic:prepend() {
         'LGPL-2.0-only': [ '6d2d9952d88b50a51a5c73dc431d06c7' ],
         'LGPL-2.0-or-later': [ '6d2d9952d88b50a51a5c73dc431d06c7' ],
         'LGPL-2.1-only': [ 'fabba2a3bfeb22a6483d44e9ae824d3f' ],
-        'LGPL-2.1-or-later': [ '2a4f4fd2128ea2f65047ee63fbca9f68' ],
+        'LGPL-2.1-or-later': [
+            "2a4f4fd2128ea2f65047ee63fbca9f68",
+            "41890f71f740302b785c27661123bff5",
+        ],
         'LGPL-3.0-only': [ 'c51d3eef3be114124d11349ca0d7e117' ],
         'LGPL-3.0-or-later': [ 'c51d3eef3be114124d11349ca0d7e117' ],
         'GPL-2.0-only': [ '93e64b4a83c7e441e48bbdeeea05c977' ],
