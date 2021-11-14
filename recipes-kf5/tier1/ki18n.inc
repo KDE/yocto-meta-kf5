@@ -26,6 +26,8 @@ inherit reuse_license_checksums
 
 EXTRA_OECMAKE:class-native += " -DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
 
+RDEPENDS:${PN}:class-target += "iso-codes"
+
 FILES:${PN}-dbg += " \
     ${libdir}/plugins/kf5/.debug/ktranscript.so \
 "
