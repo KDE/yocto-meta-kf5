@@ -5,7 +5,9 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.0"
+# GPL-2.0+ only used in exmaple and test code
+REUSE_LICENSECHECK_WHITELIST = "GPL-2.0-or-later"
+LICENSE = "LGPL-2.1+ & MIT"
 PR = "r0"
 
 DEPENDS = " \

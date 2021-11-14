@@ -6,7 +6,9 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "BSD-2-Clause & (LGPL-2.0 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
+# whitelist licenses are all compatible with LGPL-2.0+ and do not add additional restrictions
+REUSE_LICENSECHECK_WHITELIST = "LGPL-2.0 LGPL-3.0 LicenseRef-KDE-Accepted-LGPL"
+LICENSE = "BSD-2-Clause & LGPL-2.0+"
 PR = "r0"
 
 DEPENDS = "zlib bzip2 xz qtbase"

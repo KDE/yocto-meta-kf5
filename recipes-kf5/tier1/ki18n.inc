@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
 # SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
 # SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+# SPDX-FileCopyrightText: 2020-2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
 
@@ -32,4 +32,5 @@ FILES:${PN}-dbg += " \
 
 FILES:${PN} += " \
     ${libdir}/plugins/kf5/ktranscript.so \
+    ${libdir}/qml/org/kde/i18n/localeData \
 "

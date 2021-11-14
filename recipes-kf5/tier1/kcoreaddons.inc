@@ -15,6 +15,7 @@ require kcoreaddons_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 inherit mime-xdg
+inherit mime
 
 FILES:${PN} += " \
     ${datadir}/mime/packages/kde5.xml \
