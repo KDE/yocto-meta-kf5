@@ -34,6 +34,6 @@ do_compile:prepend() {
 }
 
 FILES:${PN} += " \
-  ${libdir}/plugins/kf5/parts/katepart.so \
-  ${datadir}/katepart5/script/README.md \
+    ${libdir}/plugins/kf5/parts/katepart.so \
+    ${datadir}/katepart5/script/README.md \
 "

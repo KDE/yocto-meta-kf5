@@ -30,5 +30,5 @@ inherit ki18n
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-  ${libdir}/qml/org/kde/runnermodel/* \
+    ${libdir}/qml/org/kde/runnermodel/* \
 "

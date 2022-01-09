@@ -53,9 +53,11 @@ FILES:${PN} += " \
     ${datadir}/polkit-1/actions/*.policy \
 "
 
+# TODO "${datadir}/kdevappwizard/templates/*.tar.bz2" is deprecated, remove when all frameworks are ported away
 FILES:${PN}-dev += " \
     ${datadir}/dbus-1/interfaces/*.xml \
     ${datadir}/kdevappwizard/templates/*.tar.bz2 \
+    ${datadir}/kdevfiletemplates/templates/*.tar.bz2 \
     ${datadir}/qlogging-categories5 \
     ${libdir}/cmake \
     ${libdir}/plugins/designer/*.so \
