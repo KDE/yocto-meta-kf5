@@ -105,6 +105,7 @@ do_populate_lic:prepend() {
     package_license_qa_whitelist = d.getVar('REUSE_LICENSECHECK_WHITELIST') or ''
     recipe_licenses_qa_whitelist = package_license_qa_whitelist.split()
     recipe_licenses_qa_whitelist = list(map(str.strip, recipe_licenses_qa_whitelist))
+    recipe_licenses_qa_whitelist.append("CC0-1.0")
 
     if d.getVar('LIC_FILES_CHKSUM') and not d.getVar('LIC_FILES_CHKSUM') == '':
         print("Aborting LIC_FILES_CHKSUM computation, value already set to:", d.getVar('LIC_FILES_CHKSUM'))
