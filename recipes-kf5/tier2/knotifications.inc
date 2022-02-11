@@ -13,7 +13,7 @@ DEPENDS = " \
     kconfig-native \
     kcoreaddons \
     kcoreaddons-native \
-    phonon \
+    libcanberra \
 "
 
 require knotifications_metainfo.inc
