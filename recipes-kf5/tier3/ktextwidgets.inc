@@ -14,7 +14,6 @@ DEPENDS = "qtbase \
     kconfigwidgets \
     kcoreaddons-native \
     kauth-native \
-    kiconthemes \
     kservice \
     kwidgetsaddons \
     sonnet \
