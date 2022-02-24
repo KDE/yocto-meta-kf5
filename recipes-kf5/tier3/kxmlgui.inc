@@ -16,7 +16,6 @@ DEPENDS = "qtbase \
     kconfig-native \
     kauth-native \
     kiconthemes \
-    ktextwidgets \
     kwidgetsaddons \
     kwindowsystem \
     kglobalaccel\
