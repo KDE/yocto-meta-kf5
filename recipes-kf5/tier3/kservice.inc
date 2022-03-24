@@ -12,7 +12,6 @@ DEPENDS = "qtbase \
     kconfig-native \
     kcoreaddons \
     kcoreaddons-native \
-    kcrash \
     kdbusaddons \
     bison-native \
 "
