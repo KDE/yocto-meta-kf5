@@ -20,7 +20,6 @@ DEPENDS = " \
     kglobalaccel \
     kiconthemes \
     kio \
-    kcoreaddons-native \
     kconfig-native \
     kauth-native \
     knotifications \
@@ -30,18 +29,17 @@ DEPENDS = " \
     openssl \
 "
 
-EXTRA_OECMAKE:class-target += " -DHAVE_GOOD_GETADDRINFO=ON"
+EXTRA_OECMAKE:append:class-target = " \
+    -DHAVE_GOOD_GETADDRINFO=ON \
+    -DKSERVICETYPE_PATH_kdedmodule.desktop=${STAGING_DATADIR} \
+"
 
 require kdelibs4support_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
 inherit perlnative
 inherit kdoctools
-
-do_compile:prepend() {
-    # desktoptojson needs to find installed service type files
-    export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
-}
+inherit kcoreaddons
 
 do_install:append:class-target() {
     rm -rf ${D}${libdir}/plugins/designer
