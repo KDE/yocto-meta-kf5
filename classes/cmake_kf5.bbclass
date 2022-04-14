@@ -6,20 +6,23 @@
 
 inherit cmake_qt5
 
-EXTRA_OECMAKE:class-native += " \
+EXTRA_OECMAKE:append:class-native = " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DBUILD_TESTING=OFF \
     -DBUILD_DESIGNERPLUGIN=OFF \
 "
 
-EXTRA_OECMAKE:class-target += " \
+EXTRA_OECMAKE:append:class-target = " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DBUILD_TESTING=OFF \
     -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake \
     -DBUILD_DESIGNERPLUGIN=OFF \
 "
 
-DEPENDS += "extra-cmake-modules qttools-native"
+DEPENDS:append = " \
+    extra-cmake-modules \
+    qttools-native \
+"
 
 # don't bother with translations for host tools
 do_configure:prepend:class-native() {
