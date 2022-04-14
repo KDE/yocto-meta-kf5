@@ -20,6 +20,8 @@ DEPENDS = " \
     kiconthemes \
     kitemviews \
     kjobwidgets \
+    ktextwidgets \
+    kwallet \
     kwidgetsaddons \
     kwindowsystem \
 "

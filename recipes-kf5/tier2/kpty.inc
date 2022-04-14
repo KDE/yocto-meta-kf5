@@ -13,6 +13,8 @@ DEPENDS = " \
     kcoreaddons-native \
 "
 
+EXTRA_OECMAKE += "-DCMAKE_DISABLE_FIND_PACKAGE_UTEMPTER=ON"
+
 require kpty_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
