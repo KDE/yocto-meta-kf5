@@ -11,7 +11,7 @@ DEPENDS = " \
     qtbase \
     kcoreaddons \
     kcoreaddons-native \
-    kservice \
+    kconfig \
     kconfig-native \
     kpty \
 "
