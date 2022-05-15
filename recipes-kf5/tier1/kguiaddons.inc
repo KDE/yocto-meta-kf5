@@ -16,6 +16,7 @@ DEPENDS = " \
     qtwayland \
     qtwayland-native \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
+    plasma-wayland-protocols \
 "
 
 require kguiaddons_metainfo.inc
