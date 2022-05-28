@@ -14,11 +14,11 @@ require kauth_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE:class-target += " \
+EXTRA_OECMAKE:class-target = " \
     -DKAUTH_BACKEND_NAME=POLKITQT5-1 \
 "
 
-EXTRA_OECMAKE:class-native += " \
+EXTRA_OECMAKE:class-native = " \
     -DKAUTH_BACKEND_NAME=POLKITQT5-1 \
     -DKAUTH_BUILD_CODEGENERATOR_ONLY=ON \
     -DKAUTH_POLICY_FILES_INSTALL_DIR=${datadir}/polkit-1/actions \

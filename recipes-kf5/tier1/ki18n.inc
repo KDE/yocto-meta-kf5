@@ -8,12 +8,12 @@
 LICENSE = "LGPL-2.0+ & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL) & BSD-3-Clause"
 PR = "r0"
 
-DEPENDS:class-native += " \
+DEPENDS:class-native = " \
     qtbase \
     gettext-native \
     extra-cmake-modules-native \
 "
-DEPENDS:class-target += " \
+DEPENDS:class-target = " \
     qtdeclarative \
     gettext-native \
     extra-cmake-modules \
@@ -24,9 +24,9 @@ inherit cmake_kf5
 inherit python3native
 inherit reuse_license_checksums
 
-EXTRA_OECMAKE:class-native += " -DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
+EXTRA_OECMAKE:class-native = " -DBUILD_WITH_QTSCRIPT=OFF -DLibIntl_SEARCH_PATH=/usr/include"
 
-RDEPENDS:${PN}:class-target += "iso-codes"
+RDEPENDS:${PN}:class-target = " iso-codes"
 
 FILES:${PN}-dbg += " \
     ${libdir}/plugins/kf5/.debug/ktranscript.so \
