@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: MIT
 
 inherit cmake_qt5
+inherit pkgconfig
 
 EXTRA_OECMAKE:append:class-native = " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
