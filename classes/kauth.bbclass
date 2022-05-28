@@ -4,10 +4,10 @@
 #
 # SPDX-License-Identifier: MIT
 
-DEPENDS += " \
+DEPENDS:append = " \
     kauth \
     kauth-native \
     polkit-qt-1 \
 "
 
-EXTRA_OECMAKE += " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"
+EXTRA_OECMAKE:append = " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"

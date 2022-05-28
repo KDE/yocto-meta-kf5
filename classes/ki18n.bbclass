@@ -7,7 +7,7 @@
 inherit python3native
 inherit gettext
 
-DEPENDS += " \
+DEPENDS:append = " \
     ki18n \
     gettext-native \
 "

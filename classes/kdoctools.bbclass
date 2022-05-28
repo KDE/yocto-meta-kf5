@@ -9,11 +9,11 @@ do_compile:prepend() {
     export XDG_DATA_DIRS=${STAGING_DATADIR}:$XDG_DATA_DIRS
 }
 
-DEPENDS += " \
+DEPENDS:append = " \
     kdoctools \
     kdoctools-native \
     libxslt-native \
     karchive-native \
 "
 
-EXTRA_OECMAKE += " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"
+EXTRA_OECMAKE:append = " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"

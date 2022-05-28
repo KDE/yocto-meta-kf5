@@ -4,9 +4,9 @@
 #
 # SPDX-License-Identifier: MIT
 
-DEPENDS += " \
+DEPENDS:append = " \
     kconfig \
     kconfig-native \
 "
 
-EXTRA_OECMAKE += " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"
+EXTRA_OECMAKE:append = " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"
