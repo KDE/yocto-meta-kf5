@@ -4,7 +4,7 @@
 
 DESCRIPTION = "Polkit-Qt-1"
 LICENSE = "LGPL-2.1"
-LIC_FILES_CHKSUM = "file://COPYING;md5=7dbc59dc445b2261c4fb2f9466e3446a"
+LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=da48810c4ddf8e49efa031294a26b98c"
 PR = "r0"
 
 DEPENDS = "qtbase polkit"
