@@ -36,12 +36,16 @@ inherit kauth
 inherit mime-xdg
 inherit reuse_license_checksums
 
+# handling symlink: /usr/lib/plugins/plasma/kcms/systemsettings_qwidgets/kcm_webshortcuts.so
+INSANE_SKIP:${PN} = "dev-so"
 FILES:${PN} += " \
     ${libdir}/plugins/kcm_*.so \
     ${libdir}/plugins/kf5/kio/*.so \
     ${libdir}/plugins/kf5/kded/*.so \
     ${libdir}/plugins/kf5/kiod/*.so \
     ${libdir}/plugins/kf5/urifilters/*.so \
+    ${libdir}/plugins/plasma/kcms/systemsettings/*.so \
+    ${libdir}/plugins/plasma/kcms/systemsettings_qwidgets/*.so \
     ${datadir}/kservices5/useragentstrings/*.desktop \
     ${datadir}/kservices5/searchproviders/*.desktop \
     ${datadir}/kf5/kcookiejar/domain_info \
