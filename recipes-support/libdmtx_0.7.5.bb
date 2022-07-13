@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: MIT
 
 DESCRIPTION = "Library for reading and writing data matrix barcodes"
-HOMEPAGE = "http://libdmtx.sourceforge.net/"
+HOMEPAGE = "https://github.com/dmtx"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=b58872aaf3a9d51c1f002b9d7940f4f1"
 
