@@ -8,13 +8,24 @@ LICENSE = "LGPL-2.1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=fbc093901857fcd118f065f900982c24"
 PR = "r0"
 
-DEPENDS = "qtbase"
+DEPENDS = " \
+    botan \
+    cyrus-sasl \
+    libgcrypt \
+    nss \
+    qtbase \
+"
 
 SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 inherit cmake_qt5
 inherit pkgconfig
+
+EXTRA_OECMAKE += " \
+    -DQCA_FEATURE_INSTALL_DIR=${libdir}${QT_DIR_NAME}/mkspecs/features \
+    -DLIB_SUFFIX=${@d.getVar('baselib').replace('lib', '')} \
+"
 
 do_install:prepend() {
     if [ "0" -ne $(find . -name \*.cmake | grep _usr | wc -l) ]; then
@@ -28,6 +39,6 @@ FILES:${PN} += " \
 "
 
 FILES:${PN}-dev += " \
-    ${prefix}/mkspecs/features/*  \
+    ${libdir}/mkspecs/features/*  \
     ${libdir}/cmake/Qca-qt5/*.cmake \
 "
