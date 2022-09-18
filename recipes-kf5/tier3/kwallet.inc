@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.1+"
 PR = "r0"
 
 DEPENDS = " \
@@ -21,8 +21,14 @@ DEPENDS = " \
     kwidgetsaddons \
     kwindowsystem \
     libgcrypt \
+    qca \
 "
 
+EXTRA_OECMAKE += " \
+    -DOE_QCA_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
+"
+
+inherit pkgconfig
 require kwallet_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
