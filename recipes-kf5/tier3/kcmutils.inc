@@ -7,7 +7,7 @@
 LICENSE = "LGPL-2.0"
 PR = "r0"
 
-DEPENDS = " \
+DEPENDS:class-target = " \
     qtbase \
     libxml2-native \
     kitemviews \
@@ -24,10 +24,17 @@ DEPENDS = " \
     kpackage-native \
 "
 
+DEPENDS:class-native = " \
+    qtbase-native \
+    extra-cmake-modules-native \
+"
+
 require kcmutils_metainfo.inc
 inherit cmake_kf5
 inherit ki18n
 inherit reuse_license_checksums
+
+EXTRA_OECMAKE:class-native = " -DTOOLS_ONLY=ON "
 
 FILES:${PN} += " \
     ${libdir}/qml/org/kde/kcmutils/ \
