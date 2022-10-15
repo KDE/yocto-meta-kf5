@@ -16,7 +16,6 @@ DEPENDS = "qtbase \
     kconfig-native \
     kauth-native \
     kwidgetsaddons \
-    kitemviews \
 "
 
 require kiconthemes_metainfo.inc
