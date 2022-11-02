@@ -12,7 +12,7 @@ DEPENDS = " \
 "
 
 require kquickcharts_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit reuse_license_checksums
 
 FILES:${PN} += " \

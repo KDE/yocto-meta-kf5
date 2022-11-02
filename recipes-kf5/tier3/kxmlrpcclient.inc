@@ -16,7 +16,7 @@ DEPENDS = " \
 "
 
 require kxmlrpcclient_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit gettext
 inherit python3native
 inherit kdoctools

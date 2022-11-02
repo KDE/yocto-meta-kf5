@@ -20,7 +20,7 @@ DEPENDS:class-target = " \
 "
 
 require ki18n_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit python3native
 inherit reuse_license_checksums
 

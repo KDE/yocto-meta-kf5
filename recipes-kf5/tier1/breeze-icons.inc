@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
 PR = "r0"
 
 require breeze-icons_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 # bash is in the hosttools folder in PATH, but that's not detected automatically
 # due to the CMAKE_FIND_ROOT_PATH settings
 EXTRA_OECMAKE:class-target += " -DBASH_EXE=`which bash`"

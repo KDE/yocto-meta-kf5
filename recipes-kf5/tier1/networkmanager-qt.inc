@@ -9,7 +9,7 @@ PR = "r0"
 DEPENDS = "qtbase networkmanager"
 
 require networkmanager-qt_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit reuse_license_checksums
 
 RDEPENDS:${PN} += "networkmanager"

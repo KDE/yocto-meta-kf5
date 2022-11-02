@@ -10,7 +10,7 @@ PR = "r0"
 DEPENDS = "qtbase kjs-native pcre"
 
 require kjs_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit perlnative
 
 sysroot_stage_all:append:class-native () {

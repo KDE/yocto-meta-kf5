@@ -13,7 +13,7 @@ DEPENDS = " \
 "
 
 require sonnet_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit reuse_license_checksums
 
 EXTRA_OECMAKE:append:class-native = " -DSONNET_USE_WIDGETS=OFF -DSONNET_USE_QML=OFF"

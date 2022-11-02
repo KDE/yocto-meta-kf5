@@ -11,6 +11,9 @@ EXTRA_OECMAKE:append:class-native = " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DBUILD_TESTING=OFF \
     -DBUILD_DESIGNERPLUGIN=OFF \
+    -DBUILD_WITH_QT6=ON \
+    -DEXCLUDE_DEPRECATED_BEFORE_AND_AT=5.94.0 \
+    -DQT_MAJOR_VERSION=6 \
 "
 
 EXTRA_OECMAKE:append:class-target = " \
@@ -18,6 +21,9 @@ EXTRA_OECMAKE:append:class-target = " \
     -DBUILD_TESTING=OFF \
     -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake \
     -DBUILD_DESIGNERPLUGIN=OFF \
+    -DBUILD_WITH_QT6=ON \
+    -DEXCLUDE_DEPRECATED_BEFORE_AND_AT=5.94.0 \
+    -DQT_MAJOR_VERSION=6 \
 "
 
 DEPENDS:append = " \
@@ -49,11 +55,11 @@ FILES:${PN}:append = " \
     ${datadir}/dbus-1/services/*.service \
     ${datadir}/dbus-1/system-services/*.service \
     ${datadir}/dbus-1/system.d/*.conf \
-    ${datadir}/knotifications5/*.notifyrc \
-    ${datadir}/kservices5/*.desktop \
-    ${datadir}/kservices5/*.protocol \
-    ${datadir}/kservicetypes5/*.desktop \
-    ${datadir}/kservices5/*.desktop \
+    ${datadir}/knotifications6/*.notifyrc \
+    ${datadir}/kservices6/*.desktop \
+    ${datadir}/kservices6/*.protocol \
+    ${datadir}/kservicetypes6/*.desktop \
+    ${datadir}/kservices6/*.desktop \
     ${datadir}/polkit-1/actions/*.policy \
 "
 
@@ -62,7 +68,7 @@ FILES:${PN}-dev:append = " \
     ${datadir}/dbus-1/interfaces/*.xml \
     ${datadir}/kdevappwizard/templates/*.tar.bz2 \
     ${datadir}/kdevfiletemplates/templates/*.tar.bz2 \
-    ${datadir}/qlogging-categories5 \
+    ${datadir}/qlogging-categories6 \
     ${libdir}/cmake \
     ${libdir}/plugins/designer/*.so \
     ${prefix}/mkspecs/modules/qt_*.pri \

@@ -14,7 +14,7 @@ DEPENDS = " \
 "
 
 require kdesignerplugin_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 
 FILES:${PN}-dev += " \
   ${datadir}/kf5/widgets/pics/*.png \

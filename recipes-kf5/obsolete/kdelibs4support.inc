@@ -35,7 +35,7 @@ EXTRA_OECMAKE:append:class-target = " \
 "
 
 require kdelibs4support_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit ki18n
 inherit perlnative
 inherit kdoctools

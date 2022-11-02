@@ -11,7 +11,7 @@ DEPENDS:class-native = "extra-cmake-modules qtbase-native kcoreaddons-native"
 DEPENDS:class-target = "qtbase kcoreaddons kauth-native polkit-qt-1"
 
 require kauth_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit reuse_license_checksums
 
 EXTRA_OECMAKE:class-target = " \

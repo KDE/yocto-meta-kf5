@@ -10,7 +10,7 @@ PR = "r0"
 DEPENDS = "qtbase"
 
 require bluez-qt_metainfo.inc
-inherit cmake_kf5
+inherit cmake_kf6
 inherit reuse_license_checksums
 
 EXTRA_OECMAKE:class-target += " \
