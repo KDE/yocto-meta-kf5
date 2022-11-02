@@ -12,7 +12,7 @@ DEPENDS = "qtbase extra-cmake-modules"
 SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
-inherit cmake_qt5
+inherit qt6-cmake
 EXTRA_OECMAKE += " -DPHONON_BUILD_PHONON4QT5=ON"
 
 # remove the widget designer plugin, this makes no sense for the target

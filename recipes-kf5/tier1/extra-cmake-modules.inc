@@ -9,7 +9,7 @@ PR = "r0"
 DEPENDS = "cmake-native qttools qtbase-native qttools-native"
 
 require extra-cmake-modules_metainfo.inc
-inherit cmake_qt5
+inherit qt6-cmake
 inherit reuse_license_checksums
 
 CLEANBROKEN = "1"

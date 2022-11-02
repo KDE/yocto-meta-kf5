@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-inherit cmake_qt5
+inherit qt6-cmake
 inherit pkgconfig
 
 EXTRA_OECMAKE:append:class-native = " \
