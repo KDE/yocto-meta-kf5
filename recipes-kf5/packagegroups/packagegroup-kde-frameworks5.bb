@@ -68,10 +68,8 @@ RDEPENDS:${PN} = " \
     kdeclarative \
     kded \
     kdesu \
-    kemoticons \
     kglobalaccel \
     kiconthemes \
-    kinit \
     kio \
     knewstuff \
     knotifyconfig \
@@ -83,14 +81,9 @@ RDEPENDS:${PN} = " \
     ktextwidgets \
     kwallet \
     kxmlgui \
-    kxmlrpcclient \
     plasma-framework \
     purpose \
     qqc2-desktop-style \
     \
     frameworkintegration \
-    \
-    kjs \
-    kjsembed \
-    kdelibs4support \
 "
