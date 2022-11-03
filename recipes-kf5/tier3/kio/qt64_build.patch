@@ -1,0 +1,25 @@
+From 75c48fcf018116aacc30c362a4cde37ea9262164 Mon Sep 17 00:00:00 2001
+From: Christophe Giboudeaux <christophe@krop.fr>
+Date: Sun, 2 Oct 2022 11:56:02 +0200
+Subject: [PATCH] Fix build with Qt 6.4
+
+---
+ src/core/kioglobal_p.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/core/kioglobal_p.cpp b/src/core/kioglobal_p.cpp
+index 94c3c1765..b4891f126 100644
+--- a/src/core/kioglobal_p.cpp
++++ b/src/core/kioglobal_p.cpp
+@@ -55,7 +55,7 @@ static QMap<QString, QString> standardLocationsMap()
+     };
+     static const LocationInfo mapping[] = {
+ #if QT_VERSION >= QT_VERSION_CHECK(6, 4, 0)
+-        {QStandardPaths::TemplatesLocation, "folder-templates")},
++        {QStandardPaths::TemplatesLocation, "folder-templates"},
+         {QStandardPaths::PublicShareLocation, "folder-public"},
+ #endif
+         {QStandardPaths::MusicLocation, "folder-music"},
+-- 
+GitLab
+

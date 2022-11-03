@@ -31,8 +31,8 @@ inherit ki18n
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/kio/*.so \
-    ${libdir}/plugins/kf5/kded/*.so \
+    ${libdir}/plugins/kf6/kio/*.so \
+    ${libdir}/plugins/kf6/kded/*.so \
     ${libdir}/systemd/user/* \
     ${libdir}/qml/org/kde/baloo/* \
     ${libdir}/qml/org/kde/baloo/experimental/* \

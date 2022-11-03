@@ -6,9 +6,10 @@
 LICENSE = "BSD-3-Clause & LGPL-2.0+ & LGPL-2.1+"
 PR = "r0"
 
-DEPENDS = " \
+DEPENDS += " \
     qtbase \
     qtdeclarative \
+    qt5compat \
     sonnet-native \
 "
 

@@ -35,6 +35,6 @@ EXTRA_OECMAKE += " \
 "
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/parts/katepart.so \
+    ${libdir}/plugins/kf6/parts/katepart.so \
     ${datadir}/katepart5/script/README.md \
 "

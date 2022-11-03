@@ -8,7 +8,11 @@
 LICENSE = "MIT & BSD-3-Clause & LGPL-2.0+ & LGPL-2.0"
 PR = "r0"
 
-DEPENDS = "qtbase gperf-native"
+DEPENDS += " \
+    qtbase \
+    qt5compat \
+    gperf-native \
+"
 
 require kcodecs_metainfo.inc
 inherit cmake_kf6

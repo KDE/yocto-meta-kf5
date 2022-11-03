@@ -22,7 +22,8 @@ inherit cmake_kf6
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/kirigami/*.so \
+    ${libdir}/plugins/kf6/kirigami/*.so \
+    ${libdir}/qml/org/kde/desktop/* \
     ${libdir}/qml/org/kde/qqc2desktopstyle/private/* \
     ${libdir}/qml/QtQuick/Controls.2/org.kde.desktop/* \
     ${libdir}/qml/QtQuick/Controls.2/org.kde.desktop/private/* \

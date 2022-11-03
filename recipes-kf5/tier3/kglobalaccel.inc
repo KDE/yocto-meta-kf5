@@ -14,7 +14,6 @@ DEPENDS = " \
     kconfig-native \
     kcrash \
     kdbusaddons \
-    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "
 
 require kglobalaccel_metainfo.inc

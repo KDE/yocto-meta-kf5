@@ -10,7 +10,6 @@ PR = "r0"
 
 DEPENDS = " \
     qtbase \
-    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "
 
 require kwindowsystem_metainfo.inc
@@ -18,6 +17,6 @@ inherit cmake_kf6
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/org.kde.kwindowsystem.platforms/* \
-    ${libdir}/plugins/kf5/kwindowsystem/* \
+    ${libdir}/plugins/kf6/org.kde.kwindowsystem.platforms/* \
+    ${libdir}/plugins/kf6/kwindowsystem/* \
 "

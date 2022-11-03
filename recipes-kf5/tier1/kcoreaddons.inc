@@ -19,7 +19,7 @@ inherit mime
 
 FILES:${PN} += " \
     ${datadir}/mime/packages/kde5.xml \
-    ${datadir}/kf5/licenses/* \
+    ${datadir}/kf6/licenses/* \
 "
 
 FILES:${PN}-dev += " \

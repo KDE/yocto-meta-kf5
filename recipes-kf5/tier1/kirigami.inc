@@ -7,7 +7,7 @@ LICENSE = "LGPL-2.0"
 PR = "r0"
 
 DEPENDS = " \
-    qtquickcontrols2 \
+    qtdeclarative \
     qtsvg \
 "
 
@@ -20,6 +20,5 @@ FILES:${PN} += " \
 "
 
 RDEPENDS:${PN} += " \
-    qtgraphicaleffects-qmlplugins \
-    qtquickcontrols2-qmlplugins \
+    qtdeclarative-qmlplugins \
 "

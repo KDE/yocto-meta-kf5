@@ -33,6 +33,6 @@ FILES:${PN}-dbg += " \
 "
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/ktranscript.so \
+    ${libdir}/plugins/kf6/ktranscript.so \
     ${libdir}/qml/org/kde/i18n/localeData \
 "

@@ -19,5 +19,5 @@ PACKAGES += "${PN}-data"
 RRECOMMENDS:${PN} += "${PN}-data"
 
 FILES:${PN}-data += " \
-    ${datadir}/kf5/kcharselect/kcharselect-data \
+    ${datadir}/kf6/kcharselect/kcharselect-data \
 "

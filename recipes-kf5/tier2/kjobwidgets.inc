@@ -14,7 +14,6 @@ DEPENDS = " \
     kcoreaddons \
     kcoreaddons-native \
     kwidgetsaddons \
-    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "
 
 require kjobwidgets_metainfo.inc

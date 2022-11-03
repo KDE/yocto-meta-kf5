@@ -40,6 +40,6 @@ inherit reuse_license_checksums
 FILES:${PN} += " \
     ${libdir}/qml/org/kde/newstuff/* \
     ${libdir}/qml/org/kde/newstuff/qml/* \
-    ${datadir}/kf5/knewstuff/pics/*.png \
-    ${datadir}/kf5/kmoretools/presets-kmoretools/* \
+    ${datadir}/kf6/knewstuff/pics/*.png \
+    ${datadir}/kf6/kmoretools/presets-kmoretools/* \
 "

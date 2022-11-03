@@ -46,7 +46,7 @@ sysroot_stage_all:append:class-target () {
 
 
 FILES:${PN} += " \
-    ${datadir}/kf5/kdoctools/customization/* \
-    ${datadir}/kf5/kdoctools/customization/*/* \
-    ${datadir}/kf5/kdoctools/customization/*/*/* \
+    ${datadir}/kf6/kdoctools/customization/* \
+    ${datadir}/kf6/kdoctools/customization/*/* \
+    ${datadir}/kf6/kdoctools/customization/*/*/* \
 "

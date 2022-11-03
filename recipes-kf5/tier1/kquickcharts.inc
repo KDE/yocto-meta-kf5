@@ -8,7 +8,6 @@ PR = "r0"
 
 DEPENDS = " \
     qtdeclarative \
-    qtquickcontrols2 \
 "
 
 require kquickcharts_metainfo.inc

@@ -28,8 +28,8 @@ inherit kdoctools
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/kfileitemaction \
-    ${libdir}/plugins/kf5/purpose \
+    ${libdir}/plugins/kf6/kfileitemaction \
+    ${libdir}/plugins/kf6/purpose \
     ${libdir}/qml/org/kde/purpose \
     ${datadir}/icons/hicolor \
 "

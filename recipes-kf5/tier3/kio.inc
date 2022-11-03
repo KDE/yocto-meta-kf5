@@ -40,15 +40,15 @@ inherit reuse_license_checksums
 INSANE_SKIP:${PN} = "dev-so"
 FILES:${PN} += " \
     ${libdir}/plugins/kcm_*.so \
-    ${libdir}/plugins/kf5/kio/*.so \
-    ${libdir}/plugins/kf5/kded/*.so \
-    ${libdir}/plugins/kf5/kiod/*.so \
-    ${libdir}/plugins/kf5/urifilters/*.so \
+    ${libdir}/plugins/kf6/kio/*.so \
+    ${libdir}/plugins/kf6/kded/*.so \
+    ${libdir}/plugins/kf6/kiod/*.so \
+    ${libdir}/plugins/kf6/urifilters/*.so \
     ${libdir}/plugins/plasma/kcms/systemsettings/*.so \
     ${libdir}/plugins/plasma/kcms/systemsettings_qwidgets/*.so \
-    ${datadir}/kservices5/useragentstrings/*.desktop \
-    ${datadir}/kservices5/searchproviders/*.desktop \
-    ${datadir}/kf5/kcookiejar/domain_info \
+    ${datadir}/kservices6/useragentstrings/*.desktop \
+    ${datadir}/kservices6/searchproviders/*.desktop \
+    ${datadir}/kf6/kcookiejar/domain_info \
     ${datadir}/kconf_update \
 "
 

@@ -12,7 +12,6 @@ PR = "r0"
 
 DEPENDS = " \
     qtbase \
-    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
 "
 
 require kidletime_metainfo.inc
@@ -20,5 +19,5 @@ inherit cmake_kf6
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/org.kde.kidletime.platforms/*.so \
+    ${libdir}/plugins/kf6/org.kde.kidletime.platforms/*.so \
 "

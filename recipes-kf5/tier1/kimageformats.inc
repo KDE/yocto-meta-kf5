@@ -20,5 +20,5 @@ FILES:${PN}-dbg += " \
 
 FILES:${PN} += " \
     ${libdir}/plugins/imageformats/*.so \
-    ${datadir}/kservices5/qimageioplugins/*.desktop \
+    ${datadir}/kservices6/qimageioplugins/*.desktop \
 "

@@ -28,6 +28,6 @@ inherit kdoctools
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/FrameworkIntegrationPlugin.so \
-    ${datadir}/kf5/infopage \
+    ${libdir}/plugins/kf6/FrameworkIntegrationPlugin.so \
+    ${datadir}/kf6/infopage \
 "

@@ -15,7 +15,6 @@ DEPENDS = " \
     qtbase \
     qtwayland \
     qtwayland-native \
-    ${@bb.utils.contains("DISTRO_FEATURES", "x11", "qtx11extras", "", d)} \
     plasma-wayland-protocols \
 "
 
@@ -25,5 +24,5 @@ inherit mime-xdg
 inherit reuse_license_checksums
 
 FILES:${PN} += " \
-    ${libdir}/plugins/kf5/kguiaddons/kmodifierkey/ \
+    ${libdir}/plugins/kf6/kguiaddons/kmodifierkey/ \
 "
