@@ -14,6 +14,7 @@ DEPENDS = " \
     libgcrypt \
     nss \
     qtbase \
+    qt5compat \
 "
 
 SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"
@@ -23,6 +24,8 @@ inherit qt6-cmake
 inherit pkgconfig
 
 EXTRA_OECMAKE += " \
+    -DQT_MAJOR_VERSION=6 \
+    -DBUILD_WITH_QT6=ON \
     -DQCA_FEATURE_INSTALL_DIR=${libdir}${QT_DIR_NAME}/mkspecs/features \
     -DLIB_SUFFIX=${@d.getVar('baselib').replace('lib', '')} \
 "
@@ -35,10 +38,10 @@ do_install:prepend() {
 }
 
 FILES:${PN} += " \
-    ${libdir}/qca-qt5/crypto/libqca-*.so \
+    ${libdir}/qca-qt6/crypto/libqca-*.so \
 "
 
 FILES:${PN}-dev += " \
     ${libdir}/mkspecs/features/*  \
-    ${libdir}/cmake/Qca-qt5/*.cmake \
+    ${libdir}/cmake/qca-qt6/*.cmake \
 "
