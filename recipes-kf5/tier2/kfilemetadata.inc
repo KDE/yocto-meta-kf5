@@ -10,6 +10,7 @@ PR = "r0"
 
 DEPENDS = " \
     qtbase \
+    karchive \
     kcoreaddons \
     kcoreaddons-native \
 "
