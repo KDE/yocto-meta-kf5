@@ -19,20 +19,13 @@ DEPENDS = " \
 SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
-inherit cmake_qt5
+inherit cmake_kf5
 inherit pkgconfig
 
 EXTRA_OECMAKE += " \
     -DQCA_FEATURE_INSTALL_DIR=${libdir}${QT_DIR_NAME}/mkspecs/features \
     -DLIB_SUFFIX=${@d.getVar('baselib').replace('lib', '')} \
 "
-
-do_install:prepend() {
-    if [ "0" -ne $(find . -name \*.cmake | grep _usr | wc -l) ]; then
-        sed -i 's/\"\/usr\//\"\$\{OE_QCA_PATH_HOST_ROOT\}\/usr\//g' $(find . -name "*.cmake" | grep _usr)
-        sed -i 's/\;\/usr\//\;\$\{OE_QCA_PATH_HOST_ROOT\}\/usr\//g' $(find . -name "*.cmake" | grep _usr)
-    fi
-}
 
 FILES:${PN} += " \
     ${libdir}/qca-qt5/crypto/libqca-*.so \
