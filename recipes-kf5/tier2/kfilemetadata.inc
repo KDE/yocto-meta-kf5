@@ -11,6 +11,7 @@ PR = "r0"
 DEPENDS += " \
     qtbase \
     qt5compat \
+    karchive \
     kcoreaddons \
     kcoreaddons-native \
 "

@@ -41,11 +41,13 @@ do_compile:prepend() {
     export LD_LIBRARY_PATH=${STAGING_LIBDIR_NATIVE}:$LD_LIBRARY_PATH
 }
 
-# This function is rather offensive right now, but it seems to work
+# This function is rather offensive, but it seems to work:
+# look into _usr or Export subpathes (depending on CMake version) for CMake target files inside
+# the build directory an rewrite absolut pathes to have a OE_KF5_PATH_HOST_ROOT prefix variable
 do_install:prepend() {
-    if [ "0" -ne $(find . -name \*.cmake | grep _usr | wc -l) ]; then
-        sed -i 's/\"\/usr\//\"\$\{OE_KF5_PATH_HOST_ROOT\}\/usr\//g' $(find . -name "*.cmake" | grep _usr)
-        sed -i 's/\;\/usr\//\;\$\{OE_KF5_PATH_HOST_ROOT\}\/usr\//g' $(find . -name "*.cmake" | grep _usr)
+    if [ "0" -ne $(find . -name \*.cmake | grep '_usr\|Export' | wc -l) ]; then
+        sed -i 's/\"\/usr\//\"\$\{OE_KF5_PATH_HOST_ROOT\}\/usr\//g' $(find . -name "*.cmake" | grep '_usr\|Export')
+        sed -i 's/\;\/usr\//\;\$\{OE_KF5_PATH_HOST_ROOT\}\/usr\//g' $(find . -name "*.cmake" | grep '_usr\|Export')
     fi
 }
 
