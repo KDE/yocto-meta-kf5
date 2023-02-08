@@ -1,0 +1,25 @@
+From 4fade97f7139443ef00b36a8923283191a0066be Mon Sep 17 00:00:00 2001
+From: Andreas Cord-Landwehr <cordlandwehr@kde.org>
+Date: Wed, 8 Feb 2023 19:58:26 +0100
+Subject: [PATCH] Use VisionFive2 specific MESA Fork
+
+---
+ src/declarativeimports/core/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/declarativeimports/core/CMakeLists.txt b/src/declarativeimports/core/CMakeLists.txt
+index b34f5335d..6de68e980 100644
+--- a/src/declarativeimports/core/CMakeLists.txt
++++ b/src/declarativeimports/core/CMakeLists.txt
+@@ -67,7 +67,7 @@ else()
+ endif()
+ 
+ if(QtGui_Enabled_Features MATCHES "opengles2")
+-    target_link_libraries(corebindingsplugin Qt${QT_MAJOR_VERSION}::Gui_GLESv2)
++    target_link_libraries(corebindingsplugin Qt${QT_MAJOR_VERSION}::Gui_GLESv2_PVR_MESA)
+ endif()
+ 
+ install(TARGETS corebindingsplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/core)
+-- 
+2.37.2
+
