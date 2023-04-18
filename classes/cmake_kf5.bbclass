@@ -16,7 +16,7 @@ EXTRA_OECMAKE:append:class-native = " \
 EXTRA_OECMAKE:append:class-target = " \
     -DOE_KF5_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
     -DBUILD_TESTING=OFF \
-    -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake \
+    -DKF5_HOST_TOOLING=${STAGING_LIBDIR_NATIVE}/cmake \
     -DBUILD_DESIGNERPLUGIN=OFF \
 "
 

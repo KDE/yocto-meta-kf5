@@ -12,6 +12,6 @@ DEPENDS:append = " \
 
 # for crosscompilation desktoptojson uses CMAKE_SYSROOT as root path for locating files
 EXTRA_OECMAKE:append = " \
-    -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake \
+    -DKF5_HOST_TOOLING=${STAGING_LIBDIR_NATIVE}/cmake \
     -DCMAKE_SYSROOT=${RECIPE_SYSROOT} \
 "

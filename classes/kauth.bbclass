@@ -11,4 +11,4 @@ DEPENDS:append:class-target = " \
     polkit-qt-1 \
 "
 
-EXTRA_OECMAKE:append = " -DKF5_HOST_TOOLING=${STAGING_DIR_NATIVE}/${libdir}/cmake"
+EXTRA_OECMAKE:append = " -DKF5_HOST_TOOLING=${STAGING_LIBDIR_NATIVE}/cmake"
