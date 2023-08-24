@@ -4,8 +4,12 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.1-only"
 PR = "r0"
+
+SRC_URI:append:riscv64 = " \
+    file://0001-we-cant-mmap-such-a-large-memory-on-riscv64.patch \
+"
 
 DEPENDS = " \
     libxml2-native \

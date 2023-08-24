@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: MIT
 
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
-LICENSE = "LGPL-2.0"
+LICENSE = "LGPL-2.0-only"
 PR = "r0"
 
 DEPENDS = " \

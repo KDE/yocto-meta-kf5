@@ -10,33 +10,34 @@ do_populate_lic:prepend() {
 
     # keys are only Yocto's SPDX(-like) identifiers from licenses.conf
     yocto_to_spdx_id_map = {
-        'LGPL-2.0' : [
-            'LGPL-2.0-only',
+        'LGPL-2.0-only' : [
+            'LGPL-2.0-only'
+        ],
+        'LGPL-2.0-or-later' : [
             'LGPL-2.0-or-later'
         ],
-        'LGPL-2.0+' : [
-            'LGPL-2.0-or-later'
+        'LGPL-2.1-only' : [
+            'LGPL-2.1-only'
         ],
-        'LGPL-2.1' : [
-            'LGPL-2.1-only',
+        'LGPL-2.1-or-later' : [
             'LGPL-2.1-or-later'
         ],
-        'LGPL-2.1+' : [
-            'LGPL-2.1-or-later'
+        'LGPL-3.0-only' : [
+            'LGPL-3.0-only'
         ],
-        'LGPL-3.0' : [
-            'LGPL-3.0-only',
+        'LGPL-3.0-or-later' : [
             'LGPL-3.0-or-later'
         ],
-        'GPL-2.0' : [
-            'GPL-2.0-only',
+        'GPL-2.0-only' : [
+            'GPL-2.0-only'
+        ],
+        'GPL-2.0-or-later' : [
             'GPL-2.0-or-later'
         ],
-        'GPL-2.0+' : [
-            'GPL-2.0-or-later'
+        'GPL-3.0-only' : [
+            'GPL-3.0-only'
         ],
-        'GPL-3.0' : [
-            'GPL-3.0-only',
+        'GPL-3.0-or-later' : [
             'GPL-3.0-or-later'
         ],
         'BSD-2-Clause' : [
@@ -48,11 +49,20 @@ do_populate_lic:prepend() {
         'MIT' : [
             'MIT'
         ],
+        'MIT-CMU' : [
+            'MIT-CMU'
+        ],
+        'CC0-1.0' : [
+            'CC0-1.0'
+        ],
         'LicenseRef-KDE-Accepted-LGPL': [
             'LicenseRef-KDE-Accepted-LGPL'
         ],
         'LicenseRef-KDE-Accepted-GPL': [
             'LicenseRef-KDE-Accepted-GPL'
+        ],
+        'Unicode-DFS-2016': [
+            'Unicode-DFS-2016'
         ],
     }
     spdx_id_to_yocto_map = {}
@@ -75,12 +85,16 @@ do_populate_lic:prepend() {
         'LGPL-3.0-only': [ 'c51d3eef3be114124d11349ca0d7e117' ],
         'LGPL-3.0-or-later': [ 'c51d3eef3be114124d11349ca0d7e117' ],
         'GPL-2.0-only': [ '93e64b4a83c7e441e48bbdeeea05c977' ],
-        'GPL-2.0-or-later': [ 'fed54355545ffd980b814dab4a3b312c' ],
+        'GPL-2.0-or-later': [ 
+            "fed54355545ffd980b814dab4a3b312c", 
+            "9e2385fe012386d34dcc5c9863070881",
+        ],
         'GPL-3.0-only': [ '1c76c4cc354acaac30ed4d5eefea7245' ],
-        'GPL-3.0-or-later´': [ '1c76c4cc354acaac30ed4d5eefea7245' ],
+        'GPL-3.0-or-later': [ '1c76c4cc354acaac30ed4d5eefea7245' ],
         'BSD-2-Clause': [ '63d6ee386b8aaba70b1bf15a79ca50f2' ],
         'BSD-3-Clause': [ '954f4d71a37096249f837652a7f586c0' ],
         'MIT': [ '38aa75cf4c4c87f018227d5ec9638d75' ],
+        'MIT-CMU' : ['asdf' ],
         'LicenseRef-KDE-Accepted-LGPL': [
             "6a2eced623a7c9d0c8996ce24917d006",
             "e4b79a181b6483b37d39a27f4d75e60a",
@@ -90,7 +104,9 @@ do_populate_lic:prepend() {
             'b4c280013bbbadfbe92219498dc5228c',
         ],
         'MIT-CMU': [ 'b6936b5be2ab721140d9bf57c37b0b92' ],
-        'Unicode-DFS-2016': [ '3daac258519ec32945c80ae0f7ba88f4' ]
+        'Unicode-DFS-2016': [ '3daac258519ec32945c80ae0f7ba88f4' ],
+        'CC0-1.0': [ '6fd064768b8d61c31ddd0540570fbd33' ],
+        'Unicode-DFS-2016': [ '3daac258519ec32945c80ae0f7ba88f4' ],
     }
 
     # generate flat list of used license identifiers

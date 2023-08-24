@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "MIT & LGPL-2.0+"
+LICENSE = "MIT & LGPL-2.0-or-later"
 PR = "r0"
 
 # licenses only contained in autotests

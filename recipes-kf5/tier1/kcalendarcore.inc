@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "BSD-3-Clause & LGPL-2.0+"
+LICENSE = "BSD-3-Clause & LGPL-2.0-or-later"
 PR = "r0"
 
 # licenses only contained in autotests

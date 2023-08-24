@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "BSD-3-Clause & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
 DEPENDS = "qtbase modemmanager"
@@ -11,5 +11,7 @@ DEPENDS = "qtbase modemmanager"
 require modemmanager-qt_metainfo.inc
 inherit cmake_kf5
 inherit reuse_license_checksums
+#The Cmake files include the sysroot directory to pipewire and spa, delete the actual sysroot from the path. 
+inherit cmake_sysroot
 
 RDEPENDS:${PN} += "modemmanager"

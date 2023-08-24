@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.0 & BSD-2-Clause"
+LICENSE = "LGPL-2.0-only & BSD-2-Clause"
 PR = "r0"
 
 DEPENDS = " \

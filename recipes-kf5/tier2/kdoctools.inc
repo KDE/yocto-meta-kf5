@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.1"
+LICENSE = "LGPL-2.1-only"
 PR = "r0"
 
 DEPENDS = " \
@@ -16,7 +16,8 @@ DEPENDS = " \
     docbook-xsl-stylesheets \
     liburi-perl-native \
     kdoctools-native \
-"
+    docbook-xsl-stylesheets-native \
+" 
 
 require kdoctools_metainfo.inc
 inherit cmake_kf5

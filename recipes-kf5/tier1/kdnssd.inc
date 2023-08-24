@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.0 & BSD-3-Clause"
+LICENSE = "LGPL-2.0-only & BSD-3-Clause"
 PR = "r0"
 
 DEPENDS = "qtbase avahi"

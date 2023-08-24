@@ -9,10 +9,8 @@ HOMEPAGE = "https://github.com/dmtx"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=b58872aaf3a9d51c1f002b9d7940f4f1"
 
-PR = "r1"
-
 inherit autotools
 
-SRCREV = "53f001bbcb09f40747d645997f723fc96a58fec2"
+SRCREV = "dafd3dd813fb448eab0272f139d45a6b894912df"
 SRC_URI = "git://github.com/dmtx/libdmtx;nobranch=1;protocol=https"
 S = "${WORKDIR}/git"

@@ -6,7 +6,7 @@
 
 # the licenses are only options for some files
 REUSE_LICENSECHECK_WHITELIST = "LicenseRef-KDE-Accepted-GPL LGPL-3.0"
-LICENSE = "LGPL-2.0"
+LICENSE = "LGPL-2.0-only"
 PR = "r0"
 
 DEPENDS = " \

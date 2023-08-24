@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "MIT & BSD-3-Clause & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "MIT & BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
 DEPENDS = " \
@@ -15,6 +15,7 @@ DEPENDS = " \
 
 require kwindowsystem_metainfo.inc
 inherit cmake_kf5
+inherit cmake_sysroot
 inherit reuse_license_checksums
 
 FILES:${PN} += " \

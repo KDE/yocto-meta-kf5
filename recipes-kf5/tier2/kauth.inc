@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.1 & LGPL-2.0+ & BSD-3-Clause"
+LICENSE = "LGPL-2.1-only & LGPL-2.0-or-later & BSD-3-Clause"
 PR = "r0"
 
 DEPENDS:class-native = "extra-cmake-modules qtbase-native kcoreaddons-native"

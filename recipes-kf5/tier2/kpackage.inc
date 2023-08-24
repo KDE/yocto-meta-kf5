@@ -5,8 +5,8 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.0+"
-LICENSE:${PN}-tools = "GPL-2.0+"
+LICENSE = "LGPL-2.0-or-later & GPL-2.0-or-later"
+
 PR = "r0"
 
 DEPENDS = " \

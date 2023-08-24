@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "LGPL-2.0"
+LICENSE = "LGPL-2.0-only"
 PR = "r0"
 
 DEPENDS = " \

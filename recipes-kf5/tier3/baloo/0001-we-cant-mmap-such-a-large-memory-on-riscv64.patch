@@ -1,0 +1,33 @@
+From 2ee73f50ed04515adc0be525bd17061dcd37c9fc Mon Sep 17 00:00:00 2001
+From: Justin Hammond <justin@dynam.ac>
+Date: Wed, 7 Jun 2023 04:42:04 +0000
+Subject: [PATCH] we cant mmap such a large memory on riscv64
+
+---
+ src/engine/database.cpp | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/engine/database.cpp b/src/engine/database.cpp
+index f0e0af1..3db2e6c 100644
+--- a/src/engine/database.cpp
++++ b/src/engine/database.cpp
+@@ -108,16 +108,16 @@ bool Database::open(OpenMode mode)
+      * Valgrind by default (without recompiling) limits the mmap size:
+      * <= 3.9: 32 GByte, 3.9 to 3.12: 64 GByte, 3.13: 128 GByte
+      */
+-    size_t sizeInGByte = 256;
++    size_t sizeInGByte = 16;
+     if (sizeof(void*) == 4) {
+         sizeInGByte = 1;
+         qCWarning(ENGINE) << "Running on 32 bit arch, limiting DB mmap to" << sizeInGByte << "GByte";
+     } else if (RUNNING_ON_VALGRIND) {
+         // valgrind lacks a runtime version check, assume valgrind >= 3.9, and allow for some other mmaps
+-        sizeInGByte = 40;
++        sizeInGByte = 8;
+         qCWarning(ENGINE) << "Valgrind detected, limiting DB mmap to" << sizeInGByte << "GByte";
+     }
+-    const size_t maximalSizeInBytes = sizeInGByte * size_t(1024) * size_t(1024) * size_t(1024);
++    const size_t maximalSizeInBytes = sizeInGByte << 30;
+     mdb_env_set_mapsize(m_env, maximalSizeInBytes);
+ 
+     // Set MDB environment flags

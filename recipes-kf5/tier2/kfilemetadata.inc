@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-LICENSE = "BSD-3-Clause & (LGPL-2.1 | LGPL-3.0 | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 PR = "r0"
 
 DEPENDS = " \
@@ -13,9 +13,14 @@ DEPENDS = " \
     karchive \
     kcoreaddons \
     kcoreaddons-native \
+    libkexiv2 \
+    ffmpeg \
+    poppler \
+    taglib \
 "
 
 require kfilemetadata_metainfo.inc
+inherit kconfig
 inherit cmake_kf5
 inherit ki18n
 inherit features_check
@@ -25,4 +30,5 @@ REQUIRED_DISTRO_FEATURES += "xattr"
 
 FILES:${PN} += " \
   ${libdir}/plugins/kf5/kfilemetadata/*.so \
+  ${libdir}/plugins/kf5/kfilemetadata/writers/ \
 "
