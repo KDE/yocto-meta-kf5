@@ -94,7 +94,7 @@ do_populate_lic:prepend() {
         'BSD-2-Clause': [ '63d6ee386b8aaba70b1bf15a79ca50f2' ],
         'BSD-3-Clause': [ '954f4d71a37096249f837652a7f586c0' ],
         'MIT': [ '38aa75cf4c4c87f018227d5ec9638d75' ],
-        'MIT-CMU' : ['asdf' ],
+        'MIT-CMU' : [ '91b70218e0db8e063ed88cd532cb801d' ],
         'LicenseRef-KDE-Accepted-LGPL': [
             "6a2eced623a7c9d0c8996ce24917d006",
             "e4b79a181b6483b37d39a27f4d75e60a",
