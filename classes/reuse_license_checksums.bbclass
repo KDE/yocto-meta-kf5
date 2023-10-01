@@ -8,71 +8,6 @@
 do_populate_lic:prepend() {
     srcdir = d.getVar('S')
 
-    # keys are only Yocto's SPDX(-like) identifiers from licenses.conf
-    yocto_to_spdx_id_map = {
-        'LGPL-2.0-only' : [
-            'LGPL-2.0-only'
-        ],
-        'LGPL-2.0-or-later' : [
-            'LGPL-2.0-or-later'
-        ],
-        'LGPL-2.1-only' : [
-            'LGPL-2.1-only'
-        ],
-        'LGPL-2.1-or-later' : [
-            'LGPL-2.1-or-later'
-        ],
-        'LGPL-3.0-only' : [
-            'LGPL-3.0-only'
-        ],
-        'LGPL-3.0-or-later' : [
-            'LGPL-3.0-or-later'
-        ],
-        'GPL-2.0-only' : [
-            'GPL-2.0-only'
-        ],
-        'GPL-2.0-or-later' : [
-            'GPL-2.0-or-later'
-        ],
-        'GPL-3.0-only' : [
-            'GPL-3.0-only'
-        ],
-        'GPL-3.0-or-later' : [
-            'GPL-3.0-or-later'
-        ],
-        'BSD-2-Clause' : [
-            'BSD-2-Clause'
-        ],
-        'BSD-3-Clause' : [
-            'BSD-3-Clause'
-        ],
-        'MIT' : [
-            'MIT'
-        ],
-        'MIT-CMU' : [
-            'MIT-CMU'
-        ],
-        'CC0-1.0' : [
-            'CC0-1.0'
-        ],
-        'LicenseRef-KDE-Accepted-LGPL': [
-            'LicenseRef-KDE-Accepted-LGPL'
-        ],
-        'LicenseRef-KDE-Accepted-GPL': [
-            'LicenseRef-KDE-Accepted-GPL'
-        ],
-        'Unicode-DFS-2016': [
-            'Unicode-DFS-2016'
-        ],
-    }
-    spdx_id_to_yocto_map = {}
-    for yocto_id in yocto_to_spdx_id_map:
-        for spdx_id in yocto_to_spdx_id_map[yocto_id]:
-            if spdx_id in spdx_id_to_yocto_map:
-                spdx_id_to_yocto_map[spdx_id].append(yocto_id)
-            else:
-                spdx_id_to_yocto_map[spdx_id] = [ yocto_id ]
-
     # unfortunatly license text may differ in whitespaces and empty lines
     checksum_map = {
         'LGPL-2.0-only': [ '6d2d9952d88b50a51a5c73dc431d06c7' ],
@@ -124,21 +59,19 @@ do_populate_lic:prepend() {
     recipe_licenses_qa_whitelist.append("CC0-1.0")
 
     if d.getVar('LIC_FILES_CHKSUM') and not d.getVar('LIC_FILES_CHKSUM') == '':
-        print("Aborting LIC_FILES_CHKSUM computation, value already set to:", d.getVar('LIC_FILES_CHKSUM'))
+        print("Skip LIC_FILES_CHKSUM computation, value already set to:", d.getVar('LIC_FILES_CHKSUM'))
     else:
         checksum_entries = [" "]
         for license_id in recipe_licenses:
-            if license_id in yocto_to_spdx_id_map:
-                for license_file in yocto_to_spdx_id_map[license_id]:
-                    license_file_path = os.path.join(srcdir, 'LICENSES/' + license_file + '.txt')
-                    if os.path.exists(license_file_path):
-                        md5chksum = bb.utils.md5_file(license_file_path)
-                        if md5chksum in checksum_map[license_file]:
-                            entry = "file://LICENSES/" + license_file + ".txt;md5=" + md5chksum
-                            checksum_entries.append(entry)
-                        else:
-                            bb.warn("QA Issue: %s [%s]" % (license_id + " not found in checksum table, md5sum=" + md5chksum, "reuse_license"))
-                        break
+            license_file_path = os.path.join(srcdir, 'LICENSES/' + license_id + '.txt')
+            if os.path.exists(license_file_path):
+                md5chksum = bb.utils.md5_file(license_file_path)
+                if md5chksum in checksum_map[license_id]:
+                    entry = "file://LICENSES/" + license_id + ".txt;md5=" + md5chksum
+                    checksum_entries.append(entry)
+                else:
+                    bb.warn("QA Issue: %s [%s]" % (license_id + " not found in checksum table, md5sum=" + md5chksum, "reuse_license"))
+                break
             else:
                 bb.warn("License checksum database has no entry: ", license_id)
 
@@ -156,8 +89,8 @@ do_populate_lic:prepend() {
                 license_name = license_name[:-4]
 
             # compute list intersection and test if empty
-            if license_name in spdx_id_to_yocto_map:
-                if list(set(recipe_licenses) & set(spdx_id_to_yocto_map[license_name])):
+            if license_name in checksum_map:
+                if license_name in set(recipe_licenses):
                     continue
             if license_name in recipe_licenses_qa_whitelist:
                 continue
